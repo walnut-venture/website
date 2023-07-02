@@ -1,3 +1,24 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "comma-dangle": ["error", {
+      "imports": "never"
+    }],
+    "semi": "error",
+    "no-trailing-spaces": "error",
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      },
+      {
+        "blankLine": "always",
+        "prev": "if",
+        "next": "*"
+      }
+    ],
+    "indent": ["error", 2]
+  }
 }
