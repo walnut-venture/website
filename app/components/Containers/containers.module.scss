@@ -1,4 +1,4 @@
-@use "/app/_styles/mixin.scss";
+@use "/app/styles/mixin.scss";
 
 .container {
   @include mixin.maxWidth(1900px);

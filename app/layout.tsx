@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { ReactNode } from "react";
-import { sanFrancisco } from "./_font/sanFrancisco";
-import "./_styles/globals.css";
+import { sanFrancisco } from "./font/sanFrancisco";
+import "./styles/globals.css";
 
 import styles from "./layout.module.scss";
 

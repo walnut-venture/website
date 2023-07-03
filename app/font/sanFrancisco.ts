@@ -5,22 +5,22 @@ export const sanFrancisco = localFont({
     {
       path: './SF-Pro-Display-Light.otf',
       weight: '300',
-      style: 'light',
+      style: 'light'
     },
     {
       path: './SF-Pro-Display-Regular.otf',
       weight: '400',
-      style: 'normal',
+      style: 'normal'
     },
     {
       path: './SF-Pro-Display-Medium.otf',
       weight: '500',
-      style: 'medium',
+      style: 'medium'
     },
     {
       path: './SF-Pro-Display-Semibold.otf',
       weight: '600',
-      style: 'semiBold',
+      style: 'semiBold'
     }
   ]
 });

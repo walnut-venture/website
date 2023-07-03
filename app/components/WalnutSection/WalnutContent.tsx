@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button, Container, H1, P } from "_components";
+import { Button, Container, H1, P } from "components";
 
 import styles from "./walnutSection.module.scss";
 import arrowRightSrc from "./img/ArrowRight.svg";

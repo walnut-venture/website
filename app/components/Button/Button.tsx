@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { sanFrancisco } from "_font/sanFrancisco";
+import { sanFrancisco } from "font/sanFrancisco";
 
 import {
   ReactNode,
