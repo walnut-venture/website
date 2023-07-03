@@ -1,0 +1,17 @@
+@use "/app/_styles/mixin.scss";
+
+.container {
+  @include mixin.maxWidth(1900px);
+  padding: 0 60px;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+.mainContainer {
+  @include mixin.maxWidth(1510px);
+  padding: 90px;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+}
