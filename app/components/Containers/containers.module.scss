@@ -10,7 +10,6 @@
 
 .mainContainer {
   @include mixin.maxWidth(1510px);
-  padding: 90px;
   margin: 0 auto;
   height: 100%;
   overflow: hidden;

@@ -1,0 +1,28 @@
+@use "styles/mixin";
+
+.component {
+  background-color: var(--bgDark);
+  padding: 90px;
+  margin-top: 144px;
+  border-radius: 40px;
+}
+
+.title {
+  @include mixin.maxWidth(543px);
+  margin-bottom: 80px;
+}
+
+.contentWrapper {
+  display: flex;
+  gap: 11.6%;
+}
+
+.subtitleWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.image {
+  border-radius: 30px;
+}

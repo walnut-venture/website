@@ -1,0 +1,57 @@
+.component {
+  margin-top: 144px;
+  padding: 0 90px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+}
+
+.servicesContainer {
+  display: flex;
+  gap: 8.2%;
+}
+
+.servicesDetailContainer {
+  display: flex;
+  gap: 13.8%;
+}
+
+.servicesTitle {
+  font-size: 22px;
+  margin: 80px 0 28px 0;
+}
+
+.image {
+  border-radius: 30px;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.servicesCard {
+  display: grid;
+  grid-template-columns: 25px auto;
+  grid-template-rows: repeat(2, auto);
+  grid-column-gap: 40px;
+  grid-row-gap: 28px;
+}
+
+.number {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.subtitle {
+  grid-column: 2;
+}
+
+.servicesSubtitle {
+  margin: 30px 0 36px 0;
+}

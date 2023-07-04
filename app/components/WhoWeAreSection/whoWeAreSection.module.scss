@@ -1,0 +1,27 @@
+.component {
+  margin-top: 144px;
+  padding: 0 90px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: auto 66%;
+  grid-row-gap: 80px;
+}
+
+.gridTitle {
+  font-size: 22px;
+}
+
+.subtitleWrapper {
+  grid-column: 2;
+}
+
+.gridSubtitle {
+  margin-bottom: 37px;
+}

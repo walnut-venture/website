@@ -1,4 +1,13 @@
-import { Header, WalnutContent, WalnutBackground } from "components";
+import {
+  Header,
+  WalnutContent,
+  WalnutBackground,
+  DrivingInnovationSection,
+  JoinUsSection,
+  WhoWeAreSection,
+  ServicesSection,
+  TeamSection
+} from "components";
 
 export default function Home() {
   return (
@@ -6,6 +15,11 @@ export default function Home() {
       <Header />
       <WalnutBackground />
       <WalnutContent />
+      <DrivingInnovationSection />
+      <JoinUsSection />
+      <WhoWeAreSection />
+      <ServicesSection />
+      <TeamSection />
     </main>
   );
 };
