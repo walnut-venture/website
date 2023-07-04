@@ -1,0 +1,13 @@
+@use "styles/mixin";
+
+.component {
+  @include mixin.maxWidth(450px);
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
