@@ -1,0 +1,39 @@
+@use "styles/mixin";
+
+.component {
+  background-color: var(--titleGray);
+  padding: 90px;
+  margin-top: 80px;
+  border-radius: 40px;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.title {
+  @include mixin.maxWidth(543px);
+  margin-bottom: 80px;
+  color: var(--bgBlack);
+}
+
+.contentWrapper {
+  display: flex;
+  gap: 11.6%;
+}
+
+.subtitleWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: var(--fontBlack);
+}
+
+.button {
+  margin-top: 24px;
+}
+
+.image {
+  border-radius: 30px;
+}
