@@ -1,3 +1,6 @@
+@use "styles/mixin";
+@use "styles/breakpoints";
+
 .component {
   position: absolute;
   width: 100%;
@@ -22,9 +25,18 @@
 }
 
 .title {
-  margin: 95px 0 40px 0;
+  margin: 97px 0 40px 0;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    margin: 39px 0 20px 0;
+  }
 }
 
 .subtitle {
   margin-bottom: 30px;
+  width: 80%;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    margin-bottom: 16px;
+  }
 }

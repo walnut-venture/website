@@ -1,8 +1,7 @@
 @use "styles/mixin";
-@use "styles/breakpoints";
 
 .component {
-  @include mixin.maxWidth(450px);
+  width: 66.8%;
   display: flex;
   align-items: center;
 }

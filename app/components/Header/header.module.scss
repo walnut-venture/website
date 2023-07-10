@@ -9,7 +9,8 @@
 }
 
 .navContainer {
-  width: 37.9%;
+  @include mixin.maxWidth(674px);
+  margin-right: 250px;
   display: flex;
   justify-content: space-between;
 }

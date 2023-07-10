@@ -1,5 +1,7 @@
+@use "styles/mixin";
+
 .component {
-  font-size: 28px;
+  @include mixin.fluidFont(8, 28, 1920);
   font-weight: 300;
   line-height: 140%;
 }
