@@ -12,3 +12,4 @@ export * from "./JoinUsSection";
 export * from "./WhoWeAreSection";
 export * from "./ServicesSection";
 export * from "./TeamSection";
+export * from "./CareerSection";

@@ -8,11 +8,12 @@ export const Header = () => {
   return (
     <Container>
       <header className={styles.component}>
-        <Image src={logoSrc} alt="Logo" />
-        <Navigation />
+        <div className={styles.navContainer}>
+          <Image className={styles.logo} src={logoSrc} alt="Logo" />
+          <Navigation />
+        </div>
         <Button
-          size="m"
-          className={styles.headerBtn}
+          size="s"
         >
           Get in touch
         </Button>

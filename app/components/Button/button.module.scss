@@ -1,17 +1,33 @@
+@use "styles/mixin";
+@use "styles/breakpoints";
+
 .component {
   background-color: var(--btnGreen);
   border: none;
   color: var(--titleGray);
-  font-size: 24px;
   font-weight: 500;
   cursor: pointer;
-}
-
-.sizeM {
-  padding: 14px 30px;
   border-radius: 30px;
+  padding: 14px 30px;
   display: flex;
   gap: 10px;
   align-items: center;
   width: fit-content;
+  white-space: nowrap;
+}
+
+.sizeM {
+  font-size: 24px;
+  
+  @include mixin.media-w(1024) {
+    padding: 10px 22px;
+  }
+}
+
+.sizeS {
+  @include mixin.fluidFont(6, 20, 1920);
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    padding: 10px 24px;
+  }
 }

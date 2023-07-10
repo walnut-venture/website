@@ -6,7 +6,8 @@ import {
   JoinUsSection,
   WhoWeAreSection,
   ServicesSection,
-  TeamSection
+  TeamSection,
+  CareerSection
 } from "components";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <WhoWeAreSection />
       <ServicesSection />
       <TeamSection />
+      <CareerSection />
     </main>
   );
 };

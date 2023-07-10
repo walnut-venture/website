@@ -1,3 +1,6 @@
+@use "styles/mixin";
+@use "styles/breakpoints";
+
 .component {
   display: flex;
   justify-content: space-between;
@@ -5,6 +8,14 @@
   padding: 25px 0;
 }
 
-.headerBtn {
-  font-size: 20px !important;
+.navContainer {
+  width: 37.9%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  @include mixin.media-w(breakpoints.$laptop) {
+    width: 96px;
+  }
 }
