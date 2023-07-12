@@ -1,21 +1,38 @@
+@use "styles/mixin";
+@use "styles/breakpoints";
+
 .component {
   margin-top: 144px;
   padding: 0 90px;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    padding: 0 52px;
+    margin-top: 52px;
+  }
 }
 
 .title {
   text-align: center;
   margin-bottom: 80px;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    margin-bottom: 28px;
+  }
 }
 
 .contentWrapper {
   display: grid;
   grid-template-columns: auto 66%;
-  grid-row-gap: 80px;
+  grid-row-gap: 60px;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    grid-template-columns: auto 72%;
+    grid-row-gap: 20px;
+  }
 }
 
 .gridTitle {
-  font-size: 22px;
+  @include mixin.fluidFont(4, 22, 1920);
 }
 
 .subtitleWrapper {
@@ -24,4 +41,8 @@
 
 .gridSubtitle {
   margin-bottom: 37px;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    margin-bottom: 16px;
+  }
 }

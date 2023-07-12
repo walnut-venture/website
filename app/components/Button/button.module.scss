@@ -17,7 +17,7 @@
 }
 
 .sizeM {
-  font-size: 24px;
+  @include mixin.fluidFont(6, 24, 1920);
   
   @include mixin.media-w(1024) {
     padding: 10px 22px;

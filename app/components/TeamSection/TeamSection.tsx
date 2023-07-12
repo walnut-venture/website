@@ -31,7 +31,7 @@ export const TeamSection = () => {
           <Image className={styles.image} src={teamCTOSrc} alt="TeamSEO" />
         </div>
         <div className={styles.textContainer}>
-          <P>He has  more than 22 years of experience as a leader and startup builder in the banking industry. Raja is passionate about bringing ideas, technology and people together to deliver exceptional customer and investor value.</P>
+          <P>He has more than 22 years of experience as a leader and startup builder in the banking industry. Raja is passionate about bringing ideas, technology and people together to deliver exceptional customer and investor value.</P>
           <P>He is the ex-COO of a fintech banking app in CEE region, where he was responsible for building the startup from scratch covering front to back solutions. Raja has wide experience ranging from technology, operations, customer care, financial planning and regulatory setup.</P>
         </div>
       </section>
