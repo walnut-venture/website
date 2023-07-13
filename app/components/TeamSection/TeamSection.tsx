@@ -12,7 +12,9 @@ export const TeamSection = () => {
         <H2 className={styles.title}>Team</H2>
         <P className={styles.subtitle}>At walnut ventures, we believe in reshaping the financial landscape by embracing cutting-edge technologies, driving digital transformation, and fostering entrepreneurial spirit. With our deep industry expertise and forward-thinking approach, we are at the forefront of revolutionizing finance for the digital age.</P>
         <div className={styles.teamCard}>
-          <Image className={styles.image} src={teamSEOSrc} alt="TeamSEO" />
+          <div className={styles.imageWrapper}>
+            <Image className={styles.image} src={teamSEOSrc} alt="TeamSEO" fill />
+          </div>
           <div className={styles.teamTitle}>
             <H3>Julian Verocai</H3>
             <P>Julian is the founder and CEO of walnut venture studios.</P>
@@ -28,7 +30,9 @@ export const TeamSection = () => {
             <H3>Raja Kathiresan</H3>
             <P>Raja is the CTO of walnut venture studios and an entrepreneur in residence.</P>
           </div>
-          <Image className={styles.image} src={teamCTOSrc} alt="TeamSEO" />
+          <div className={styles.imageWrapper}>
+            <Image className={styles.image} src={teamCTOSrc} alt="TeamSEO" fill />
+          </div>
         </div>
         <div className={styles.textContainer}>
           <P>He has more than 22 years of experience as a leader and startup builder in the banking industry. Raja is passionate about bringing ideas, technology and people together to deliver exceptional customer and investor value.</P>

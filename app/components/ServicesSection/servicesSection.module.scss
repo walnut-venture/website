@@ -1,8 +1,16 @@
+@use "styles/mixin";
+@use "styles/breakpoints";
+
 .component {
   margin-top: 144px;
   padding: 0 90px;
   display: flex;
   flex-direction: column;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    padding: 0 52px;
+    margin-top: 52px;
+  }
 }
 
 .title {
@@ -11,7 +19,7 @@
 
 .servicesContainer {
   display: flex;
-  gap: 8.2%;
+  justify-content: space-between;
 }
 
 .servicesDetailContainer {
@@ -20,18 +28,34 @@
 }
 
 .servicesTitle {
-  font-size: 22px;
+  @include mixin.fluidFont(4, 22, 1920);
   margin: 80px 0 28px 0;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    margin: 28px 0 16px 0;
+  }
+}
+
+.imageWrapper {
+  width: 41%;
+  position: relative;
+  padding-top: calc(546 / 598 * 50%);
 }
 
 .image {
+  object-fit: cover;
   border-radius: 30px;
 }
 
 .cardsContainer {
   display: flex;
   flex-direction: column;
+  width: 50%;
   gap: 80px;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    gap: 16px;
+  }
 }
 
 .servicesCard {
@@ -52,6 +76,14 @@
   grid-column: 2;
 }
 
+.servicesDetailWrapper {
+  width: 50%;
+}
+
 .servicesSubtitle {
-  margin: 30px 0 36px 0;
+  margin: 30px 0;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    margin: 16px 0;
+  }
 }

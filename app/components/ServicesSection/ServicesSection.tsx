@@ -12,7 +12,9 @@ export const ServicesSection = () => {
         <H2 className={styles.title}>Services</H2>
         <P className={styles.servicesTitle}>Our services</P>
         <div className={styles.servicesContainer}>
-          <Image className={styles.image} src={ourServicesSrc} alt="OurServices" />
+          <div className={styles.imageWrapper}>
+            <Image className={styles.image} src={ourServicesSrc} alt="OurServices" fill />
+          </div>
           <div className={styles.cardsContainer}>
             <div className={styles.servicesCard}>
               <P className={styles.number}>01.</P>
@@ -28,12 +30,14 @@ export const ServicesSection = () => {
         </div>
         <P className={styles.servicesTitle}>Our services in detail</P>
         <div className={styles.servicesDetailContainer}>
-          <div>
+          <div className={styles.servicesDetailWrapper}>
             <P>Fast designing, building and scaling of disruptive and innovative business models in the financial sector</P>
             <P className={styles.servicesSubtitle}>Advising financial institutions on digital transformation strategies</P>
             <P>Company building and applying lean start-up methodology</P>
           </div>
-          <Image className={styles.image} src={ourServicesDetailSrc} alt="OurServices" />
+          <div className={styles.imageWrapper}>
+            <Image className={styles.image} src={ourServicesDetailSrc} alt="OurServices" fill />
+          </div>
         </div>
       </section>
     </MainContainer>
