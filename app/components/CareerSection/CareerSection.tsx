@@ -14,10 +14,18 @@ export const CareerSection = () => {
         <H2 className={styles.title}>Career</H2>
         <P className={styles.subtitle}>Hi there! We are glad you found us! We are looking for brilliant minds, who want to support  founders & corporate innovation heads from idea to scale.</P>
         <div className={styles.imagesContainer}>
-          <Image className={styles.image} src={firstImageSrc} alt="Image" />
-          <Image className={styles.image} src={secondImageSrc} alt="Image" />
-          <Image className={styles.image} src={thirdImageSrc} alt="Image" />
-          <Image className={styles.image} src={fourthImageSrc} alt="Image" />
+          <div className={styles.imageWrapper}>
+            <Image className={styles.image} src={firstImageSrc} alt="Image" />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image className={styles.image} src={secondImageSrc} alt="Image" />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image className={styles.image} src={thirdImageSrc} alt="Image" />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image className={styles.image} src={fourthImageSrc} alt="Image" />
+          </div>
         </div>
         <div className={styles.textContainer}>
           <P className={styles.text}>Are you passionate about building new ventures, new business models, products and leaving your mark on the industry? At walnut venture you will find a like minded team of highly motivated entrepreneurs.</P>
