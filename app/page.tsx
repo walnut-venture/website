@@ -8,7 +8,8 @@ import {
   ServicesSection,
   TeamSection,
   CareerSection,
-  ContactUsSection
+  ContactUsSection,
+  Footer
 } from "components";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
       <TeamSection />
       <CareerSection />
       <ContactUsSection />
+      <Footer />
     </main>
   );
 };

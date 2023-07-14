@@ -9,6 +9,8 @@
   background-color: var(--titleGray);
   color: var(--fontBlack);
   border-radius: 30px;
+  resize: none;
+  height: 100%;
 
   &::placeholder {
     color: var(--textGray);
@@ -18,4 +20,8 @@
     padding: 12px 20px;
     border-radius: 20px;
   }
+}
+
+.container {
+  height: 100%;
 }

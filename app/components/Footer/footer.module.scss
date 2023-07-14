@@ -1,0 +1,12 @@
+@use "styles/mixin";
+@use "styles/breakpoints";
+
+.component {
+  margin: 144px 0 68px 0;
+  display: flex;
+  justify-content: space-between;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    margin: 52px 0 28px 0;
+  }
+}

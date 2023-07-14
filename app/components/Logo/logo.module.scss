@@ -1,0 +1,8 @@
+@use "styles/mixin";
+@use "styles/breakpoints";
+
+.logo {
+  @include mixin.media-w(breakpoints.$laptop) {
+    width: 96px;
+  }
+}

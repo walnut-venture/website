@@ -27,9 +27,6 @@ export const Input: FunctionComponent<TProps> = ({
 
   return (
     <div className={containerClassName}>
-      <span className={styles.placeholderActive}>
-        {placeholder}
-      </span>
       <input
         className={inputClassName}
         placeholder={placeholder}

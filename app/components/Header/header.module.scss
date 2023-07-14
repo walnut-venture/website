@@ -14,9 +14,3 @@
   display: flex;
   justify-content: space-between;
 }
-
-.logo {
-  @include mixin.media-w(breakpoints.$laptop) {
-    width: 96px;
-  }
-}
