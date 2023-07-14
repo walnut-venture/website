@@ -3,5 +3,5 @@
 .component {
   @include mixin.fluidFont(8, 28, 1920);
   font-weight: 300;
-  line-height: 140%;
+  line-height: 120%;
 }

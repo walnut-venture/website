@@ -7,7 +7,8 @@ import {
   WhoWeAreSection,
   ServicesSection,
   TeamSection,
-  CareerSection
+  CareerSection,
+  ContactUsSection
 } from "components";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <ServicesSection />
       <TeamSection />
       <CareerSection />
+      <ContactUsSection />
     </main>
   );
 };

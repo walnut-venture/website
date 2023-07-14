@@ -1,0 +1,39 @@
+@use "styles/mixin";
+@use "styles/breakpoints";
+
+.component {
+  background-color: var(--titleGray);
+  border-radius: 40px;
+  margin-top: 144px;
+  padding: 90px 154px;
+  display: flex;
+  justify-content: center;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    padding: 40px 154px;
+    margin-top: 52px;
+  }
+}
+
+.contentWrapper {
+  @include mixin.maxWidth(1068px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    gap: 20px;
+  }
+}
+
+.title {
+  color: var(--bgBlack);
+  @include mixin.fluidFont(18, 50, 1920);
+  font-weight: 600;
+}
+
+.subtitle {
+  color: var(--bgBlack);
+  text-align: center;
+}

@@ -15,16 +15,16 @@ export const CareerSection = () => {
         <P className={styles.subtitle}>Hi there! We are glad you found us! We are looking for brilliant minds, who want to support  founders & corporate innovation heads from idea to scale.</P>
         <div className={styles.imagesContainer}>
           <div className={styles.imageWrapper}>
-            <Image className={styles.image} src={firstImageSrc} alt="Image" />
+            <Image className={styles.image} src={firstImageSrc} alt="Image" fill />
           </div>
           <div className={styles.imageWrapper}>
-            <Image className={styles.image} src={secondImageSrc} alt="Image" />
+            <Image className={styles.image} src={secondImageSrc} alt="Image" fill />
           </div>
           <div className={styles.imageWrapper}>
-            <Image className={styles.image} src={thirdImageSrc} alt="Image" />
+            <Image className={styles.image} src={thirdImageSrc} alt="Image" fill />
           </div>
           <div className={styles.imageWrapper}>
-            <Image className={styles.image} src={fourthImageSrc} alt="Image" />
+            <Image className={styles.image} src={fourthImageSrc} alt="Image" fill />
           </div>
         </div>
         <div className={styles.textContainer}>
