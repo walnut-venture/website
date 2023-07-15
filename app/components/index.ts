@@ -1,4 +1,5 @@
 export * from "./Containers";
+export * from "./Logo";
 export * from "./Header";
 export * from "./WalnutSection";
 export * from "./H1";
@@ -12,3 +13,9 @@ export * from "./JoinUsSection";
 export * from "./WhoWeAreSection";
 export * from "./ServicesSection";
 export * from "./TeamSection";
+export * from "./CareerSection";
+export * from "./ContactUsSection";
+export * from "./Input";
+export * from "./Textarea";
+export * from "./Footer";
+export * from "./Contacts";

@@ -2,3 +2,13 @@
   max-width: $width;
   width: 100%;
 }
+
+@mixin fluidFont($minFont, $maxFont, $maxWidth) {
+	font-size: calc((100vw - 320px)/(#{$maxWidth - 320}) * (#{$maxFont} - #{$minFont}) + #{$minFont + px});
+}
+
+@mixin media-w($width) {
+  @media only screen and (max-width: #{$width + px} ) {
+    @content;
+  }
+}

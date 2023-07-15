@@ -1,13 +1,13 @@
 import classNames from "classnames";
-import { FunctionComponent } from "react";
+import { FunctionComponent, ReactNode } from "react";
 
 import styles from './p.module.scss';
 
 type TProps = {
-  children: string;
+  children: string | ReactNode;
   isText?: boolean;
   className?: string;
-}
+};
 
 export const P: FunctionComponent<TProps> = ({
   children,

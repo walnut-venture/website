@@ -1,18 +1,17 @@
-import Image from "next/image";
-import { Button, Container, Navigation } from "components";
+import { Button, Container, Logo, Navigation } from "components";
 
 import styles from "./header.module.scss";
-import logoSrc from "./img/WalnutLogo.svg";
 
 export const Header = () => {
   return (
     <Container>
       <header className={styles.component}>
-        <Image src={logoSrc} alt="Logo" />
-        <Navigation />
+        <div className={styles.navContainer}>
+          <Logo />
+          <Navigation />
+        </div>
         <Button
-          size="m"
-          className={styles.headerBtn}
+          size="s"
         >
           Get in touch
         </Button>

@@ -1,5 +1,7 @@
+@use "styles/mixin";
+
 .component {
   color: var(--titleGray);
-  font-size: 42px;
+  @include mixin.fluidFont(6, 42, 1920);
   font-weight: 500;
 }
