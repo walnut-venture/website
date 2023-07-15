@@ -19,8 +19,16 @@
 .sizeM {
   @include mixin.fluidFont(6, 24, 1920);
   
-  @include mixin.media-w(1024) {
+  @include mixin.media-w(breakpoints.$laptop) {
+    font-size: 14px;
     padding: 10px 22px;
+  }
+
+  @include mixin.media-w(breakpoints.$laptop-s) {
+    font-size: 18px;
+    padding: 10px 0;
+    @include mixin.maxWidth(294px);
+    justify-content: center;
   }
 }
 
@@ -28,6 +36,14 @@
   @include mixin.fluidFont(6, 20, 1920);
 
   @include mixin.media-w(breakpoints.$laptop) {
+    font-size: 12px;
     padding: 10px 24px;
+  }
+
+  @include mixin.media-w(breakpoints.$laptop-s) {
+    font-size: 18px;
+    padding: 10px 0;
+    @include mixin.maxWidth(294px);
+    justify-content: center;
   }
 }
