@@ -29,7 +29,7 @@
 }
 
 .title {
-  color: var(--bgBlack);
+  color: var(--bgBlack) !important;
   @include mixin.fluidFont(18, 50, 1920);
   font-weight: 600;
 }

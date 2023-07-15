@@ -29,7 +29,9 @@ export const CareerSection = () => {
         </div>
         <div className={styles.textContainer}>
           <P className={styles.text}>Are you passionate about building new ventures, new business models, products and leaving your mark on the industry? At walnut venture you will find a like minded team of highly motivated entrepreneurs.</P>
-          <P className={styles.text}>We are always interested in hearing from new talents. Please send us your CV with a short intro e-mail to loremipsum@gmail.com.</P>
+          <P className={styles.text}>
+            We are always interested in hearing from new talents. Please send us your CV with a short intro e-mail to <a className={styles.email} href="mailto:loremipsum@gmail.com">loremipsum@gmail.com</a>.
+          </P>
         </div>
       </section>
     </Container>

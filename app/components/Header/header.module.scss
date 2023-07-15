@@ -13,4 +13,8 @@
   margin-right: 250px;
   display: flex;
   justify-content: space-between;
+
+  @include mixin.media-w(breakpoints.$laptop-m) {
+    margin-right: 80px;
+  }
 }

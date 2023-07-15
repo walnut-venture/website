@@ -12,5 +12,5 @@
   justify-content: space-between;
   font-size: 18px;
 
-  @include mixin.fluidFont(10, 20, 1920);
+  @include mixin.fluidFont(6, 20, 1920);
 }
