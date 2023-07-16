@@ -17,5 +17,12 @@
   @include mixin.media-w(breakpoints.$laptop) {
     padding: 12px 20px;
     border-radius: 20px;
+    font-size: 12px;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    font-size: 14px;
+    padding: 16px 20px;
+    border-radius: 20px;
   }
 }

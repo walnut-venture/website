@@ -9,6 +9,7 @@ interface IWindowSize {
 
 interface UseWindowSize extends IWindowSize {
   isLaptopS: boolean;
+  isMobile: boolean;
 }
 
 export function useWindowSize(): UseWindowSize {
@@ -24,7 +25,7 @@ export function useWindowSize(): UseWindowSize {
         const height = window.innerHeight;
         setWindowSize({
           width,
-          height,
+          height
         });
       };
       window.addEventListener("resize", handleSize);
@@ -36,6 +37,7 @@ export function useWindowSize(): UseWindowSize {
 
   return {
     ...windowSize,
-    isLaptopS: windowSize.width <= 700
+    isLaptopS: windowSize.width <= 700,
+    isMobile: windowSize.width >= 600
   };
 };

@@ -6,8 +6,8 @@
   padding: 0 90px;
 
   @include mixin.media-w(breakpoints.$laptop) {
-    padding: 0 52px;
-    margin-top: 52px;
+    padding: 0 35px;
+    margin-top: 60px;
   }
 }
 
@@ -29,10 +29,19 @@
     grid-template-columns: auto 72%;
     grid-row-gap: 20px;
   }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .gridTitle {
   @include mixin.fluidFont(4, 22, 1920);
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    font-size: 12px;
+  }
 }
 
 .subtitleWrapper {
@@ -44,5 +53,11 @@
 
   @include mixin.media-w(breakpoints.$laptop) {
     margin-bottom: 16px;
+    font-size: 18px;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    margin-bottom: 12px;
+    font-size: 20px;
   }
 }

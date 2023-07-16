@@ -17,3 +17,20 @@
     font-size: 12px;
   }
 }
+
+.burgerMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 88px;
+  width: 100%;
+}
+
+.burgerNav {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--bgWhite);
+}

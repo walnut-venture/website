@@ -11,6 +11,15 @@
   @include mixin.media-w(breakpoints.$laptop) {
     margin-top: 52px;
   }
+
+  @include mixin.media-w(breakpoints.$laptop-m) {
+    padding: 0 50px;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    margin-top: 60px;
+    padding: 0 35px;
+  }
 }
 
 .title {
@@ -24,6 +33,16 @@
 
   @include mixin.media-w(breakpoints.$laptop) {
     margin: 28px 0 20px 0;
+  }
+
+  @include mixin.media-w(breakpoints.$laptop-m) {
+    width: 90%;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    margin: 28px 0 24px 0;
+    width: 100%;
+    text-align: start;
   }
 }
 
@@ -42,6 +61,10 @@
   @include mixin.media-w(breakpoints.$laptop) {
     height: 348px;
   }
+}
+
+.flexContainer {
+  width: 100%;
 }
 
 .imageWrapper {
@@ -75,6 +98,10 @@
 .image {
   object-fit: cover;
   border-radius: 30px;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    border-radius: 16px;
+  }
 }
 
 .textContainer {
@@ -88,10 +115,18 @@
     margin-top: 28px;
     gap: 16px;
   }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    width: 100%;
+  }
 }
 
 .text {
   text-align: center;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    text-align: start;
+  }
 }
 
 .email {

@@ -11,6 +11,14 @@
   @include mixin.media-w(breakpoints.$laptop) {
     padding: 0 50px;
   }
+
+  @include mixin.media-w(breakpoints.$laptop-s) {
+    padding: 0 20px;
+  }
+
+  @include mixin.media-w(breakpoints.$laptop-m) {
+    padding: 0;
+  }
 }
 
 .mainContainer {
@@ -22,5 +30,9 @@
   
   @include mixin.media-w(breakpoints.$laptop) {
     padding: 0 112px;
+  }
+
+  @include mixin.media-w(breakpoints.$laptop-m) {
+    padding: 0;
   }
 }
