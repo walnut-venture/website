@@ -81,3 +81,7 @@
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 3;
 }
+
+.button {
+  @include mixin.maxWidth(294px);
+}

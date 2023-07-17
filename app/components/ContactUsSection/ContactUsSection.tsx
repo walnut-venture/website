@@ -5,7 +5,7 @@ import styles from "./contactUsSection.module.scss";
 export const ContactUsSection = () => {
   return (
     <Container>
-      <section className={styles.component}>
+      <section id="contact-us" className={styles.component}>
         <div className={styles.contentWrapper}>
           <H2 className={styles.title}>Interested in working together?</H2>
           <P className={styles.subtitle}>Contact us and let&apos;s talk about how we can support your innovation journey! Our team is happy to answer your questions.</P>

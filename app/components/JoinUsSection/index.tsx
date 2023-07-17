@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { MainContainer, H2, P, ArrowButton } from "components";
 import { useWindowSize } from "hooks";
 
@@ -22,9 +23,11 @@ const JoinUsSection = () => {
               <div className={styles.subtitleWrapper}>
                 <P>Whether you are a financial institution looking to innovate or a fintech start-up with a ground-breaking idea, walnut venture studios is your trusted partner in building ventures that disrupt the financial sector, drive growth, and transform the way finance works.</P>
                 <P>Contact us today to explore how we can collaborate and unlock the full potential of your business. Together, let&apos;s shape the future of finance.</P>
-                <ArrowButton>
-                  Join
-                </ArrowButton>
+                <Link href="#contact-us">
+                  <ArrowButton>
+                    Join
+                  </ArrowButton>
+                </Link>
               </div>
               <div className={styles.imageWrapper}>
                 <Image className={styles.image} src={imageSrc} alt="Image" fill />
@@ -43,9 +46,11 @@ const JoinUsSection = () => {
               <div className={styles.subtitleWrapper}>
                 <P>Whether you are a financial institution looking to innovate or a fintech start-up with a ground-breaking idea, walnut venture studios is your trusted partner in building ventures that disrupt the financial sector, drive growth, and transform the way finance works.</P>
                 <P className={styles.subtitle}>Contact us today to explore how we can collaborate and unlock the full potential of your business. Together, let&apos;s shape the future of finance.</P>
-                <ArrowButton>
-                  Join
-                </ArrowButton>
+                <Link href="#contact-us">
+                  <ArrowButton>
+                    Join
+                  </ArrowButton>
+                </Link>
               </div>
             </div>
           </section>

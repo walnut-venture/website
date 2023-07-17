@@ -13,7 +13,7 @@ const ServicesSection = () => {
 
   return (
     <MainContainer>
-      <section className={styles.component}>
+      <section id="services" className={styles.component}>
         <H2 className={styles.title}>Services</H2>
         <P className={styles.servicesTitle}>Our services</P>
         <div className={styles.servicesContainer}>

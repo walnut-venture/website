@@ -13,7 +13,7 @@ const CareerSection = () => {
 
   return (
     <Container>
-      <section className={styles.component}>
+      <section id="career" className={styles.component}>
         <H2 className={styles.title}>Career</H2>
         <P className={styles.subtitle}>Hi there! We are glad you found us! We are looking for brilliant minds, who want to support  founders & corporate innovation heads from idea to scale.</P>
         {

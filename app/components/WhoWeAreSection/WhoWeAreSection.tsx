@@ -5,7 +5,7 @@ import styles from "./whoWeAreSection.module.scss";
 export const WhoWeAreSection = () => {
   return (
     <MainContainer>
-      <section className={styles.component}>
+      <section id="who-we-are" className={styles.component}>
         <H2 className={styles.title}>Who we are?</H2>
         <div className={styles.contentWrapper}>
           <P className={styles.gridTitle}>Our vision</P>

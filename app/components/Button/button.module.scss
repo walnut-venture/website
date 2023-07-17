@@ -16,6 +16,12 @@
   white-space: nowrap;
 }
 
+.component:hover {
+  background-color: var(--btnHover);
+  color: var(--textHover);
+  transition: 0.2s ease-in;
+}
+
 .sizeM {
   @include mixin.fluidFont(6, 24, 1920);
   

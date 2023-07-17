@@ -7,22 +7,22 @@ export const Navigation = () => {
     <nav className={styles.component}>
       <ul className={styles.nav}>
         <li>
-          <Link href="#">
+          <Link href="#who-we-are" className={styles.link}>
             Who we are
           </Link>
         </li>
         <li>
-          <Link href="#">
+          <Link href="#services" className={styles.link}>
             Services
           </Link>
         </li>
         <li>
-          <Link href="#">
+          <Link href="#team" className={styles.link}>
             Team
           </Link>
         </li>
         <li>
-          <Link href="#">
+          <Link href="#career" className={styles.link}>
             Career
           </Link>
         </li>

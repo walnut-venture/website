@@ -6,6 +6,8 @@
   --bgDark: #222222;
   --bgWhite: #FFFFFF;
   --fontBlack: #303030;
+  --btnHover: #DAEBE9;
+  --textHover: #025C51;
 }
 
 *, *:after, *:before {

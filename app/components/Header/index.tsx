@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useContext, useRef } from "react";
 import { Button, Container, Logo, Navigation } from "components";
 import { useWindowSize, useClickOutside } from "hooks";
@@ -30,11 +31,13 @@ const Header = () => {
                 <Logo />
                 <Navigation />
               </div>
-              <Button
-                size="s"
-              >
-                Get in touch
-              </Button>
+              <Link href="#contact-us">
+                <Button
+                  size="s"
+                >
+                  Get in touch
+                </Button>
+              </Link>
             </>
             :
             <>
