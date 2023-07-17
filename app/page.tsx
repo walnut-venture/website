@@ -1,31 +1,54 @@
+"use client";
+
+import { useState } from "react";
+import Header from "components/Header";
+import DrivingInnovationSection from "components/DrivingInnovationSection";
+import JoinUsSection from "components/JoinUsSection";
+import ServicesSection from "components/ServicesSection";
+import TeamSection from "components/TeamSection";
+import CareerSection from "components/CareerSection";
+
 import {
-  Header,
   WalnutContent,
   WalnutBackground,
-  DrivingInnovationSection,
-  JoinUsSection,
   WhoWeAreSection,
-  ServicesSection,
-  TeamSection,
-  CareerSection,
   ContactUsSection,
   Footer
 } from "components";
+import { BurgerContext } from "context";
 
 export default function Home() {
+  const [ activeBurger, setActiveBurger ] = useState(false);
+
   return (
-    <main>
-      <Header />
-      <WalnutBackground />
-      <WalnutContent />
-      <DrivingInnovationSection />
-      <JoinUsSection />
-      <WhoWeAreSection />
-      <ServicesSection />
-      <TeamSection />
-      <CareerSection />
-      <ContactUsSection />
-      <Footer />
-    </main>
+    <BurgerContext.Provider value={{ activeBurger, setActiveBurger }}>
+      <main>
+        {
+          activeBurger ?
+            <style jsx global>{`
+              body {
+                overflow-y: hidden;
+              }
+          `}</style>
+            :
+            <style jsx global>{`
+              body {
+                overflow-y: auto;
+              }
+          `}</style>
+        }
+        <Header />
+        <WalnutBackground />
+        <WalnutContent />
+        <DrivingInnovationSection />
+        <JoinUsSection />
+        <WhoWeAreSection />
+        <ServicesSection />
+        <TeamSection />
+        <CareerSection />
+        <ContactUsSection />
+        <Footer />
+      </main>
+    </BurgerContext.Provider>
   );
 };

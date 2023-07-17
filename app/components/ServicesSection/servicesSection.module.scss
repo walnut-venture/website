@@ -11,6 +11,11 @@
     padding: 0 52px;
     margin-top: 52px;
   }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    padding: 0 26px;
+    margin-top: 60px;
+  }
 }
 
 .title {
@@ -20,11 +25,21 @@
 .servicesContainer {
   display: flex;
   justify-content: space-between;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    flex-direction: column;
+    gap: 24px;
+  }
 }
 
 .servicesDetailContainer {
   display: flex;
   gap: 13.8%;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    flex-direction: column;
+    gap: 24px;
+  }
 }
 
 .servicesTitle {
@@ -33,6 +48,7 @@
 
   @include mixin.media-w(breakpoints.$laptop) {
     margin: 28px 0 16px 0;
+    font-size: 12px;
   }
 }
 
@@ -40,11 +56,20 @@
   width: 41%;
   position: relative;
   padding-top: calc(546 / 598 * 50%);
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    width: 100%;
+    padding-top: calc(546 / 598 * 100%);
+  }
 }
 
 .image {
   object-fit: cover;
   border-radius: 30px;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    border-radius: 16px;
+  }
 }
 
 .cardsContainer {
@@ -56,6 +81,11 @@
   @include mixin.media-w(breakpoints.$laptop) {
     gap: 16px;
   }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    width: 100%;
+    gap: 28px;
+  }
 }
 
 .servicesCard {
@@ -64,20 +94,46 @@
   grid-template-rows: repeat(2, auto);
   grid-column-gap: 40px;
   grid-row-gap: 28px;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    grid-column-gap: 20px;
+    grid-row-gap: 16px;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+  }
 }
 
 .number {
-  font-size: 20px;
+  @include mixin.fluidFont(4, 22, 1920);
   display: flex;
   align-items: center;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    font-size: 12px;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    font-size: 16px;
+  }
 }
 
 .subtitle {
   grid-column: 2;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    grid-column: 1 / 3;
+  }
 }
 
 .servicesDetailWrapper {
   width: 50%;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    width: 100%;
+  }
 }
 
 .servicesSubtitle {

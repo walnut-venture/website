@@ -1,4 +1,5 @@
 @use "styles/mixin";
+@use "styles/breakpoints";
 
 .component {
   width: 66.8%;
@@ -10,7 +11,26 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  font-size: 18px;
-
   @include mixin.fluidFont(6, 20, 1920);
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    font-size: 12px;
+  }
+}
+
+.burgerMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 88px;
+  width: 100%;
+}
+
+.burgerNav {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--bgWhite);
 }

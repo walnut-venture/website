@@ -13,19 +13,38 @@
     margin-top: 52px;
     gap: 28px;
   }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    padding: 0 35px;
+    margin-top: 60px;
+    gap: 12px;
+  }
 }
 
 .title {
   text-align: center;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    margin-bottom: 16px;
+  }
 }
 
 .subtitle {
   text-align: center;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    text-align: start;
+    margin-bottom: 12px;
+  }
 }
 
 .teamCard {
   display: flex;
   justify-content: space-between;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    flex-direction: column;
+  }
 }
 
 .teamTitle {
@@ -38,17 +57,31 @@
   @include mixin.media-w(breakpoints.$laptop) {
     gap: 16px;
   }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    width: 100%;
+    margin-top: 24px;
+  }
 }
 
 .imageWrapper {
   width: 41%;
   position: relative;
   padding-top: calc(546 / 598 * 50%);
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    width: 100%;
+    padding-top: calc(546 / 598 * 100%);
+  }
 }
 
 .image {
   object-fit: cover;
   border-radius: 30px;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    border-radius: 16px;
+  }
 }
 
 .textContainer {
@@ -58,5 +91,9 @@
 
   @include mixin.media-w(breakpoints.$laptop) {
     gap: 16px;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    gap: 12px;
   }
 }

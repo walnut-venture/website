@@ -14,7 +14,7 @@ type HTMLButtonProps = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>
 
 type Props = {
   children?: ReactNode;
-  size?: "m" | "s";
+  size?: "m" | "s" | "none";
   className?: string;
 } & HTMLButtonProps;
 
@@ -26,7 +26,8 @@ export const Button = forwardRef<HTMLButtonElement, Props>(({
 }, ref) => {
   const buttonSize = classNames({
     [styles.sizeM]: size === "m",
-    [styles.sizeS]: size === "s"
+    [styles.sizeS]: size === "s",
+    [styles.sizeNone]: size === "none"
   });
 
   const buttonClassName = classNames(

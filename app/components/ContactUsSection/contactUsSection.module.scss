@@ -14,6 +14,16 @@
     margin-top: 52px;
     border-radius: 20px;
   }
+
+  @include mixin.media-w(breakpoints.$laptop-m) {
+    padding: 28px 48px;
+    margin-top: 60px;
+    border-radius: 0;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    padding: 28px 40px;
+  }
 }
 
 .contentWrapper {
@@ -32,6 +42,11 @@
   color: var(--bgBlack) !important;
   @include mixin.fluidFont(18, 50, 1920);
   font-weight: 600;
+  text-align: center;
+  
+  @include mixin.media-w(breakpoints.$laptop) {
+    font-size: 36px;
+  }
 }
 
 .subtitle {
@@ -47,6 +62,12 @@
   @include mixin.media-w(breakpoints.$laptop) {
     gap: 23px;
   }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 
 .inputWrapper {
@@ -58,8 +79,17 @@
   @include mixin.media-w(breakpoints.$laptop) {
     gap: 16px;
   }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    width: 100%;
+    gap: 12px;
+  }
 }
 
 .textareaWrapper {
   width: 50%;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    width: 100%;
+  }
 }

@@ -11,11 +11,21 @@
     padding: 52px;
     margin-top: 28px;
   }
+
+  @include mixin.media-w(breakpoints.$laptop-m) {
+    padding: 28px 48px;
+    margin-top: 0;
+    border-radius: 0;
+  }
 }
 
 .titleWrapper {
   display: flex;
   justify-content: flex-end;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    justify-content: flex-start;
+  }
 }
 
 .title {
@@ -26,17 +36,31 @@
   @include mixin.media-w(breakpoints.$laptop) {
     margin-bottom: 28px;
   }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    width: 100%;
+    margin: 24px 0 16px 0;
+  }
 }
 
 .contentWrapper {
   display: flex;
   justify-content: space-between;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    flex-direction: column;
+  }
 }
 
 .imageWrapper {
   width: 41%;
   position: relative;
   padding-top: calc(546 / 598 * 50%);
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    width: 100%;
+    padding-top: calc(546 / 598 * 100%);
+  }
 }
 
 .subtitleWrapper {
@@ -50,13 +74,25 @@
     width: 51%;
     gap: 16px;
   }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    width: 100%;
+    gap: 12px;
+    align-items: center;
+  }
 }
 
-.button {
-  margin-top: 24px;
+.subtitle {
+  @include mixin.media-w(breakpoints.$mobile) {
+    margin-bottom: 12px;
+  }
 }
 
 .image {
   object-fit: cover;
   border-radius: 30px;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    border-radius: 16px;
+  }
 }

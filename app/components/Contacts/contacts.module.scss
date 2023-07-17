@@ -11,6 +11,10 @@
   @include mixin.media-w(breakpoints.$laptop) {
     gap: 12px;
   }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    align-items: center;
+  }
 }
 
 .title {

@@ -1,11 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import { H2, MainContainer, P, H3 } from "components";
+import { useWindowSize } from "hooks";
 
 import styles from "./servicesSection.module.scss";
 import ourServicesSrc from "./img/ourSevicesImage.jpg";
 import ourServicesDetailSrc from "./img/ourSevicesDetailImage.jpg";
 
-export const ServicesSection = () => {
+const ServicesSection = () => {
+  const { isMobile } = useWindowSize();
+
   return (
     <MainContainer>
       <section className={styles.component}>
@@ -29,17 +34,33 @@ export const ServicesSection = () => {
           </div>
         </div>
         <P className={styles.servicesTitle}>Our services in detail</P>
-        <div className={styles.servicesDetailContainer}>
-          <div className={styles.servicesDetailWrapper}>
-            <P>Fast designing, building and scaling of disruptive and innovative business models in the financial sector</P>
-            <P className={styles.servicesSubtitle}>Advising financial institutions on digital transformation strategies</P>
-            <P>Company building and applying lean start-up methodology</P>
-          </div>
-          <div className={styles.imageWrapper}>
-            <Image className={styles.image} src={ourServicesDetailSrc} alt="OurServices" fill />
-          </div>
-        </div>
+        {
+          isMobile ?
+            <div className={styles.servicesDetailContainer}>
+              <div className={styles.servicesDetailWrapper}>
+                <P>Fast designing, building and scaling of disruptive and innovative business models in the financial sector</P>
+                <P className={styles.servicesSubtitle}>Advising financial institutions on digital transformation strategies</P>
+                <P>Company building and applying lean start-up methodology</P>
+              </div>
+              <div className={styles.imageWrapper}>
+                <Image className={styles.image} src={ourServicesDetailSrc} alt="OurServices" fill />
+              </div>
+            </div>
+            :
+            <div className={styles.servicesDetailContainer}>
+              <div className={styles.servicesDetailWrapper}>
+                <div className={styles.imageWrapper}>
+                  <Image className={styles.image} src={ourServicesDetailSrc} alt="OurServices" fill />
+                </div>
+                <P className={styles.servicesSubtitle}>Fast designing, building and scaling of disruptive and innovative business models in the financial sector</P>
+                <P className={styles.servicesSubtitle}>Advising financial institutions on digital transformation strategies</P>
+                <P>Company building and applying lean start-up methodology</P>
+              </div>
+            </div>
+        }
       </section>
     </MainContainer>
   );
 };
+
+export default ServicesSection;
