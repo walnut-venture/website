@@ -14,9 +14,9 @@ export const Arrowright = ({ isHovered }: Props) => {
   >
     <path d="M19.7398 6.42999L27.8332 12.5L19.7398 18.57M5.1665 12.5H27.6065"
       stroke={isHovered ? COLORS.GREEN : COLORS.GRAY}
-      stroke-width="1.5"
-      stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"/>
+      strokeWidth="1.5"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"/>
   </svg>;
 };

@@ -13,3 +13,4 @@ export * from "./Input";
 export * from "./Textarea";
 export * from "./Footer";
 export * from "./Contacts";
+export * from "./ShowMore";

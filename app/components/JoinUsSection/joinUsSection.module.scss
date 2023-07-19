@@ -2,7 +2,7 @@
 @use "styles/breakpoints";
 
 .component {
-  background-color: var(--titleGray);
+  background-color: var(--bgWhite);
   padding: 90px;
   margin-top: 80px;
   border-radius: 40px;
@@ -95,4 +95,10 @@
   @include mixin.media-w(breakpoints.$mobile) {
     border-radius: 16px;
   }
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

@@ -46,7 +46,7 @@ const JoinUsSection = () => {
               <div className={styles.subtitleWrapper}>
                 <P>Whether you are a financial institution looking to innovate or a fintech start-up with a ground-breaking idea, walnut venture studios is your trusted partner in building ventures that disrupt the financial sector, drive growth, and transform the way finance works.</P>
                 <P className={styles.subtitle}>Contact us today to explore how we can collaborate and unlock the full potential of your business. Together, let&apos;s shape the future of finance.</P>
-                <Link href="#contact-us">
+                <Link href="#contact-us" className={styles.button}>
                   <ArrowButton>
                     Join
                   </ArrowButton>
