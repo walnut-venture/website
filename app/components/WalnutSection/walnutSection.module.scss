@@ -83,5 +83,7 @@
 }
 
 .button {
-  @include mixin.maxWidth(294px);
+  @include mixin.media-w(breakpoints.$laptop-s) {
+    @include mixin.maxWidth(294px);
+  }
 }

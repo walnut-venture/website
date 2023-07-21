@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { H2, MainContainer, P, H3 } from "components";
+import { H2, MainContainer, P, H3, ListItem } from "components";
 import { useWindowSize } from "hooks";
 
 import styles from "./servicesSection.module.scss";
@@ -15,7 +15,9 @@ const ServicesSection = () => {
     <MainContainer>
       <section id="services" className={styles.component}>
         <H2 className={styles.title}>Services</H2>
-        <P className={styles.servicesTitle}>Our services</P>
+        <div className={styles.listContainer}>
+          <ListItem>Our services</ListItem>
+        </div>
         <div className={styles.servicesContainer}>
           <div className={styles.imageWrapper}>
             <Image className={styles.image} src={ourServicesSrc} alt="OurServices" fill />
@@ -33,7 +35,9 @@ const ServicesSection = () => {
             </div>
           </div>
         </div>
-        <P className={styles.servicesTitle}>Our services in detail</P>
+        <div className={styles.listContainer}>
+          <ListItem>Our services in detail</ListItem>
+        </div>
         {
           isMobile ?
             <div className={styles.servicesDetailContainer}>

@@ -36,14 +36,6 @@
   }
 }
 
-.gridTitle {
-  @include mixin.fluidFont(4, 22, 1920);
-
-  @include mixin.media-w(breakpoints.$laptop) {
-    font-size: 12px;
-  }
-}
-
 .subtitleWrapper {
   grid-column: 2;
 }

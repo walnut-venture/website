@@ -18,7 +18,9 @@
     "eslint-config-next": "13.4.7",
     "next": "latest",
     "react": "18.2.0",
+    "react-cookie-consent": "^8.0.1",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.45.2",
     "sass": "^1.63.6",
     "typescript": "5.1.6"
   },

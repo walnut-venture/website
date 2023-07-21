@@ -42,13 +42,11 @@
   }
 }
 
-.servicesTitle {
-  @include mixin.fluidFont(4, 22, 1920);
+.listContainer {
   margin: 80px 0 28px 0;
 
-  @include mixin.media-w(breakpoints.$laptop) {
-    margin: 28px 0 16px 0;
-    font-size: 12px;
+  @include mixin.media-w(breakpoints.$mobile) {
+    margin: 28px 0 16px 16px;
   }
 }
 
