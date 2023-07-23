@@ -30,6 +30,7 @@
 }
 
 .title {
+  padding: 0 20px;
   margin: 97px 0 40px 0;
 
   @include mixin.media-w(breakpoints.$laptop) {

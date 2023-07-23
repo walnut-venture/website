@@ -8,6 +8,7 @@
   --fontBlack: #303030;
   --btnHover: #DAEBE9;
   --textHover: #025C51;
+  --inputError:#FF2435;
 }
 
 *, *:after, *:before {

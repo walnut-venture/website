@@ -30,7 +30,6 @@
   @include mixin.maxWidth(1068px);
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 40px;
 
   @include mixin.media-w(breakpoints.$laptop) {
@@ -54,7 +53,7 @@
   text-align: center;
 }
 
-.form {
+.container {
   width: 100%;
   display: flex;
   gap: 40px;
@@ -67,6 +66,18 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+  }
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    gap: 20px;
   }
 }
 

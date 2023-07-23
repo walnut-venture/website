@@ -5,19 +5,18 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 70px;
+  height: 80px;
   display: flex;
-  background-color: var(--bgGray);
-  justify-content: center;
+  background-color: var(--bgWhite);
   align-items: center;
   gap: 28%;
   width: 100%;
-  padding: 0 60px;
   z-index: 999;
-  border-top: 1px solid var(--borderGray);
-  
-  @include mixin.media-w(breakpoints.$laptop-l) {
-    padding: 0 40px;
+  border-top: 1px solid var(--btnGreen);
+  padding: 0 70px;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    padding: 0 50px;
   }
 
   @include mixin.media-w(breakpoints.$laptop-s) {
@@ -26,21 +25,29 @@
 }
 
 .button {
-  background-color: var(--ctaYellow);
-  color: var(--fontBlack);
-  font-weight: 600;
-  padding: 10.5px 19.5px;
+  background-color: var(--btnGreen);
+  color: var(--titleGray);
+  font-weight: 500;
+  padding: 14px 30px;
   border: none;
-  border-radius: 44px;
-  font-size: 16px;
+  border-radius: 30px;
+  @include mixin.fluidFont(6, 20, 1920);
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    font-size: 12px;
+    padding: 10px 24px;
+  }
 }
 
 .button:hover {
   transition: 0.2s ease-in;
   cursor: pointer;
-  background-color: var(--bgHoverGray);
+  background-color: var(--btnHover);
+  color: var(--textHover);
 }
 
-.button:active {
-  background-color: var(--borderGray);
+.title {
+  @include mixin.media-w(breakpoints.$laptop-l) {
+    font-size: 14px;
+  }
 }
