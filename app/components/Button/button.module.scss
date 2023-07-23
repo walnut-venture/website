@@ -32,6 +32,12 @@
   }
 }
 
+.sizeM:hover {
+  background-color: var(--btnHover);
+  color: var(--textHover);
+  transition: 0.2s ease-in;
+}
+
 .sizeS {
   @include mixin.fluidFont(6, 20, 1920);
 
@@ -48,8 +54,30 @@
   }
 }
 
+.sizeS:hover {
+  background-color: var(--btnHover);
+  color: var(--textHover);
+  transition: 0.2s ease-in;
+}
+
 .sizeNone {
   padding: 0;
   border-radius: 0;
   background-color: transparent;
+}
+
+.sizeH {
+  background-color: transparent;
+  padding: 0;
+  color: var(--textGray);
+  font-size: 18px;
+  border-radius: 0;
+  border-bottom: 2px solid var(--textGray);
+  font-weight: 300;
+}
+
+.sizeH:hover {
+  border-bottom: 2px solid var(--bgWhite);
+  color: var(--bgWhite);
+  transition: 0.2s ease-in;
 }

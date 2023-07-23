@@ -13,7 +13,8 @@ import {
   WalnutBackground,
   WhoWeAreSection,
   ContactUsSection,
-  Footer
+  Footer,
+  CookieBanner
 } from "components";
 import { BurgerContext } from "context";
 
@@ -48,6 +49,7 @@ export default function Home() {
         <CareerSection />
         <ContactUsSection />
         <Footer />
+        <CookieBanner />
       </main>
     </BurgerContext.Provider>
   );

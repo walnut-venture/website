@@ -30,6 +30,7 @@
 }
 
 .title {
+  padding: 0 20px;
   margin: 97px 0 40px 0;
 
   @include mixin.media-w(breakpoints.$laptop) {
@@ -80,4 +81,10 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 3;
+}
+
+.button {
+  @include mixin.media-w(breakpoints.$laptop-s) {
+    @include mixin.maxWidth(294px);
+  }
 }

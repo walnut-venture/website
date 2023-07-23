@@ -1,20 +1,25 @@
-import Image from "next/image";
 import { FunctionComponent } from "react";
 import { Button } from "./Button";
-
-import arrowRightSrc from "./img/Arrowright.svg";
+import { useToggle } from "hooks";
+import { Arrowright } from "./img/Arrowright";
 
 type TProps = {
   children: String;
 };
 
 export const ArrowButton: FunctionComponent<TProps> = ({ children }) => {
+  const [ isHovered, toggleHover ] = useToggle();
+
   return (
     <Button
       size="m"
+      onMouseEnter={toggleHover}
+      onMouseLeave={toggleHover}
     >
       {children}
-      <Image src={arrowRightSrc} alt="Arrow" />
+      <Arrowright
+        isHovered={isHovered}
+      />
     </Button>
   );
 };

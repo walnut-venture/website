@@ -268,10 +268,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:*":
+  version: 20.4.4
+  resolution: "@types/node@npm:20.4.4"
+  checksum: 43f3c4a8acc38ae753e15a0e79bae0447d255b3742fa87f8e065d7b9d20ecb0e03d6c5b46c00d5d26f4552160381a00255f49205595a8ee48c2423e00263c930
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:20.3.3":
   version: 20.3.3
   resolution: "@types/node@npm:20.3.3"
   checksum: 7a0d00800451ca8cd8df63a8cc218c697edadb3143bf46cd6afeb974542a6a1665c3679459be0016c29216ccfed6616b7e55851747527dfa71c5608d9157528c
+  languageName: node
+  linkType: hard
+
+"@types/nodemailer@npm:^6.4.8":
+  version: 6.4.8
+  resolution: "@types/nodemailer@npm:6.4.8"
+  dependencies:
+    "@types/node": "*"
+  checksum: 3cc9b6a0e54f25a1b36124df413964ff5a69e8dc4558c5dfc06818917313a50f4dbfe31fc9190e4270d07a0f8678474da24a2eae42f907933ea81d983b4772d4
   languageName: node
   linkType: hard
 
@@ -2224,6 +2240,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"js-cookie@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "js-cookie@npm:2.2.1"
+  checksum: 9b1fb980a1c5e624fd4b28ea4867bb30c71e04c4484bb3a42766344c533faa684de9498e443425479ec68609e96e27b60614bfe354877c449c631529b6d932f2
+  languageName: node
+  linkType: hard
+
 "js-tokens@npm:^3.0.0 || ^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -2651,6 +2674,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nodemailer@npm:^6.9.4":
+  version: 6.9.4
+  resolution: "nodemailer@npm:6.9.4"
+  checksum: 1a61039c9c6041ee9ed423c7fa3685cb300679f1ef8dcfd912fc58d9b8c429c34ac1187eebd4d86baf7158222f6e3a1ea2b4fd2a29630fb9ef0027cef46e90bb
+  languageName: node
+  linkType: hard
+
 "nopt@npm:^6.0.0":
   version: 6.0.0
   resolution: "nopt@npm:6.0.0"
@@ -2983,6 +3013,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-cookie-consent@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "react-cookie-consent@npm:8.0.1"
+  dependencies:
+    js-cookie: ^2.2.1
+  peerDependencies:
+    react: ">=16"
+  checksum: c99f3e40e3091c439956498158b5b8906cce170763836d6fade98a06ce667eca25aaf3bc407e10a6fb72fc44e5178a2ebf14cbbe4e1b5684a74b7d7f484bd359
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
@@ -2992,6 +3033,15 @@ __metadata:
   peerDependencies:
     react: ^18.2.0
   checksum: 7d323310bea3a91be2965f9468d552f201b1c27891e45ddc2d6b8f717680c95a75ae0bc1e3f5cf41472446a2589a75aed4483aee8169287909fcd59ad149e8cc
+  languageName: node
+  linkType: hard
+
+"react-hook-form@npm:^7.45.2":
+  version: 7.45.2
+  resolution: "react-hook-form@npm:7.45.2"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+  checksum: 023ca091f2bb1f3117d8a694871874c4a344f02c795c6a08b8f78b09b78444451375fbe921d7db4ba7cd78909b1fa5e92d19efd2bfedc43124fdc44540ac036c
   languageName: node
   linkType: hard
 
@@ -3692,6 +3742,7 @@ __metadata:
   resolution: "walnut-venture-studios@workspace:."
   dependencies:
     "@types/node": 20.3.3
+    "@types/nodemailer": ^6.4.8
     "@types/react": 18.2.14
     "@types/react-dom": 18.2.6
     classnames: ^2.3.2
@@ -3699,8 +3750,11 @@ __metadata:
     eslint-config-next: 13.4.7
     husky: ^8.0.0
     next: latest
+    nodemailer: ^6.9.4
     react: 18.2.0
+    react-cookie-consent: ^8.0.1
     react-dom: 18.2.0
+    react-hook-form: ^7.45.2
     sass: ^1.63.6
     typescript: 5.1.6
   languageName: unknown

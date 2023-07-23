@@ -34,3 +34,13 @@
   font-weight: 500;
   color: var(--bgWhite);
 }
+
+.button {
+  @include mixin.maxWidth(294px);
+}
+
+.link:hover {
+  border-bottom: 2px solid var(--bgWhite);;
+  color: var(--bgWhite);
+  transition: 0.2s ease-in;
+}
