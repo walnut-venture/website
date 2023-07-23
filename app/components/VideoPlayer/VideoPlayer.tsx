@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./videoPlayer.module.scss";
 
 const videoUrls = [
   "/videos/globalStockMarkets.mp4",
@@ -17,14 +18,13 @@ export const VideoPlayer = () => {
   };
 
   return (
-    <div>
-      <video
-        src={url}
-        muted
-        playsInline
-        autoPlay
-        onEnded={playNextVideo}
-      />
-    </div>
+    <video
+      src={url}
+      muted
+      playsInline
+      autoPlay
+      onEnded={playNextVideo}
+      className={styles.component}
+    />
   );
 };
