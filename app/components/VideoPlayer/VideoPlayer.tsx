@@ -1,53 +1,30 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import styles from "./videoPlayer.module.scss";
 
-type Props = {
-  videoUrls: string[];
-}
+const videoUrls = [
+  "/videos/globalStockMarkets.mp4",
+  "/videos/greenSmock.mp4",
+  "/videos/walnutCracking.mp4"
+];
 
-export const VideoPlayer = ({ videoUrls }: Props) => {
-  const [ currentVideoIndex, setCurrentVideoIndex ] = useState(0);
-  const videoRef = useRef(null);
+export const VideoPlayer = () => {
+  const [currentVideo, setCurrentVideo] = useState(0);
+  const [url, setUrl] = useState(videoUrls[currentVideo]);
 
   const playNextVideo = () => {
-    if (currentVideoIndex < videoUrls.length - 1) {
-      setCurrentVideoIndex((prevIndex) => prevIndex + 1);
-    } else {
-      setCurrentVideoIndex(0);
-    }
+    const nextVideoIdx = (currentVideo + 1) % videoUrls.length;
+    setCurrentVideo(nextVideoIdx);
+    setUrl(videoUrls[nextVideoIdx]);
   };
 
-  useEffect(() => {
-    const videoElement = videoRef.current;
-
-    const onVideoEnded = () => {
-      playNextVideo();
-    };
-
-    videoElement.addEventListener("ended", onVideoEnded);
-
-    return () => {
-      videoElement.removeEventListener("ended", onVideoEnded);
-    };
-  }, [currentVideoIndex]);
-
-  useEffect(() => {
-    videoRef.current.play();
-  }, []);
-
   return (
-    <div>
-      {videoUrls.map((url, index) => (
-        <video
-          key={index}
-          src={url}
-          autoPlay={index === currentVideoIndex}
-          loop
-          muted
-          playsInline
-          style={{ display: index === currentVideoIndex ? "block" : "none" }}
-          ref={videoRef}
-        />
-      ))}
-    </div>
+    <video
+      src={url}
+      muted
+      playsInline
+      autoPlay
+      onEnded={playNextVideo}
+      className={styles.component}
+    />
   );
 };

@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { BurgerContext } from "context";
 import { VideoPlayer } from "components";
-import { videoUrls } from "data";
 
 import styles from "./walnutSection.module.scss";
 
@@ -10,7 +9,7 @@ export const WalnutBackground = () => {
 
   return (
     <section className={styles.component}>
-      <VideoPlayer videoUrls={videoUrls} />
+      <VideoPlayer />
       {activeBurger &&
         <div className={styles.activeBurgerShadow}></div>
       }
