@@ -1,31 +1,52 @@
-import { NextApiResponse } from "next";
-import { NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import z from "zod";
 
-export async function POST(req: NextRequest, res: NextApiResponse) {
+// validate data with zod
+const validateData = (data: any) => {
+  const schema = z.object({
+    name: z.string().min(2).max(50),
+    email: z.string().email(),
+    phone: z.string().min(10).max(15),
+    message: z.string().min(10).max(1000)
+  });
+
+  return schema.safeParse(data);
+};
+
+export async function POST(req: Request) {
   try {
-    const { body } = req;
+    const reqData = await req.json();
 
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.EMAIL_USERNAME,
-        pass: process.env.EMAIL_PASSWORD
+    if (validateData(reqData)) {
+      let data = {
+        sender: { name: reqData.name, email: reqData.email },
+        to: [{ email: "julian.verocai@verocaiconsulting.com" }],
+        subject: "Message from: " + reqData.name,
+        textContent: `Phone number: ${reqData.phone} \n${reqData.message}`
+      };
+
+      const response = await fetch('https://api.brevo.com/v3/smtp/email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          "accept": "application/json",
+          'api-key': process.env.NEXT_PUBLIC_BREVO_KEY!
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) {
+        throw new Error('Response was not ok');
       }
-    });
 
-    const mailOptions = {
-      from: (body as any).email,
-      to: process.env.EMAIL_USERNAME,
-      subject: "Message from: " + (body as any).name,
-      text: "Phone: " + (body as any).phone + "\n" + (body as any).message
-    };
+      const responseData = await response.json();
 
-    const emailRes = await transporter.sendMail(mailOptions);
-    res.status(200).json({ success: true, message: 'Email sent', data: emailRes });
+      return NextResponse.json({ success: true, message: 'Email sent', data: responseData });
+    } else {
+      return NextResponse.json({ success: false, message: 'Invalid data' });
+    }
   } catch (err: any) {
-    res.status(500).json({ success: false, message: 'Error sending email', error: err.message });
+    return NextResponse.json({ success: false, message: 'Error sending email', error: err.message });
   }
 };
