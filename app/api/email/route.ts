@@ -16,29 +16,32 @@ const validateData = (data: any) => {
 
 export async function POST(req: Request) {
   try {
-    const data = await req.json();
+    const reqData = await req.json();
 
-    if (validateData(data)) {
-      const transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 587,
-        secure: false,
-        auth: {
-          user: process.env.EMAIL_USERNAME,
-          pass: process.env.EMAIL_PASSWORD
-        }
-      });
-
-      const mailOptions = {
-        from: (data as any).email,
-        to: process.env.EMAIL_USERNAME,
-        subject: "Message from: " + (data as any).name,
-        text: "Phone: " + (data as any).phone + "\n" + (data as any).message
+    if (validateData(reqData)) {
+      let data = {
+        sender: { name: reqData.name, email: reqData.email },
+        to: [{ email: "julian.verocai@verocaiconsulting.com" }],
+        subject: "Message from: " + reqData.name,
+        textContent: `Phone number: ${reqData.phone} \n${reqData.message}`
       };
 
-      const emailRes = await transporter.sendMail(mailOptions);
+      const response = await fetch('https://api.brevo.com/v3/smtp/email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'api-key': process.env.NEXT_PUBLIC_BREVO_KEY!
+        },
+        body: JSON.stringify(data)
+      });
 
-      return NextResponse.json({ success: true, message: 'Email sent', data: emailRes });
+      if (!response.ok) {
+        throw new Error('Response was not ok');
+      }
+
+      const responseData = await response.json();
+
+      return NextResponse.json({ success: true, message: 'Email sent', data: responseData });
     } else {
       return NextResponse.json({ success: false, message: 'Invalid data' });
     }
