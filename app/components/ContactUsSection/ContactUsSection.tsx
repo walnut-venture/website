@@ -11,9 +11,17 @@ interface IForm {
 };
 
 export const ContactUsSection = () => {
-  const { control, handleSubmit: validateBeforeSubmit } = useForm<IForm>({});
+  const { control, handleSubmit: validateBeforeSubmit } = useForm<IForm>({
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      message: ""
+    }
+  });
 
   const handleSubmit = async ({ name, email, phone, message }: IForm) => {
+    console.log(name, email, message, phone);
     const res = await fetch("api/email", {
       method: "POST",
       headers: {
@@ -82,7 +90,7 @@ export const ContactUsSection = () => {
                   control={control}
                   rules={{
                     minLength: {
-                      value: 10,
+                      value: 0,
                       message: "The message must contain at least 10 characters"
                     },
                     maxLength: {

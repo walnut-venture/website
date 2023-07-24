@@ -1,31 +1,48 @@
-import { NextApiResponse } from "next";
-import { NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import z from "zod";
 
-export async function POST(req: NextRequest, res: NextApiResponse) {
+// validate data with zod
+const validateData = (data: any) => {
+  const schema = z.object({
+    name: z.string().min(2).max(50),
+    email: z.string().email(),
+    phone: z.string().min(10).max(15),
+    message: z.string().min(10).max(1000)
+  });
+
+  return schema.safeParse(data);
+};
+
+export async function POST(req: Request) {
   try {
-    const { body } = req;
+    const data = await req.json();
 
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.EMAIL_USERNAME,
-        pass: process.env.EMAIL_PASSWORD
-      }
-    });
+    if (validateData(data)) {
+      const transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 587,
+        secure: false,
+        auth: {
+          user: process.env.EMAIL_USERNAME,
+          pass: process.env.EMAIL_PASSWORD
+        }
+      });
 
-    const mailOptions = {
-      from: (body as any).email,
-      to: process.env.EMAIL_USERNAME,
-      subject: "Message from: " + (body as any).name,
-      text: "Phone: " + (body as any).phone + "\n" + (body as any).message
-    };
+      const mailOptions = {
+        from: (data as any).email,
+        to: process.env.EMAIL_USERNAME,
+        subject: "Message from: " + (data as any).name,
+        text: "Phone: " + (data as any).phone + "\n" + (data as any).message
+      };
 
-    const emailRes = await transporter.sendMail(mailOptions);
-    res.status(200).json({ success: true, message: 'Email sent', data: emailRes });
+      const emailRes = await transporter.sendMail(mailOptions);
+
+      return NextResponse.json({ success: true, message: 'Email sent', data: emailRes });
+    } else {
+      return NextResponse.json({ success: false, message: 'Invalid data' });
+    }
   } catch (err: any) {
-    res.status(500).json({ success: false, message: 'Error sending email', error: err.message });
+    return NextResponse.json({ success: false, message: 'Error sending email', error: err.message });
   }
 };

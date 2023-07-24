@@ -37,6 +37,7 @@ export const Textarea: FunctionComponent<TProps> = ({
         className={classNames(textareaClassName, textareaStyles)}
         placeholder={placeholder}
         {...props}
+        {...field}
       />
     </div>
   );
