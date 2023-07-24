@@ -30,6 +30,7 @@ export async function POST(req: Request) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          "accept": "application/json",
           'api-key': process.env.NEXT_PUBLIC_BREVO_KEY!
         },
         body: JSON.stringify(data)
