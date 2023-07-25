@@ -4,44 +4,66 @@
 .component {
   margin-top: 144px;
   padding: 0 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 
   @include mixin.media-w(breakpoints.$laptop) {
     padding: 0 35px;
     margin-top: 60px;
+    gap: 20px;
   }
 }
 
 .title {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 
   @include mixin.media-w(breakpoints.$laptop) {
-    margin-bottom: 28px;
+    margin-bottom: 8px;
   }
 }
 
-.contentWrapper {
-  display: grid;
-  grid-template-columns: auto 66%;
-  grid-row-gap: 60px;
+// .contentWrapper {
+//   // display: grid;
+//   // grid-template-columns: auto 66%;
+//   // grid-row-gap: 60px;
 
-  @include mixin.media-w(breakpoints.$laptop) {
-    grid-template-columns: auto 72%;
-    grid-row-gap: 20px;
-  }
+//   // @include mixin.media-w(breakpoints.$laptop) {
+//   //   grid-template-columns: auto 72%;
+//   //   grid-row-gap: 20px;
+//   // }
+
+//   @include mixin.media-w(breakpoints.$mobile) {
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }
+
+.contentItem {
+  display: flex;
+  justify-content: space-between;
 
   @include mixin.media-w(breakpoints.$mobile) {
-    display: flex;
     flex-direction: column;
+    gap: 16px;
   }
 }
 
-.subtitleWrapper {
-  grid-column: 2;
+.list {
+  width: 15.2%;
 }
 
-.gridSubtitle {
-  margin-bottom: 37px;
+.contentText {
+  width: 66.2%;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    width: 100%;
+  }
+}
+
+.contentSubtitle {
+  margin-bottom: 38px;
 
   @include mixin.media-w(breakpoints.$laptop) {
     margin-bottom: 16px;

@@ -28,7 +28,7 @@
   overflow: hidden;
   padding: 0 205px;
   
-  @include mixin.media-w(breakpoints.$laptop) {
+  @include mixin.media-w(breakpoints.$desktop-s) {
     padding: 0 112px;
   }
 
