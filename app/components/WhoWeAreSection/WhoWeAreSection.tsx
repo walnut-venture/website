@@ -16,32 +16,44 @@ export const WhoWeAreSection = () => {
 
   useEffect(() => {
     const blockElement = blockRef.current;
+    const titleElement = titleRef.current;
     const firstElement = firstRef.current;
     const secondElement = secondRef.current;
     const thirdElement = thirdRef.current;
 
-    // let tl = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: blockElement,
-    //     start: "center",
-    //     end: "+=1000",
-    //     markers: true,
-    //     scrub: true,
-    //     pin: true
-    //   }
-    // });
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: blockElement,
+        start: "top",
+        end: "+=1000",
+        scrub: true,
+        pin: true
+      }
+    });
 
-    // tl.from(secondElement, {
-    //   opacity: 0,
-    //   duration: 3,
-    //   y: 50
-    // });
+    tl.from(titleElement, {
+      opacity: 0,
+      duration: 3,
+      y: 200
+    });
 
-    // tl.from(thirdElement, {
-    //   opacity: 0,
-    //   duration: 3,
-    //   y: 50
-    // });
+    tl.from(firstElement, {
+      opacity: 0,
+      duration: 3,
+      y: 200
+    });
+
+    tl.from(secondElement, {
+      opacity: 0,
+      duration: 3,
+      y: 200
+    });
+
+    tl.from(thirdElement, {
+      opacity: 0,
+      duration: 3,
+      y: 200
+    });
   },[]);
 
   return (
