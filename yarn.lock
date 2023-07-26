@@ -1903,6 +1903,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gsap@npm:^3.12.2":
+  version: 3.12.2
+  resolution: "gsap@npm:3.12.2"
+  checksum: e3e9709f9ca60cee0ef7fd91f45a232a48b550f95b6df090dfffe2511fccc651408476de575b69c1c2ce80b6089b6ad0d4854beb58ea427f14e51a30b0640a70
+  languageName: node
+  linkType: hard
+
 "has-bigints@npm:^1.0.1, has-bigints@npm:^1.0.2":
   version: 1.0.2
   resolution: "has-bigints@npm:1.0.2"
@@ -2853,13 +2860,6 @@ __metadata:
   bin:
     node-gyp: bin/node-gyp.js
   checksum: 78b404e2e0639d64e145845f7f5a3cb20c0520cdaf6dda2f6e025e9b644077202ea7de1232396ba5bde3fee84cdc79604feebe6ba3ec84d464c85d407bb5da99
-  languageName: node
-  linkType: hard
-
-"nodemailer@npm:^6.9.4":
-  version: 6.9.4
-  resolution: "nodemailer@npm:6.9.4"
-  checksum: 1a61039c9c6041ee9ed423c7fa3685cb300679f1ef8dcfd912fc58d9b8c429c34ac1187eebd4d86baf7158222f6e3a1ea2b4fd2a29630fb9ef0027cef46e90bb
   languageName: node
   linkType: hard
 
@@ -4111,9 +4111,9 @@ __metadata:
     classnames: ^2.3.2
     eslint: 8.44.0
     eslint-config-next: 13.4.7
+    gsap: ^3.12.2
     husky: ^8.0.0
     next: latest
-    nodemailer: ^6.9.4
     react: 18.2.0
     react-cookie-consent: ^8.0.1
     react-dom: 18.2.0

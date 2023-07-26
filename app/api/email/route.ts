@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
 import z from "zod";
 
 // validate data with zod
