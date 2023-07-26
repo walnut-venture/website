@@ -24,22 +24,6 @@
   }
 }
 
-// .contentWrapper {
-//   // display: grid;
-//   // grid-template-columns: auto 66%;
-//   // grid-row-gap: 60px;
-
-//   // @include mixin.media-w(breakpoints.$laptop) {
-//   //   grid-template-columns: auto 72%;
-//   //   grid-row-gap: 20px;
-//   // }
-
-//   @include mixin.media-w(breakpoints.$mobile) {
-//     display: flex;
-//     flex-direction: column;
-//   }
-// }
-
 .contentItem {
   display: flex;
   justify-content: space-between;
