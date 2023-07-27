@@ -38,6 +38,10 @@
     font-size: 12px;
     padding: 10px 24px;
   }
+
+  @include mixin.media-minW(breakpoints.$desktop) {
+    font-size: 20px;
+  }
 }
 
 .button:hover {

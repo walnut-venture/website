@@ -16,6 +16,10 @@
   @include mixin.media-w(breakpoints.$laptop) {
     font-size: 12px;
   }
+
+  @include mixin.media-minW(breakpoints.$desktop) {
+    font-size: 20px;
+  }
 }
 
 .burgerMenu {

@@ -116,6 +116,10 @@
   @include mixin.media-w(breakpoints.$mobile) {
     font-size: 16px;
   }
+
+  @include mixin.media-minW(breakpoints.$desktop) {
+    font-size: 22px;
+  }
 }
 
 .subtitle {

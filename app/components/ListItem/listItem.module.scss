@@ -21,6 +21,10 @@
   @include mixin.media-w(breakpoints.$mobile) {
     padding-left: 0;
   }
+
+  @include mixin.media-minW(breakpoints.$desktop) {
+    font-size: 22px;
+  }
 }
 
 .image {

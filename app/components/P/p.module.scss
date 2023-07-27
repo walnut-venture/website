@@ -9,4 +9,8 @@
   @include mixin.media-w(breakpoints.$laptop-l) {
     font-size: 18px;
   }
+
+  @include mixin.media-minW(breakpoints.$desktop) {
+    font-size: 28px;
+  }
 }

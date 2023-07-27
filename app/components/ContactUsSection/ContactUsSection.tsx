@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
 import { Container, H2, P, Button, Input, Textarea } from "components";
 
 import styles from "./contactUsSection.module.scss";
@@ -33,6 +34,8 @@ export const ContactUsSection = () => {
     if (res.ok) {
       const responseJson = await res.json();
       console.log(responseJson);
+
+      return toast(<P>Emails was send!</P>, {style: {backgroundColor: "#E7E7E7", padding: "12px, 20px", color: '#000000', borderRadius: "40px", textAlign: "center"}});
     } else {
       console.log("Error sending email");
     }
@@ -107,6 +110,7 @@ export const ContactUsSection = () => {
             >
               Get in touch
             </Button>
+            <Toaster />
           </form>
         </div>
       </section>
