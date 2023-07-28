@@ -13,6 +13,8 @@ export const WhoWeAreSection = () => {
   const firstRef = useRef(null);
   const secondRef = useRef(null);
   const thirdRef = useRef(null);
+  const fourthRef = useRef(null);
+  const fifthRef = useRef(null);
 
   useEffect(() => {
     const blockElement = blockRef.current;
@@ -20,12 +22,15 @@ export const WhoWeAreSection = () => {
     const firstElement = firstRef.current;
     const secondElement = secondRef.current;
     const thirdElement = thirdRef.current;
+    const fourthElement = fourthRef.current;
+    const fifthElement = fifthRef.current;
 
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: blockElement,
         start: "top",
         end: "+=1000",
+        markers: true,
         scrub: true,
         pin: true
       }
@@ -54,6 +59,18 @@ export const WhoWeAreSection = () => {
       duration: 3,
       y: 200
     });
+
+    tl.from(fourthElement, {
+      opacity: 0,
+      duration: 3,
+      y: 200
+    });
+
+    tl.from(fifthElement, {
+      opacity: 0,
+      duration: 3,
+      y: 200
+    });
   },[]);
 
   return (
@@ -76,8 +93,22 @@ export const WhoWeAreSection = () => {
         <div className={styles.contentItem} ref={thirdRef}>
           <div></div>
           <div className={styles.contentText}>
-            <H3 className={styles.contentSubtitle}>Deep financial expertise</H3>
-            <P>With a team of seasoned professionals who possess extensive experience in the financial sector, we understand the complexities and challenges of the industry. Our deep domain knowledge allows us to identify opportunities and create ventures that address key pain points and emerging trends.</P>
+            <H3 className={styles.contentSubtitle}>Technology-driven-approach</H3>
+            <P>We harness the power of technology and emerging trends such as blockchain, artificial intelligence, and machine learning to develop innovative solutions that enhance efficiency, security, and customer experience in finance. Our ventures leverage cutting-edge technologies to stay ahead of the curve.</P>
+          </div>
+        </div>
+        <div className={styles.contentItem} ref={fourthRef}>
+          <div></div>
+          <div className={styles.contentText}>
+            <H3 className={styles.contentSubtitle}>Collaborative ecosystems</H3>
+            <P>We have built a robust network of financial institutions, fintech start-ups, regulatory bodies, and industry experts. This ecosystem fosters collaboration, knowledge sharing, and access to a wide range of resources, providing our ventures with a competitive edge.</P>
+          </div>
+        </div>
+        <div className={styles.contentItem} ref={fifthRef}>
+          <div></div>
+          <div className={styles.contentText}>
+            <H3 className={styles.contentSubtitle}>Regulatory compliance</H3>
+            <P>We prioritize regulatory compliance and work closely with regulatory authorities to ensure that our ventures operate within the legal frameworks of the financial industry. Our in-depth understanding of compliance requirements enables us to build ventures that are both innovative and compliant.</P>
           </div>
         </div>
       </section>

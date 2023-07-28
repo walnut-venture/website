@@ -28,7 +28,7 @@ const TeamSection = () => {
         {
           isMobile ?
             <div className={styles.textContainer}>
-              <P>He is a dynamic and accomplished finance and technology executive with a proven track record of driving innovation and growth in the financial sector. With a strong background in finance, coupled with a deep understanding of emerging technologies, Julian possesses a unique blend of strategic vision and hands-on leadership.</P>
+              <P>He is an accomplished finance and technology executive with a proven track record of driving innovation and growth in the financial sector. With a strong background in finance, coupled with a deep understanding of emerging technologies, Julian possesses a unique blend of strategic vision and hands-on leadership.</P>
               <P>Julian&apos;s passion for entrepreneurship and his keen eye for market opportunities have allowed him to forge strategic partnerships, creating synergies between traditional financial institutions and agile fintech start-ups.</P>
               <P>Julian has professional experience in working for large international banking groups, as well as deep regulatory and monetary policy know-how from his working experience at the European Central Bank in Frankfurt. He has consulted for many years international banks on various innovation projects (ESG platforms, neo bank projects, core-banking system migration and many more).</P>
             </div>
