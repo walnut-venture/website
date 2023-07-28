@@ -25,6 +25,10 @@
     padding: 16px 20px;
     border-radius: 20px;
   }
+
+  @include mixin.media-minW(breakpoints.$desktop) {
+    font-size: 18px;
+  }
 }
 
 .component:-webkit-autofill {

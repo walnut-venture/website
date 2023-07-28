@@ -30,6 +30,10 @@
     @include mixin.maxWidth(294px);
     justify-content: center;
   }
+
+  @include mixin.media-minW(breakpoints.$desktop) {
+    font-size: 24px;
+  }
 }
 
 .sizeM:hover {
@@ -51,6 +55,10 @@
     padding: 10px 0;
     @include mixin.maxWidth(294px);
     justify-content: center;
+  }
+
+  @include mixin.media-minW(breakpoints.$desktop) {
+    font-size: 20px;
   }
 }
 

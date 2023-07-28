@@ -17,3 +17,4 @@ export * from "./ShowMore";
 export * from "./ListItem";
 export * from "./CookieBanner";
 export * from "./VideoPlayer";
+export * from "./InfiniteSlider";

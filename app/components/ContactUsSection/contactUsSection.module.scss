@@ -46,6 +46,10 @@
   @include mixin.media-w(breakpoints.$laptop) {
     font-size: 36px;
   }
+
+  @include mixin.media-minW(breakpoints.$desktop) {
+    font-size: 50px;
+  }
 }
 
 .subtitle {
