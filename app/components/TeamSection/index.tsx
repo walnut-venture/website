@@ -6,7 +6,6 @@ import { useWindowSize } from "hooks";
 
 import styles from "./teamSection.module.scss";
 import teamSEOSrc from "./img/teamCEOImage.jpg";
-import teamCTOSrc from "./img/teamCTOImage.jpg";
 
 const TeamSection = () => {
   const { isMobile } = useWindowSize();
@@ -38,40 +37,6 @@ const TeamSection = () => {
               <P>Julian&apos;s passion for entrepreneurship and his keen eye for market opportunities have allowed him to forge strategic partnerships, creating synergies between traditional financial institutions and agile fintech start-ups.</P>
               <ShowMore />
             </div>
-        }
-        {
-          isMobile ?
-            <>
-              <div className={styles.teamCard}>
-                <div className={styles.teamTitle}>
-                  <H3>Raja Kathiresan</H3>
-                  <P>Raja is the CTO of walnut venture studios and an entrepreneur in residence.</P>
-                </div>
-                <div className={styles.imageWrapper}>
-                  <Image className={styles.image} src={teamCTOSrc} alt="TeamSEO" fill />
-                </div>
-              </div>
-              <div className={styles.textContainer}>
-                <P>He has more than 22 years of experience as a leader and startup builder in the banking industry. Raja is passionate about bringing ideas, technology and people together to deliver exceptional customer and investor value.</P>
-                <P>He is the ex-COO of a fintech banking app in CEE region, where he was responsible for building the startup from scratch covering front to back solutions. Raja has wide experience ranging from technology, operations, customer care, financial planning and regulatory setup.</P>
-              </div>
-            </>
-            :
-            <>
-              <div className={styles.teamCard}>
-                <div className={styles.teamTitle}>
-                  <div className={styles.imageWrapper}>
-                    <Image className={styles.image} src={teamCTOSrc} alt="TeamSEO" fill />
-                  </div>
-                  <H3>Raja Kathiresan</H3>
-                  <P>Raja is the CTO of walnut venture studios and an entrepreneur in residence.</P>
-                </div>
-              </div>
-              <div className={styles.textContainer}>
-                <P>He has more than 22 years of experience as a leader and startup builder in the banking industry. Raja is passionate about bringing ideas, technology and people together to deliver exceptional customer and investor value.</P>
-                <P>He is the ex-COO of a fintech banking app in CEE region, where he was responsible for building the startup from scratch covering front to back solutions. Raja has wide experience ranging from technology, operations, customer care, financial planning and regulatory setup.</P>
-              </div>
-            </>
         }
       </section>
     </MainContainer>
