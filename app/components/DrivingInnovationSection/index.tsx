@@ -21,8 +21,8 @@ const DrivingInnovationSection = () => {
                 <Image className={styles.image} src={imageSrc} alt="Image" fill />
               </div>
               <div className={styles.subtitleWrapper}>
-                <P>Walnut venture studios is a leading corporate venture builder focusing on revolutionizing the financial sector through innovation, technology, and entrepreneurship.</P>
-                <P>We partner with established financial institutions, fintech companies, and forward-thinking organizations to create disruptive ventures that shape the future of finance. Our headquarter is at the tripoint in Bregenz, Austria and we have a branch in Vienna.</P>
+                <P>Walnut venture studios is a corporate venture builder focusing on revolutionizing the financial sector through innovation, technology, and entrepreneurship.</P>
+                <P>We partner with established financial institutions, fintech companies, and forward-thinking organizations to create disruptive ventures that shape the future of finance. Our headquarter is at the tripoint in Bregenz, Austria and Frankfurt am Main, Germany.</P>
               </div>
             </div>
           </section>

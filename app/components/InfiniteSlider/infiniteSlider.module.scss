@@ -56,6 +56,10 @@
     gap: 50px;
     animation: scroll 50s linear infinite;
   }
+
+  @include mixin.media-minW(breakpoints.$desktop) {
+    height: 700px;
+  }
 }
 
 .imageWrapper {
