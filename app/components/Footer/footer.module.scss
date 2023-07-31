@@ -19,7 +19,7 @@
   }
 
   @include mixin.media-w(breakpoints.$mobile) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 40px;
   }
@@ -29,6 +29,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    gap: 40px;
+    align-items: center;
+  }
 }
 
 .footerLogo {
