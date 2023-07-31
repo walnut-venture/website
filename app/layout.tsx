@@ -7,7 +7,8 @@ import styles from "./layout.module.scss";
 
 export const metadata = {
   title: 'Walnut venture studios',
-  description: 'Empowering innovation and new business models in the financial sector. We design, build and scale the success stories of tomorrow.'
+  description: 'Empowering innovation and new business models in the financial sector. We design, build and scale the success stories of tomorrow.',
+  keywords: 'fintech, company building, venture building, innovation, finance'
 };
 
 export default function RootLayout({

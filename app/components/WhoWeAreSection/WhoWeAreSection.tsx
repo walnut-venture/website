@@ -30,7 +30,6 @@ export const WhoWeAreSection = () => {
         trigger: blockElement,
         start: "top",
         end: "+=1000",
-        markers: true,
         scrub: true,
         pin: true
       }

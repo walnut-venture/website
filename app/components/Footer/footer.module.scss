@@ -19,9 +19,20 @@
   }
 
   @include mixin.media-w(breakpoints.$mobile) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
-    gap: 48px;
+    gap: 40px;
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    gap: 40px;
+    align-items: center;
   }
 }
 
@@ -29,5 +40,14 @@
   @include mixin.media-w(breakpoints.$mobile) {
     width: 166px;
     order: 2;
+  }
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 300;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    font-size: 16px;
   }
 }
