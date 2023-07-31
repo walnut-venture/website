@@ -7,5 +7,6 @@
 
   @include mixin.media-w(breakpoints.$laptop) {
     width: 96px;
+    height: 27px;
   }
 }
