@@ -13,7 +13,7 @@ const TeamSection = () => {
   return (
     <MainContainer>
       <section id="team" className={styles.component}>
-        <H2 className={styles.title}>Team</H2>
+        <H2 className={styles.title}>About us</H2>
         <P className={styles.subtitle}>At walnut ventures, we believe in reshaping the financial landscape by embracing cutting-edge technologies, driving digital transformation, and fostering entrepreneurial spirit. With our deep industry expertise and forward-thinking approach, we are at the forefront of revolutionizing finance for the digital age.</P>
         <div className={styles.teamCard}>
           <div className={styles.imageWrapper}>
