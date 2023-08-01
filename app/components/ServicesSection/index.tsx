@@ -86,20 +86,20 @@ const ServicesSection = () => {
           </div>
         </div>
         <div className={styles.listContainer}>
-          <ListItem>Our services in detail</ListItem>
+          <ListItem>{t("secondTitle")}</ListItem>
         </div>
         {
           isMobile ?
             <div className={styles.servicesDetailContainer}>
               <div className={styles.servicesDetailWrapper}>
-                <P>Fast designing, building and scaling of disruptive and innovative business models in the financial sector</P>
-                <P className={styles.servicesSubtitle}>Advising financial institutions on digital transformation strategies</P>
-                <P className={styles.servicesSubtitle}>Company building and applying lean start-up methodology</P>
-                <P className={styles.servicesSubtitle}>IT consulting & advisory (we are experts on core banking systems and have established strong relationship to all core banking provider in DACH region)</P>
-                <P className={styles.servicesSubtitle}>Business development & advisory for market entry into DACH region</P>
-                <P className={styles.servicesSubtitle}>Advisory on regulatory topics for financial institutions</P>
-                <P className={styles.servicesSubtitle}>ESG consulting</P>
-                <P className={styles.servicesSubtitle}>Fund-raising for start-ups</P>
+                <P>{t("firstDetail")}</P>
+                <P className={styles.servicesSubtitle}>{t("secondDetail")}</P>
+                <P className={styles.servicesSubtitle}>{t("thirdDetail")}</P>
+                <P className={styles.servicesSubtitle}>{t("fourthDetail")}</P>
+                <P className={styles.servicesSubtitle}>{t("fifthDetail")}</P>
+                <P className={styles.servicesSubtitle}>{t("sixthDetail")}</P>
+                <P className={styles.servicesSubtitle}>{t("seventhDetail")}</P>
+                <P className={styles.servicesSubtitle}>{t("eightDetail")}</P>
               </div>
               <div className={styles.imageWrapper}>
                 <Image className={styles.image} src={ourServicesDetailSrc} alt="OurServices" fill />
@@ -111,9 +111,13 @@ const ServicesSection = () => {
                 <div className={styles.imageWrapper}>
                   <Image className={styles.image} src={ourServicesDetailSrc} alt="OurServices" fill />
                 </div>
-                <P className={styles.servicesSubtitle}>Fast designing, building and scaling of disruptive and innovative business models in the financial sector</P>
-                <P className={styles.servicesSubtitle}>Advising financial institutions on digital transformation strategies</P>
-                <P>Company building and applying lean start-up methodology</P>
+                <P className={styles.servicesSubtitle}>{t("secondDetail")}</P>
+                <P className={styles.servicesSubtitle}>{t("thirdDetail")}</P>
+                <P className={styles.servicesSubtitle}>{t("fourthDetail")}</P>
+                <P className={styles.servicesSubtitle}>{t("fifthDetail")}</P>
+                <P className={styles.servicesSubtitle}>{t("sixthDetail")}</P>
+                <P className={styles.servicesSubtitle}>{t("seventhDetail")}</P>
+                <P className={styles.servicesSubtitle}>{t("eightDetail")}</P>
               </div>
             </div>
         }
