@@ -1,0 +1,58 @@
+{
+  "Navigation": {
+    "whoWeAre": "Who we are",
+    "services": "Services",
+    "aboutUs": "About us",
+    "career": "Career",
+    "getInTouch": "Get in touch"
+  },
+  "WalnutContent": {
+    "title": "Welcome to walnut venture studios",
+    "subtitle": "Empowering innovation and new business models in the financial sector. We design, build and scale the success stories of tomorrow.",
+    "button": "Let’s talk"
+  },
+  "DrivingInnovation": {
+    "title": "Driving innovation and growth in finance",
+    "firstSubtitle": "Walnut venture studios is a corporate venture builder focusing on revolutionizing the financial sector through innovation, technology, and entrepreneurship.",
+    "secondSubtitle": "We partner with established financial institutions, fintech companies, and forward-thinking organizations to create disruptive ventures that shape the future of finance. Our headquarter is at the tripoint in Bregenz, Austria and Frankfurt am Main, Germany."
+  },
+  "JoinUs": {
+    "title": "Join us in shaping the future of finance",
+    "firstSubtitle": "Whether you are a financial institution looking to innovate or a fintech start-up with a ground-breaking idea, walnut venture studios is your trusted partner in building ventures that disrupt the financial sector, drive growth, and transform the way finance works.",
+    "secondSubtitle": "Contact us today to explore how we can collaborate and unlock the full potential of your business. Together, let's shape the future of finance.",
+    "button": "Join"
+  },
+  "WhoWeAre": {
+    "mainTitle": "Who we are?",
+    "firstTitle": "Our vision",
+    "secondTitle": "What sets us apart",
+    "firstText": "We envision a financial landscape that embraces digital transformation, fosters financial inclusion, and delivers cutting-edge solutions to businesses and customers alike. By combining the expertise and resources of established financial institutions with the agility and innovation of start-ups, we aim to drive meaningful change and empower the finance industry for the digital age.",
+    "secondText": "With a team of seasoned professionals who possess extensive experience in the financial sector, we understand the complexities and challenges of the industry. Our deep domain knowledge allows us to identify opportunities and create ventures that address key pain points and emerging trends.",
+    "thirdText": "We harness the power of technology and emerging trends such as blockchain, artificial intelligence, and machine learning to develop innovative solutions that enhance efficiency, security, and customer experience in finance. Our ventures leverage cutting-edge technologies to stay ahead of the curve.",
+    "fourthText": "We have built a robust network of financial institutions, fintech start-ups, regulatory bodies, and industry experts. This ecosystem fosters collaboration, knowledge sharing, and access to a wide range of resources, providing our ventures with a competitive edge.",
+    "fifthText": "We prioritize regulatory compliance and work closely with regulatory authorities to ensure that our ventures operate within the legal frameworks of the financial industry. Our in-depth understanding of compliance requirements enables us to build ventures that are both innovative and compliant.",
+    "firstSubtitle": "Deep financial expertise",
+    "secondSubtitle": "Technology-driven-approach",
+    "thirdSubtitle": "Collaborative ecosystems",
+    "fourthSubtitle": "Regulatory compliance"
+  },
+  "Services": {
+    "mainTitle": "Services",
+    "firstTitle": "Our services",
+    "secondTitle": "Our services in detail",
+    "firstText": "We collaborate with our financial partners to identify areas for disruption, explore new business models, and validate the feasibility of potential ventures. Through market research, customer insights, and financial analysis, we ensure that our ventures have a strong foundation for success.",
+    "secondText": "We transform validated concepts into scalable ventures, handling all aspects of product development, technology integration, compliance, and go-to-market strategy. Our experienced team ensures that the ventures are designed to meet the evolving needs of the financial industry.",
+    "thirdText": "We provide ongoing support to accelerate the growth of our ventures. Leveraging our network, industry expertise, and access to capital, we help our ventures navigate challenges, expand their customer base, and achieve sustainable growth in the competitive financial sector.",
+    "firstSubtitle": "Venture ideation and validation",
+    "secondSubtitle": "Venture building and development",
+    "thirdSubtitle": "Venture growth and scaling",
+    "firstDetail": "Fast designing, building and scaling of disruptive and innovative business models in the financial sector",
+    "secondDetail": "Advising financial institutions on digital transformation strategies",
+    "thirdDetail": "Company building and applying lean start-up methodology",
+    "fourthDetail": "ESG consulting",
+    "fifthDetail": "IT consulting & advisory (we are experts on core banking systems and have established strong relationship to all core banking provider in DACH region)",
+    "sixthDetail": "Business development & advisory for market entry into DACH region",
+    "seventhDetail": "Advisory on regulatory topics for financial institutions",
+    "eightDetail": "Fund-raising for start-ups"
+  }
+}

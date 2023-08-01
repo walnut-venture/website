@@ -1,0 +1,58 @@
+{
+  "Navigation": {
+    "whoWeAre": "Wer wir sind",
+    "services": "Dienstleistungen",
+    "aboutUs": "Über uns",
+    "career": "Karriere",
+    "getInTouch": "Kontakt aufnehmen"
+  },
+  "WalnutContent": {
+    "title": "Willkommen bei walnut venture studios",
+    "subtitle": "Förderung von Innovationen und neuen Geschäftsmodellen im Finanzsektor. Wir entwickeln, bauen und skalieren die Erfolgsgeschichten von morgen.",
+    "button": "Lasst uns reden"
+  },
+  "DrivingInnovation": {
+    "title": "Innovation und Wachstum im Finanzwesen fördern",
+    "firstSubtitle": "Walnut venture studios ist ein Corporate Venture Builder, der sich darauf konzentriert, den Finanzsektor durch Innovation, Technologie und Unternehmertum zu revolutionieren.",
+    "secondSubtitle": "Wir arbeiten mit etablierten Finanzinstituten, Fintech-Unternehmen und zukunftsorientierten Organisationen zusammen, um bahnbrechende Projekte zu entwickeln, die die Zukunft des Finanzwesens gestalten. Unser Hauptsitz befindet sich am Dreiländereck in Bregenz, Österreich und Frankfurt am Main, Deutschland."
+  },
+  "JoinUs": {
+    "title": "Gestalten Sie mit uns die Zukunft des Finanzwesens",
+    "firstSubtitle": "Ob Sie als Finanzinstitut auf der Suche nach Innovationen sind oder als Fintech-Start-up eine bahnbrechende Idee haben, walnut venture studios ist Ihr zuverlässiger Partner bei der Entwicklung von Projekten, die den Finanzsektor verändern, das Wachstum vorantreiben und die Art und Weise, wie Finanzen funktionieren, verändern.",
+    "secondSubtitle": "Setzen Sie sich noch heute mit uns in Verbindung, um zu erfahren, wie wir zusammenarbeiten und das volle Potenzial Ihres Unternehmens ausschöpfen können. Lassen Sie uns gemeinsam die Zukunft des Finanzwesens gestalten.",
+    "button": "Beitreten"
+  },
+  "WhoWeAre": {
+    "mainTitle": "Wer wir sind?",
+    "firstTitle": "Unser Leitbild",
+    "secondTitle": "Was uns auszeichnet",
+    "firstText": "Wir stellen uns eine Finanzlandschaft vor, die den digitalen Wandel begrüßt, die finanzielle Inklusion fördert und Unternehmen und Kunden gleichermaßen innovative Lösungen bietet. Indem wir das Know-how und die Ressourcen etablierter Finanzinstitute mit der Agilität und Innovationskraft von Start-ups kombinieren, wollen wir einen sinnvollen Wandel vorantreiben und die Finanzbranche für das digitale Zeitalter fit machen.",
+    "secondText": "Mit einem Team aus erfahrenen Fachleuten, die über umfangreiche Erfahrungen im Finanzsektor verfügen, verstehen wir die Komplexität und die Herausforderungen der Branche. Dank unserer fundierten Fachkenntnisse können wir Chancen erkennen und Projekte entwickeln, die sich mit wichtigen Problemen und neuen Trends befassen.",
+    "thirdText": "Wir nutzen die Macht der Technologie und aufkommende Trends wie Blockchain, künstliche Intelligenz und maschinelles Lernen, um innovative Lösungen zu entwickeln, die die Effizienz, Sicherheit und das Kundenerlebnis im Finanzwesen verbessern. Unsere Projekte nutzen Spitzentechnologien, um der Zeit immer einen Schritt voraus zu sein.",
+    "fourthText": "Wir haben ein solides Netzwerk aus Finanzinstituten, Fintech-Start-ups, Regulierungsbehörden und Branchenexperten aufgebaut. Dieses Ökosystem fördert die Zusammenarbeit, den Wissensaustausch und den Zugang zu einer breiten Palette von Ressourcen und verschafft unseren Projekten einen Wettbewerbsvorteil.",
+    "fifthText": "Wir legen großen Wert auf die Einhaltung gesetzlicher Vorschriften und arbeiten eng mit den Aufsichtsbehörden zusammen, um sicherzustellen, dass unsere Unternehmen innerhalb des rechtlichen Rahmens der Finanzbranche operieren. Dank unseres umfassenden Verständnisses der Compliance-Anforderungen sind wir in der Lage, Unternehmen aufzubauen, die sowohl innovativ als auch gesetzeskonform sind.",
+    "firstSubtitle": "Umfassendes Finanzwissen",
+    "secondSubtitle": "Technologieorientierter Ansatz",
+    "thirdSubtitle": "Kollaborative Ökosysteme",
+    "fourthSubtitle": "Einhaltung von Vorschriften"
+  },
+  "Services": {
+    "mainTitle": "Dienstleistungen",
+    "firstTitle": "Unsere Dienstleistungen",
+    "secondTitle": "Unsere Dienstleistungen im Detail",
+    "firstText": "Wir arbeiten mit unseren Finanzpartnern zusammen, um neue Geschäftsmodelle zu erforschen und die Machbarkeit potenzieller Unternehmen zu prüfen. Durch Marktforschung, Kundeneinblicke und Finanzanalysen stellen wir sicher, dass unsere Vorhaben eine solide Grundlage für den Erfolg haben.",
+    "secondText": "Wir verwandeln validierte Konzepte in skalierbare Unternehmen und kümmern uns um alle Aspekte der Produktentwicklung, Technologieintegration, Compliance und Markteinführungsstrategie. Unser erfahrenes Team stellt sicher, dass die Projekte den sich wandelnden Anforderungen der Finanzbranche gerecht werden.",
+    "thirdText": "Wir bieten kontinuierliche Unterstützung, um das Wachstum unserer Unternehmen zu beschleunigen. Durch die Nutzung unseres Netzwerks, unserer Branchenkenntnisse und unseres Zugangs zu Kapital helfen wir unseren Unternehmen, Herausforderungen zu meistern, ihren Kundenstamm zu erweitern und ein nachhaltiges Wachstum im wettbewerbsintensiven Finanzsektor zu erzielen.",
+    "firstSubtitle": "Ideenfindung und Validierung von Projekten",
+    "secondSubtitle": "Aufbau und Entwicklung von Unternehmen",
+    "thirdSubtitle": "Wachstum und Skalierung von Unternehmen",
+    "firstDetail": "Schnelles Entwerfen, Aufbauen und Skalieren von bahnbrechenden und innovativen Geschäftsmodellen im Finanzsektor",
+    "secondDetail": "Beratung von Finanzinstituten zu Strategien der digitalen Transformation",
+    "thirdDetail": "Aufbau eines Unternehmens und Anwendung der Lean-Startup-Methodik",
+    "fourthDetail": "ESG Beratung",
+    "fifthDetail": "IT-Consulting und -Beratung (wir sind Experten für Kernbankensysteme und haben enge Beziehungen zu allen Kernbankanbietern in der DACH-Region aufgebaut)",
+    "sixthDetail": "Business Development & Beratung für den Markteintritt in die DACH-Region",
+    "seventhDetail": "Beratung zu regulatorischen Themen für Finanzinstitute",
+    "eightDetail": "Mittelbeschaffung für Start-ups"
+  }
+}

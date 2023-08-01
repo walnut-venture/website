@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useContext, useRef } from "react";
 import { Button, Container, Logo, Navigation } from "components";
+import { useTranslations } from "next-intl";
 import { useWindowSize, useClickOutside } from "hooks";
 import { BurgerContext } from "context";
 
@@ -13,6 +14,7 @@ import crossIconSrc from "./img/crossButton.svg";
 
 const Header = () => {
   const { isLaptopS } = useWindowSize();
+  const t = useTranslations("Navigation");
   const { activeBurger, setActiveBurger } = useContext(BurgerContext);
   const burgerRef = useRef<HTMLDivElement>(null);
   useClickOutside(burgerRef, () => setActiveBurger(false));
@@ -35,7 +37,7 @@ const Header = () => {
                 <Button
                   size="s"
                 >
-                  Get in touch
+                  {t("getInTouch")}
                 </Button>
               </Link>
             </>
