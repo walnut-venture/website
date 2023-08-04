@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { H2, MainContainer, P, H3, ListItem } from "components";
+import { useTranslations } from "next-intl";
 import { useWindowSize } from "hooks";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,6 +15,7 @@ import ourServicesDetailSrc from "./img/ourSevicesDetailImage.jpg";
 
 const ServicesSection = () => {
   const { isMobile } = useWindowSize();
+  const t = useTranslations("Services");
   const blockRef = useRef(null);
   const firstRef = useRef(null);
   const secondRef = useRef(null);
@@ -57,9 +59,9 @@ const ServicesSection = () => {
   return (
     <MainContainer>
       <section id="services" className={styles.component} ref={blockRef}>
-        <H2 className={styles.title}>Services</H2>
+        <H2 className={styles.title}>{t("mainTitle")}</H2>
         <div className={styles.listContainer}>
-          <ListItem>Our services</ListItem>
+          <P className={styles.listItem}>{t("firstTitle")}</P>
         </div>
         <div className={styles.servicesContainer}>
           <div className={styles.imageWrapper}>
@@ -68,36 +70,36 @@ const ServicesSection = () => {
           <div className={styles.cardsContainer}>
             <div className={styles.servicesCard} ref={firstRef}>
               <P className={styles.number}>01.</P>
-              <H3>Venture ideation and validation</H3>
-              <P className={styles.subtitle}>We collaborate with our financial partners to identify areas for disruption, explore new business models, and validate the feasibility of potential ventures. Through market research, customer insights, and financial analysis, we ensure that our ventures have a strong foundation for success.</P>
+              <H3>{t("firstSubtitle")}</H3>
+              <P className={styles.subtitle}>{t("firstText")}</P>
             </div>
             <div className={styles.servicesCard} ref={secondRef}>
               <P className={styles.number}>02.</P>
-              <H3>Venture building and development</H3>
-              <P className={styles.subtitle}>We transform validated concepts into scalable ventures, handling all aspects of product development, technology integration, compliance, and go-to-market strategy. Our experienced team ensures that the ventures are designed to meet the evolving needs of the financial industry.</P>
+              <H3>{t("secondSubtitle")}</H3>
+              <P className={styles.subtitle}>{t("secondText")}</P>
             </div>
             <div className={styles.servicesCard} ref={thirdRef}>
               <P className={styles.number}>03.</P>
-              <H3>Venture growth and scaling</H3>
-              <P className={styles.subtitle}>We provide ongoing support to accelerate the growth of our ventures. Leveraging our network, industry expertise, and access to capital, we help our ventures navigate challenges, expand their customer base, and achieve sustainable growth in the competitive financial sector.</P>
+              <H3>{t("thirdSubtitle")}</H3>
+              <P className={styles.subtitle}>{t("thirdText")}</P>
             </div>
           </div>
         </div>
         <div className={styles.listContainer}>
-          <ListItem>Our services in detail</ListItem>
+          <P className={styles.listItem}>{t("secondTitle")}</P>
         </div>
         {
           isMobile ?
             <div className={styles.servicesDetailContainer}>
               <div className={styles.servicesDetailWrapper}>
-                <P>Fast designing, building and scaling of disruptive and innovative business models in the financial sector</P>
-                <P className={styles.servicesSubtitle}>Advising financial institutions on digital transformation strategies</P>
-                <P className={styles.servicesSubtitle}>Company building and applying lean start-up methodology</P>
-                <P className={styles.servicesSubtitle}>IT consulting & advisory (we are experts on core banking systems and have established strong relationship to all core banking provider in DACH region)</P>
-                <P className={styles.servicesSubtitle}>Business development & advisory for market entry into DACH region</P>
-                <P className={styles.servicesSubtitle}>Advisory on regulatory topics for financial institutions</P>
-                <P className={styles.servicesSubtitle}>ESG consulting</P>
-                <P className={styles.servicesSubtitle}>Fund-raising for start-ups</P>
+                <ListItem>{t("firstDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("secondDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("thirdDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("fourthDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("fifthDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("sixthDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("seventhDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("eightDetail")}</ListItem>
               </div>
               <div className={styles.imageWrapper}>
                 <Image className={styles.image} src={ourServicesDetailSrc} alt="OurServices" fill />
@@ -109,9 +111,13 @@ const ServicesSection = () => {
                 <div className={styles.imageWrapper}>
                   <Image className={styles.image} src={ourServicesDetailSrc} alt="OurServices" fill />
                 </div>
-                <P className={styles.servicesSubtitle}>Fast designing, building and scaling of disruptive and innovative business models in the financial sector</P>
-                <P className={styles.servicesSubtitle}>Advising financial institutions on digital transformation strategies</P>
-                <P>Company building and applying lean start-up methodology</P>
+                <ListItem className={styles.servicesSubtitle}>{t("secondDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("thirdDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("fourthDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("fifthDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("sixthDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("seventhDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("eightDetail")}</ListItem>
               </div>
             </div>
         }

@@ -1,29 +1,32 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import styles from "./navigation.module.scss";
 
 export const Navigation = () => {
+  const t = useTranslations("Navigation");
+
   return (
     <nav className={styles.component}>
       <ul className={styles.nav}>
         <li>
           <Link href="#who-we-are" className={styles.link}>
-            Who we are
+            {t("whoWeAre")}
           </Link>
         </li>
         <li>
           <Link href="#services" className={styles.link}>
-            Services
+            {t("services")}
           </Link>
         </li>
         <li>
           <Link href="#team" className={styles.link}>
-            Team
+            {t("aboutUs")}
           </Link>
         </li>
         <li>
           <Link href="#career" className={styles.link}>
-            Career
+            {t("career")}
           </Link>
         </li>
       </ul>

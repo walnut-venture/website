@@ -1,31 +1,34 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Button } from "components";
 
 import styles from "./navigation.module.scss";
 
 export const MobileNavigation = () => {
+  const t = useTranslations("Navigation");
+
   return (
     <div className={styles.burgerMenu}>
       <nav>
         <ul className={styles.burgerNav}>
           <li>
             <Link href="#who-we-are"  className={styles.link}>
-              Who we are
+              {t("whoWeAre")}
             </Link>
           </li>
           <li>
             <Link href="#services"  className={styles.link}>
-              Services
+              {t("services")}
             </Link>
           </li>
           <li>
             <Link href="#team"  className={styles.link}>
-              Team
+              {t("aboutUs")}
             </Link>
           </li>
           <li>
             <Link href="#career"  className={styles.link}>
-              Career
+              {t("career")}
             </Link>
           </li>
         </ul>
@@ -34,7 +37,7 @@ export const MobileNavigation = () => {
         <Button
           size="s"
         >
-          Get in touch
+          {t("getInTouch")}
         </Button>
       </Link>
     </div>

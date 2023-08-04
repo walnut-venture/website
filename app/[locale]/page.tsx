@@ -14,7 +14,8 @@ import {
   WhoWeAreSection,
   ContactUsSection,
   Footer,
-  CookieBanner
+  CookieBanner,
+  MethodologySection
 } from "components";
 import { BurgerContext } from "context";
 
@@ -46,6 +47,7 @@ export default function Home() {
         <WhoWeAreSection />
         <ServicesSection />
         <TeamSection />
+        <MethodologySection />
         <CareerSection />
         <ContactUsSection />
         <Footer />

@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { useContext } from "react";
 import { ArrowButton, Container, H1, MobileNavigation, P } from "components";
+import { useTranslations } from "next-intl";
 import { BurgerContext } from "context";
 
 import styles from "./walnutSection.module.scss";
 
 export const WalnutContent = () => {
   const { activeBurger, setActiveBurger } = useContext(BurgerContext);
+  const t = useTranslations("WalnutContent");
 
   return (
     <Container>
@@ -14,11 +16,11 @@ export const WalnutContent = () => {
         {
           !activeBurger &&
           <>
-            <H1 className={styles.title}>Welcome to walnut venture studios</H1>
-            <P className={styles.subtitle}>Empowering innovation and new business models in the financial sector. We design, build and scale the success stories of tomorrow.</P>
+            <H1 className={styles.title}>{t("title")}</H1>
+            <P className={styles.subtitle}>{t("subtitle")}</P>
             <Link href="#contact-us" className={styles.button}>
               <ArrowButton>
-                Let&apos;s talk
+                {t("button")}
               </ArrowButton>
             </Link>
           </>

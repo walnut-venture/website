@@ -145,3 +145,16 @@
     margin: 16px 0;
   }
 }
+
+.listItem {
+  white-space: nowrap;
+  @include mixin.fluidFont(4, 22, 1920);
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    font-size: 12px;
+  }
+
+  @include mixin.media-minW(breakpoints.$desktop) {
+    font-size: 22px;
+  }
+}
