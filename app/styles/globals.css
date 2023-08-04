@@ -9,6 +9,7 @@
   --btnHover: #DAEBE9;
   --textHover: #025C51;
   --inputError:#FF2435;
+  --bgMethodology: #232222;
 }
 
 *, *:after, *:before {
@@ -22,6 +23,7 @@ body {
   height: 100%;
   scroll-behavior: smooth;
   color: var(--textGray);
+  overflow-wrap: break-word;
 }
 
 h1, h2, h3, h4, h5, h6, ul, li, p {

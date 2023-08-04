@@ -1,0 +1,16 @@
+.component {
+  display: flex;
+  gap: 3px;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.toggleItem {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.toggleItem:hover {
+  text-decoration: underline;
+  color: var(--bgWhite);
+}

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useContext, useRef } from "react";
-import { Button, Container, Logo, Navigation } from "components";
+import { Button, Container, Logo, Navigation, LanguageToggle } from "components";
 import { useTranslations } from "next-intl";
 import { useWindowSize, useClickOutside } from "hooks";
 import { BurgerContext } from "context";
@@ -13,7 +13,7 @@ import burgerIconSrc from "./img/burgerMenu.svg";
 import crossIconSrc from "./img/crossButton.svg";
 
 const Header = () => {
-  const { isLaptopS } = useWindowSize();
+  const { isLaptopM } = useWindowSize();
   const t = useTranslations("Navigation");
   const { activeBurger, setActiveBurger } = useContext(BurgerContext);
   const burgerRef = useRef<HTMLDivElement>(null);
@@ -27,19 +27,22 @@ const Header = () => {
     <Container>
       <header className={styles.component}>
         {
-          !isLaptopS ?
+          !isLaptopM ?
             <>
               <div className={styles.navContainer}>
                 <Logo />
                 <Navigation />
               </div>
-              <Link href="#contact-us">
-                <Button
-                  size="s"
-                >
-                  {t("getInTouch")}
-                </Button>
-              </Link>
+              <div className={styles.burgerWrapper}>
+                <LanguageToggle />
+                <Link href="#contact-us">
+                  <Button
+                    size="s"
+                  >
+                    {t("getInTouch")}
+                  </Button>
+                </Link>
+              </div>
             </>
             :
             <>
@@ -53,12 +56,15 @@ const Header = () => {
                     <Image src={crossIconSrc} alt="BurgerMenu" />
                   </Button>
                   :
-                  <Button
-                    size="none"
-                    onClick={handleBurgerClick}
-                  >
-                    <Image src={burgerIconSrc} alt="BurgerMenu" />
-                  </Button>
+                  <div className={styles.burgerWrapper}>
+                    <LanguageToggle />
+                    <Button
+                      size="none"
+                      onClick={handleBurgerClick}
+                    >
+                      <Image src={burgerIconSrc} alt="BurgerMenu" />
+                    </Button>
+                  </div>
                 }
               </div>
             </>

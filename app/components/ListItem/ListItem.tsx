@@ -20,7 +20,7 @@ export const ListItem:FunctionComponent<TProps> = ({
   return (
     <div className={listClassName}>
       <Image className={styles.image} src={ellipseSrc} alt="Ellipse" />
-      <P className={styles.title}>{children}</P>
+      <P>{children}</P>
     </div>
   );
 };

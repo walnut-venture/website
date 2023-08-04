@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { MainContainer, H2, P, H3, ListItem } from "components";
+import { MainContainer, H2, P, H3 } from "components";
 import { useTranslations } from "next-intl";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -81,11 +81,11 @@ export const WhoWeAreSection = () => {
           <H2 className={styles.title}>{t("mainTitle")}</H2>
         </div>
         <div className={styles.contentItem} ref={firstRef}>
-          <ListItem className={styles.list}>{t("firstTitle")}</ListItem>
+          <P className={styles.list}>{t("firstTitle")}</P>
           <P className={styles.contentText}>{t("firstText")}</P>
         </div>
         <div className={styles.contentItem} ref={secondRef}>
-          <ListItem className={styles.list}>{t("secondTitle")}</ListItem>
+          <P className={styles.list}>{t("secondTitle")}</P>
           <div className={styles.contentText}>
             <H3 className={styles.contentSubtitle}>{t("firstSubtitle")}</H3>
             <P>{t("secondText")}</P>

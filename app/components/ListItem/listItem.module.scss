@@ -2,40 +2,15 @@
 @use "styles/breakpoints";
 
 .component {
-  position: relative;
   display: flex;
-  align-items: center;
-  height: fit-content;
-}
-
-.title {
-  padding-left: 27px;
-  white-space: nowrap;
-  @include mixin.fluidFont(4, 22, 1920);
-
-  @include mixin.media-w(breakpoints.$laptop) {
-    font-size: 12px;
-    padding-left: 16px;
-  }
-
-  @include mixin.media-w(breakpoints.$mobile) {
-    padding-left: 0;
-  }
-
-  @include mixin.media-minW(breakpoints.$desktop) {
-    font-size: 22px;
-  }
 }
 
 .image {
-  position: absolute;
+  width: 4px;
+  height: 4px;
+  margin: 12px 8px 0 8px;
 
   @include mixin.media-w(breakpoints.$laptop) {
-    width: 8px;
-    height: 8px;
-  }
-
-  @include mixin.media-w(breakpoints.$mobile) {
-    left: -16px;
+    margin: 8px 8px 0 8px;
   }
 }

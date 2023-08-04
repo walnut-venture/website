@@ -61,7 +61,7 @@ const ServicesSection = () => {
       <section id="services" className={styles.component} ref={blockRef}>
         <H2 className={styles.title}>{t("mainTitle")}</H2>
         <div className={styles.listContainer}>
-          <ListItem>{t("firstTitle")}</ListItem>
+          <P className={styles.listItem}>{t("firstTitle")}</P>
         </div>
         <div className={styles.servicesContainer}>
           <div className={styles.imageWrapper}>
@@ -86,20 +86,20 @@ const ServicesSection = () => {
           </div>
         </div>
         <div className={styles.listContainer}>
-          <ListItem>{t("secondTitle")}</ListItem>
+          <P className={styles.listItem}>{t("secondTitle")}</P>
         </div>
         {
           isMobile ?
             <div className={styles.servicesDetailContainer}>
               <div className={styles.servicesDetailWrapper}>
-                <P>{t("firstDetail")}</P>
-                <P className={styles.servicesSubtitle}>{t("secondDetail")}</P>
-                <P className={styles.servicesSubtitle}>{t("thirdDetail")}</P>
-                <P className={styles.servicesSubtitle}>{t("fourthDetail")}</P>
-                <P className={styles.servicesSubtitle}>{t("fifthDetail")}</P>
-                <P className={styles.servicesSubtitle}>{t("sixthDetail")}</P>
-                <P className={styles.servicesSubtitle}>{t("seventhDetail")}</P>
-                <P className={styles.servicesSubtitle}>{t("eightDetail")}</P>
+                <ListItem>{t("firstDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("secondDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("thirdDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("fourthDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("fifthDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("sixthDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("seventhDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("eightDetail")}</ListItem>
               </div>
               <div className={styles.imageWrapper}>
                 <Image className={styles.image} src={ourServicesDetailSrc} alt="OurServices" fill />
@@ -111,13 +111,13 @@ const ServicesSection = () => {
                 <div className={styles.imageWrapper}>
                   <Image className={styles.image} src={ourServicesDetailSrc} alt="OurServices" fill />
                 </div>
-                <P className={styles.servicesSubtitle}>{t("secondDetail")}</P>
-                <P className={styles.servicesSubtitle}>{t("thirdDetail")}</P>
-                <P className={styles.servicesSubtitle}>{t("fourthDetail")}</P>
-                <P className={styles.servicesSubtitle}>{t("fifthDetail")}</P>
-                <P className={styles.servicesSubtitle}>{t("sixthDetail")}</P>
-                <P className={styles.servicesSubtitle}>{t("seventhDetail")}</P>
-                <P className={styles.servicesSubtitle}>{t("eightDetail")}</P>
+                <ListItem className={styles.servicesSubtitle}>{t("secondDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("thirdDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("fourthDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("fifthDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("sixthDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("seventhDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("eightDetail")}</ListItem>
               </div>
             </div>
         }
