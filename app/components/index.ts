@@ -20,3 +20,4 @@ export * from "./VideoPlayer";
 export * from "./InfiniteSlider";
 export * from "./MethodologySection";
 export * from "./LanguageToggle";
+export * from "./ScrollText";

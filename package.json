@@ -10,6 +10,7 @@
     "postinstall": "husky install"
   },
   "dependencies": {
+    "@react-spring/web": "^9.7.3",
     "@types/node": "20.3.3",
     "@types/nodemailer": "^6.4.8",
     "@types/react": "18.2.14",

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { H2, MainContainer, P, H3, ListItem } from "components";
+import { H2, MainContainer, P, H3, ListItem, ScrollText } from "components";
 import { useTranslations } from "next-intl";
 import { useWindowSize } from "hooks";
 gsap.registerPlugin(ScrollTrigger);
@@ -91,16 +91,18 @@ const ServicesSection = () => {
         {
           isMobile ?
             <div className={styles.servicesDetailContainer}>
-              <div className={styles.servicesDetailWrapper}>
-                <ListItem>{t("firstDetail")}</ListItem>
-                <ListItem className={styles.servicesSubtitle}>{t("secondDetail")}</ListItem>
-                <ListItem className={styles.servicesSubtitle}>{t("thirdDetail")}</ListItem>
-                <ListItem className={styles.servicesSubtitle}>{t("fourthDetail")}</ListItem>
-                <ListItem className={styles.servicesSubtitle}>{t("fifthDetail")}</ListItem>
-                <ListItem className={styles.servicesSubtitle}>{t("sixthDetail")}</ListItem>
-                <ListItem className={styles.servicesSubtitle}>{t("seventhDetail")}</ListItem>
-                <ListItem className={styles.servicesSubtitle}>{t("eightDetail")}</ListItem>
-              </div>
+              <ScrollText>
+                <div className={styles.servicesDetailWrapper}>
+                  <ListItem>{t("firstDetail")}</ListItem>
+                  <ListItem className={styles.servicesSubtitle}>{t("secondDetail")}</ListItem>
+                  <ListItem className={styles.servicesSubtitle}>{t("thirdDetail")}</ListItem>
+                  <ListItem className={styles.servicesSubtitle}>{t("fourthDetail")}</ListItem>
+                  <ListItem className={styles.servicesSubtitle}>{t("fifthDetail")}</ListItem>
+                  <ListItem className={styles.servicesSubtitle}>{t("sixthDetail")}</ListItem>
+                  <ListItem className={styles.servicesSubtitle}>{t("seventhDetail")}</ListItem>
+                  <ListItem className={styles.servicesSubtitle}>{t("eightDetail")}</ListItem>
+                </div>
+              </ScrollText>
               <div className={styles.imageWrapper}>
                 <Image className={styles.image} src={ourServicesDetailSrc} alt="OurServices" fill />
               </div>
