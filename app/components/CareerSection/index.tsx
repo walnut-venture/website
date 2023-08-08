@@ -1,5 +1,5 @@
 import { Container, H2, P, InfiniteSlider } from "components";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 
 import styles from "./career.module.scss";
 
