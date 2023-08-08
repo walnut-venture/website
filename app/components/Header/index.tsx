@@ -13,6 +13,7 @@ import burgerIconSrc from "./img/burgerMenu.svg";
 import crossIconSrc from "./img/crossButton.svg";
 
 const Header = () => {
+  const activeLocalization = process.env.NEXT_PUBLIC_LOCALISATION === "true";
   const { isLaptopM } = useWindowSize();
   const t = useTranslations("Navigation");
   const { activeBurger, setActiveBurger } = useContext(BurgerContext);
@@ -34,7 +35,7 @@ const Header = () => {
                 <Navigation />
               </div>
               <div className={styles.burgerWrapper}>
-                <LanguageToggle />
+                {activeLocalization && <LanguageToggle />}
                 <Link href="#contact-us">
                   <Button
                     size="s"
@@ -57,7 +58,7 @@ const Header = () => {
                   </Button>
                   :
                   <div className={styles.burgerWrapper}>
-                    <LanguageToggle />
+                    {activeLocalization && <LanguageToggle />}
                     <Button
                       size="none"
                       onClick={handleBurgerClick}

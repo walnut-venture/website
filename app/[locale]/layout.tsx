@@ -30,15 +30,17 @@ export default async function RootLayout({
   children,
   params: {locale}
 }: Props) {
+  const activeLocalization = process.env.NEXT_PUBLIC_LOCALISATION === "true";
+
   let messages;
   try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
+    messages = (await import(`../../messages/${activeLocalization ? locale : "en"}.json`)).default;
   } catch (error) {
     notFound();
   };
 
   return (
-    <html lang={locale}>
+    <html lang={activeLocalization ? locale: "en"}>
       <head>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
