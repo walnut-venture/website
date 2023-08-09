@@ -5,7 +5,6 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 80px;
   display: flex;
   background-color: var(--bgWhite);
   color: var(--fontBlack);
@@ -14,14 +13,14 @@
   width: 100%;
   z-index: 999;
   border-top: 1px solid var(--btnGreen);
-  padding: 0 70px;
+  padding: 15px 70px;
 
   @include mixin.media-w(breakpoints.$laptop) {
-    padding: 0 50px;
+    padding: 15px 50px;
   }
 
   @include mixin.media-w(breakpoints.$laptop-s) {
-    padding: 0 20px;
+    padding: 10px 20px;
   }
 }
 

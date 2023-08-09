@@ -25,6 +25,11 @@ export const Navigation = () => {
           </Link>
         </li>
         <li>
+          <Link href="#methodology"  className={styles.link}>
+            {t("methodology")}
+          </Link>
+        </li>
+        <li>
           <Link href="#career" className={styles.link}>
             {t("career")}
           </Link>
