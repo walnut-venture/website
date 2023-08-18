@@ -25,6 +25,7 @@
 .servicesContainer {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 24px;
 
   @include mixin.media-w(breakpoints.$mobile) {
     flex-direction: column;
@@ -50,6 +51,10 @@
   }
 }
 
+.mediaContent {
+  width: 41%;
+}
+
 .imageWrapper {
   width: 41%;
   position: relative;
@@ -61,11 +66,21 @@
   }
 }
 
+.detailImageWrapper {
+  width: 100%;
+  position: relative;
+  padding-top: calc(358 / 546 * 100%);
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    padding-top: calc(546 / 598 * 100%);
+  }
+}
+
 .image {
   object-fit: cover;
   border-radius: 30px;
 
-  @include mixin.media-w(breakpoints.$mobile) {
+  @include mixin.media-w(breakpoints.$laptop) {
     border-radius: 16px;
   }
 }
@@ -147,14 +162,19 @@
 }
 
 .listItem {
+  font-weight: 500;
   white-space: nowrap;
-  @include mixin.fluidFont(4, 22, 1920);
+  @include mixin.fluidFont(6, 32, 1920);
 
   @include mixin.media-w(breakpoints.$laptop) {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   @include mixin.media-minW(breakpoints.$desktop) {
-    font-size: 22px;
+    font-size: 32px;
+  }
+
+  @include mixin.media-minW(breakpoints.$mobile) {
+    font-size: 16px;
   }
 }

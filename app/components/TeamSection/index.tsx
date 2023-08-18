@@ -7,6 +7,7 @@ import { useWindowSize } from "hooks";
 
 import styles from "./teamSection.module.scss";
 import teamSEOSrc from "./img/teamCEOImage.jpg";
+import linkedinSrc from "./img/linkedin.svg";
 
 const TeamSection = () => {
   const { isMobile } = useWindowSize();
@@ -22,7 +23,12 @@ const TeamSection = () => {
             <Image className={styles.image} src={teamSEOSrc} alt="TeamSEO" fill />
           </div>
           <div className={styles.teamTitle}>
-            <H3>{t("name")}</H3>
+            <div className={styles.socialWrapper}>
+              <H3>{t("name")}</H3>
+              <a className={styles.socialLink} href="https://www.linkedin.com/in/julian-verocai-30b1a582/">
+                <Image className={styles.social} src={linkedinSrc} alt="Linkedin" />
+              </a>
+            </div>
             <P>{t("speciality")}</P>
           </div>
         </div>

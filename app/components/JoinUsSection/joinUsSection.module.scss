@@ -92,7 +92,7 @@
   object-fit: cover;
   border-radius: 30px;
 
-  @include mixin.media-w(breakpoints.$mobile) {
+  @include mixin.media-w(breakpoints.$laptop) {
     border-radius: 16px;
   }
 }

@@ -51,16 +51,17 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 44px;
+  gap: 10px;
   width: 49%;
 
   @include mixin.media-w(breakpoints.$laptop) {
-    gap: 16px;
+    gap: 14px;
   }
 
   @include mixin.media-w(breakpoints.$mobile) {
     width: 100%;
     margin-top: 24px;
+    gap: 12px;
   }
 }
 
@@ -79,7 +80,7 @@
   object-fit: cover;
   border-radius: 30px;
 
-  @include mixin.media-w(breakpoints.$mobile) {
+  @include mixin.media-w(breakpoints.$laptop) {
     border-radius: 16px;
   }
 }
@@ -95,5 +96,29 @@
 
   @include mixin.media-w(breakpoints.$mobile) {
     gap: 12px;
+  }
+}
+
+.socialWrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.social {
+  width: 40px;
+  height: 40px;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.socialLink {
+  height: 40px;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    height: 24px;
   }
 }
