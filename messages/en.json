@@ -3,6 +3,7 @@
     "whoWeAre": "Who we are",
     "services": "Services",
     "aboutUs": "About us",
+    "methodology": "Methodology",
     "career": "Career",
     "getInTouch": "Get in touch"
   },
@@ -82,7 +83,7 @@
   },
   "Footer": {
     "title": "Contact",
-    "text": "Copyright © 2023 Walnut venture studios"
+    "text": "Copyright © 2023 walnut venture studios"
   },
   "Methodology": {
     "mainTitle": "Methodology",
@@ -109,5 +110,8 @@
     "secondPhase": "Proof of concept & testing phase",
     "thirdPhase": "MVP on the market",
     "fourthPhase": "Roll-out & scale-up"
+  },
+  "CookieBanner": {
+    "title": "We use analytics cookies to collect anonymous data about how you interact with our website. By clicking on ‘Agree’,  you expressly consent to the aforementioned processes. You can withdraw your consent at any time."
   }
 }

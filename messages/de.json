@@ -3,6 +3,7 @@
     "whoWeAre": "Wer wir sind",
     "services": "Dienstleistungen",
     "aboutUs": "Über uns",
+    "methodology": "Methodik",
     "career": "Karriere",
     "getInTouch": "Kontakt aufnehmen"
   },
@@ -82,7 +83,7 @@
   },
   "Footer": {
     "title": "Kontakt",
-    "text": "Urheberrecht © 2023 Walnut venture studios"
+    "text": "Urheberrecht © 2023 walnut venture studios"
   },
   "Methodology": {
     "mainTitle": "Methodik",
@@ -109,5 +110,8 @@
     "secondPhase": "Konzeptnachweis und Testphase",
     "thirdPhase": "MVP auf dem Markt",
     "fourthPhase": "Roll-out & scale-up"
+  },
+  "CookieBanner": {
+    "title": "Wir verwenden Analyse-Cookies, um anonyme Daten darüber zu sammeln, wie Sie mit unserer Website interagieren. Indem Sie auf ‘Zustimmen’ klicken, erklären Sie sich ausdrücklich mit den oben genannten Verfahren einverstanden. Sie können Ihre Zustimmung jederzeit widerrufen."
   }
 }

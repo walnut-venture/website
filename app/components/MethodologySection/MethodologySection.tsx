@@ -12,7 +12,7 @@ export const MethodologySection = () => {
 
   return (
     <MainContainer>
-      <section className={styles.component}>
+      <section id="methodology" className={styles.component}>
         <div className={styles.titleWrapper}>
           <H2>{t("mainTitle")}</H2>
           <H3 className={styles.subtitle}>{t("firstSubtitle")}</H3>

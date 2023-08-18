@@ -17,13 +17,13 @@
 }
 
 .navContainer {
-  @include mixin.maxWidth(674px);
+  @include mixin.maxWidth(800px);
   margin-right: 50px;
   display: flex;
   justify-content: space-between;
 
-  @include mixin.media-w(breakpoints.$laptop-l) {
-    margin-right: 40px;
+  @include mixin.media-w(breakpoints.$laptop) {
+    margin-right: 80px;
   }
 }
 
