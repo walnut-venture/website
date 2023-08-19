@@ -56,7 +56,6 @@
   @include mixin.media-w(breakpoints.$laptop) {
     margin: 28px auto 0 auto;
     gap: 16px;
-    width: 100%;
   }
 }
 

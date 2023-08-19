@@ -15,7 +15,7 @@ const CareerSection = () => {
         <div className={styles.textContainer}>
           <P className={styles.text}>{t("secondText")}</P>
           <P className={styles.text}>
-            {t("thirdText")}<a className={styles.email} href="mailto:julian.verocai@verocaiconsulting.com">julian.verocai@verocaiconsulting.com</a>.
+            {t("thirdText")}<a className={styles.email} href="mailto:office@walnut-vs.com">office@walnut-vs.com</a>.
           </P>
         </div>
       </section>
