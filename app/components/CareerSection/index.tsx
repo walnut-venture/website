@@ -1,4 +1,4 @@
-import { Container, H2, P, ImagesWrapper } from "components";
+import { H2, P, ImagesWrapper, MainContainer } from "components";
 import { useTranslations } from "next-intl";
 
 import styles from "./career.module.scss";
@@ -7,7 +7,7 @@ const CareerSection = () => {
   const t = useTranslations("Career");
 
   return (
-    <Container>
+    <MainContainer>
       <section id="career" className={styles.component}>
         <H2 className={styles.title}>{t("mainTitle")}</H2>
         <P className={styles.subtitle}>{t("firstText")}</P>
@@ -19,7 +19,7 @@ const CareerSection = () => {
           </P>
         </div>
       </section>
-    </Container>
+    </MainContainer>
   );
 };
 

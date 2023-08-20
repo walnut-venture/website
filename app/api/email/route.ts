@@ -20,7 +20,7 @@ export async function POST(req: Request) {
     if (validateData(reqData)) {
       let data = {
         sender: { name: reqData.name, email: reqData.email },
-        to: [{ email: "julian.verocai@verocaiconsulting.com" }],
+        to: [{ email: "office@walnut-vs.com" }],
         subject: "Message from: " + reqData.name,
         textContent: `Phone number: ${reqData.phone} \n${reqData.message}`
       };
