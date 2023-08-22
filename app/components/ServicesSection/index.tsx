@@ -36,13 +36,13 @@ const ServicesSection = () => {
               <H3>{t("secondSubtitle")}</H3>
               <P className={styles.subtitle}>{t("secondText")}</P>
             </motion.div>
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 2 }} viewport={{ once: true }} className={styles.servicesCard}>
-              <P className={styles.number}>03.</P>
-              <H3>{t("thirdSubtitle")}</H3>
-              <P className={styles.subtitle}>{t("thirdText")}</P>
-            </motion.div>
           </div>
         </div>
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 2 }} viewport={{ once: true }} className={styles.servicesCard}>
+          <P className={styles.number}>03.</P>
+          <H3>{t("thirdSubtitle")}</H3>
+          <P className={styles.subtitle}>{t("thirdText")}</P>
+        </motion.div>
         <div className={styles.listContainer}>
           <P className={styles.listItem}>{t("secondTitle")}</P>
         </div>
@@ -55,12 +55,14 @@ const ServicesSection = () => {
                 <ListItem className={styles.servicesSubtitle}>{t("thirdDetail")}</ListItem>
                 <ListItem className={styles.servicesSubtitle}>{t("fourthDetail")}</ListItem>
                 <ListItem className={styles.servicesSubtitle}>{t("fifthDetail")}</ListItem>
+              </div>
+              <div className={styles.mediaContent}>
+                <div className={styles.detailImageWrapper}>
+                  <Image className={styles.image} src={ourServicesDetailSrc} alt="OurServices" fill />
+                </div>
                 <ListItem className={styles.servicesSubtitle}>{t("sixthDetail")}</ListItem>
                 <ListItem className={styles.servicesSubtitle}>{t("seventhDetail")}</ListItem>
                 <ListItem className={styles.servicesSubtitle}>{t("eightDetail")}</ListItem>
-              </div>
-              <div className={styles.imageWrapper}>
-                <Image className={styles.image} src={ourServicesDetailSrc} alt="OurServices" fill />
               </div>
             </div>
             :

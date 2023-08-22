@@ -8,6 +8,7 @@ interface IWindowSize {
 };
 
 interface UseWindowSize extends IWindowSize {
+  isLaptopL: boolean;
   isLaptopM: boolean;
   isLaptopS: boolean;
   isMobile: boolean;
@@ -38,6 +39,7 @@ export function useWindowSize(): UseWindowSize {
 
   return {
     ...windowSize,
+    isLaptopL: windowSize.width <= 900,
     isLaptopM: windowSize.width <= 800,
     isLaptopS: windowSize.width <= 700,
     isMobile: windowSize.width >= 600

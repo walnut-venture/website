@@ -36,15 +36,20 @@
 
 .list {
   width: 15.2%;
+  font-weight: 500;
   white-space: nowrap;
-  @include mixin.fluidFont(4, 22, 1920);
+  @include mixin.fluidFont(6, 32, 1920);
 
   @include mixin.media-w(breakpoints.$laptop) {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   @include mixin.media-minW(breakpoints.$desktop) {
-    font-size: 22px;
+    font-size: 32px;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    font-size: 16px;
   }
 }
 

@@ -14,10 +14,17 @@
     gap: 30px;
   }
 
+  @include mixin.media-w(breakpoints.$laptop-l) {
+    gap: 15px;
+  }
+
   @include mixin.media-w(breakpoints.$laptop-s) {
-    padding: 0;
+    padding: 0 50px;
     margin-top: 60px;
-    gap: 0;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    padding: 0 26px;
   }
 }
 
@@ -39,7 +46,7 @@
 
   @include mixin.media-w(breakpoints.$mobile) {
     width: 100%;
-    padding: 0 35px;
+    padding: 0 9px;
     text-align: start;
   }
 }
@@ -56,115 +63,380 @@
   }
 }
 
-.container {
-  @include mixin.maxWidth(1192px);
-  background-color: var(--bgMethodology);
-  border-radius: 40px;
-  display: flex;
-  gap: 8.4%;
-  padding: 30px;
-  min-height: 446px;
+.cardsContainer {
+  position: relative;
+  width: 100%;
+  padding: 0 5px;
+  height: 500px;
 
   @include mixin.media-w(breakpoints.$desktop-s) {
-    min-height: 267px;
-    gap: 33px;
+    height: 400px;
   }
 
-  @include mixin.media-w(breakpoints.$laptop-s) {
-    flex-direction: column;
-    border-radius: 0;
-    gap: 24px;
-    padding: 30px 52px;
+  @include mixin.media-w(breakpoints.$laptop) {
+    height: 350px;
   }
 
-  @include mixin.media-w(breakpoints.$mobile) {
-    padding: 24px 35px;
-  }
-}
-
-.firstBlock {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.secondBlock {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.bgCard {
-  background: var(--bgBlack);
-  border-radius: 40px;
-  width: 50%;
-  padding: 45px 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-
-  @include mixin.media-w(breakpoints.$desktop-s) {
-    padding: 19px 24px;
-    gap: 10px;
-  }
-
-  @include mixin.media-w(breakpoints.$laptop-s) {
-    width: 100%;
-    border-radius: 16px;
-    min-height: 182px;
-    padding: 16px 24px;
-  }
-}
-
-.card {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  padding: 45px 0;
-
-  @include mixin.media-w(breakpoints.$desktop-s) {
-    padding: 19px 0;
-    gap: 10px;
-  }
-
-  @include mixin.media-w(breakpoints.$laptop-s) {
-    width: 100%;
+  @include mixin.media-w(breakpoints.$laptop-l) {
+    height: 300px;
     padding: 0;
   }
 }
 
-.cardTitle {
-  margin-bottom: 6px;
-  width: 80%;
+.firstCard {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 30px;
+  bottom: 0;
+  height: 85%;
+  width: 22%;
+  background-color: #6A6162;
+  z-index: 5;
+  left: 60px;
 
-  @include mixin.media-w(breakpoints.$desktop-s) {
-    margin-bottom: 14px;
+  @include mixin.media-w(breakpoints.$laptop-l) {
+    left: 20px;
+    width: 47%;
+    height: 93%;
   }
 
-  @include mixin.media-w(breakpoints.$laptop-s) {
-    margin-bottom: 20px;
+  @include mixin.media-w(breakpoints.$mobile) {
+    left: 10px;
+    width: 49%;
+    height: 95%;
+  }
+}
+
+.secondCard {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 30px;
+  bottom: 0;
+  height: 90%;
+  width: 47%;
+  background-color: #4D4948;
+  z-index: 4;
+  left: 40px;
+
+  @include mixin.media-w(breakpoints.$laptop-l) {
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+}
+
+.thirdCard {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 30px;
+  bottom: 0;
+  height: 95%;
+  width: 72%;
+  background-color: #383435;
+  z-index: 3;
+  left: 20px;
+
+  @include mixin.media-w(breakpoints.$laptop-l) {
+    left: 20px;
+    width: 47%;
+    height: 93%;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    left: 10px;
+    width: 49%;
+    height: 95%;
+  }
+}
+
+.fourthCard {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 30px;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #232122;
+  z-index: 2;
+
+  @include mixin.media-w(breakpoints.$laptop-l) {
+    position: relative;
+  }
+}
+
+.firstContent {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+
+  @include mixin.media-w(breakpoints.$desktop-s) {
+    gap: 15px;
+  }
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    gap: 10px;
+    padding: 20px;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    gap: 7px;
+  }
+}
+
+.secondContent {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+
+  @include mixin.media-w(breakpoints.$desktop-s) {
+    gap: 15px;
+  }
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    gap: 10px;
+    padding: 20px;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    gap: 7px;
+  }
+}
+
+.thirdContent {
+  width: 33%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+
+  @include mixin.media-w(breakpoints.$desktop-s) {
+    gap: 15px;
+  }
+  
+  @include mixin.media-w(breakpoints.$laptop) {
+    gap: 10px;
+    padding: 20px;
+  }
+
+  @include mixin.media-w(breakpoints.$laptop-l) {
+    width: 100%;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    gap: 7px;
+  }
+}
+
+.fourthContent {
+  width: 27%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+
+  @include mixin.media-w(breakpoints.$desktop-s) {
+    gap: 15px;
+  }
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    gap: 10px;
+    padding: 20px;
+  }
+
+  @include mixin.media-w(breakpoints.$laptop-l) {
+    padding: 40px;
+    width: 50%;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    gap: 7px;
+  }
+}
+
+.cardTitle {
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--bgWhite);
+  @include mixin.fluidFont(8, 28, 1920);
+  font-weight: 500;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  @include mixin.media-w(breakpoints.$laptop-l) {
+    margin-bottom: 5px;
+  }
+
+  @include mixin.media-minW(breakpoints.$desktop) {
+    font-size: 28px;
+  }
+
+  @include mixin.media-w(breakpoints.$desktop-s) {
+    margin-bottom: 15px;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    margin-bottom: 10px;
+  }
+}
+
+.cardText {
+  color: var(--bgWhite);
+  @include mixin.fluidFont(8, 18, 1920);
+  font-weight: 500;
+  text-align: center;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    font-size: 12px;
+  }
+
+  @include mixin.media-minW(breakpoints.$desktop) {
+    font-size: 18px;
   }
 }
 
 .phaseContainer {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
+  padding-right: 10px;
+}
 
-  @include mixin.media-w(breakpoints.$laptop-s) {
-    padding: 0 52px;
-    margin-top: 50px;
-  }
+.firstPhase {
+  position: relative;
+  background-color: #6A6162;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  width: 22%;
 
-  @include mixin.media-w(breakpoints.$mobile) {
-    padding: 0 35px;
-    flex-direction: column;
-    gap: 46px;
+  @include mixin.media-w(breakpoints.$laptop-l) {
+    width: 50%;
+    margin-bottom: 20px;
   }
 }
 
-.phaseWrapper {
+.firstPhase::after {
+  height: 100%;
+  width: 20px;
+  background-color: #6A6162;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -19px;
+  clip-path: polygon(0% 0%, 50% 0%, 100% 50%, 50% 100%, 0% 100%);
+  z-index: 1;
+}
+
+.secondPhase {
   position: relative;
-  margin-right: 30px;
+  background-color: #4D4948;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px 15px 50px;
+  width: 34%;
+
+  @include mixin.media-w(breakpoints.$laptop-l) {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+}
+
+.secondPhase::after {
+  height: 100%;
+  width: 20px;
+  background-color: #4D4948;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -19px;
+  clip-path: polygon(0% 0%, 50% 0%, 100% 50%, 50% 100%, 0% 100%);
+  z-index: 1;
+}
+
+.thirdPhase {
+  position: relative;
+  background-color: #383435;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px 15px 50px;
+  width: 22%;
+
+  @include mixin.media-w(breakpoints.$laptop-l) {
+    width: 50%;
+  }
+}
+
+.thirdPhase::after {
+  height: 100%;
+  width: 20px;
+  background-color: #383435;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -19px;
+  clip-path: polygon(0% 0%, 50% 0%, 100% 50%, 50% 100%, 0% 100%);
+  z-index: 1;
+}
+
+.fourthPhase {
+  position: relative;
+  background-color: #232122;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px 15px 50px;
+  width: 22%;
+
+  @include mixin.media-w(breakpoints.$laptop-l) {
+    width: 50%;
+  }
+}
+
+.fourthPhase::after {
+  height: 100%;
+  width: 20px;
+  background-color: #232122;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -19px;
+  clip-path: polygon(0% 0%, 50% 0%, 100% 50%, 50% 100%, 0% 100%);
+  z-index: 1;
+}
+
+.phaseTitle {
+  color: var(--bgWhite);
+  @include mixin.fluidFont(8, 28, 1920);
+  text-align: center;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    font-size: 16px;
+  }
+
+  @include mixin.media-minW(breakpoints.$desktop) {
+    font-size: 28px;
+  }
 }
 
 .firstPhaseBlock {
@@ -177,10 +449,4 @@
   width: 60%;
   margin-right: 0;
   margin-left: auto;
-}
-
-.image {
-  position: absolute;
-  top: -20px;
-  right: -30px;
 }
