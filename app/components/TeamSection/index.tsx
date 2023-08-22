@@ -25,7 +25,7 @@ const TeamSection = () => {
           <div className={styles.teamTitle}>
             <div className={styles.socialWrapper}>
               <H3>{t("name")}</H3>
-              <a className={styles.socialLink} href="https://www.linkedin.com/in/julian-verocai-30b1a582/">
+              <a className={styles.socialLink} href="https://www.linkedin.com/in/julian-verocai-30b1a582/" target="_blank">
                 <Image className={styles.social} src={linkedinSrc} alt="Linkedin" />
               </a>
             </div>
