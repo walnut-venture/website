@@ -322,7 +322,7 @@
   justify-content: center;
   align-items: center;
   padding: 15px 30px;
-  width: 22%;
+  width: 26%;
 
   @include mixin.media-w(breakpoints.$laptop-l) {
     width: 50%;
@@ -350,7 +350,7 @@
   justify-content: center;
   align-items: center;
   padding: 15px 30px 15px 50px;
-  width: 34%;
+  width: 24%;
 
   @include mixin.media-w(breakpoints.$laptop-l) {
     width: 50%;
@@ -378,7 +378,7 @@
   justify-content: center;
   align-items: center;
   padding: 15px 30px 15px 50px;
-  width: 22%;
+  width: 23%;
 
   @include mixin.media-w(breakpoints.$laptop-l) {
     width: 50%;
@@ -405,7 +405,7 @@
   justify-content: center;
   align-items: center;
   padding: 15px 30px 15px 50px;
-  width: 22%;
+  width: 27%;
 
   @include mixin.media-w(breakpoints.$laptop-l) {
     width: 50%;

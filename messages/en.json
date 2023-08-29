@@ -15,7 +15,7 @@
   "DrivingInnovation": {
     "title": "Driving innovation and growth in finance",
     "firstSubtitle": "Walnut venture studios is a corporate venture builder focusing on revolutionizing the financial sector through innovation, technology, and entrepreneurship.",
-    "secondSubtitle": "We partner with established financial institutions, fintech companies, and forward-thinking organizations to create disruptive ventures that shape the future of finance. Our headquarter is at the tripoint in Bregenz, Austria and Frankfurt am Main, Germany."
+    "secondSubtitle": "We partner with established financial institutions, fintech companies, and forward-thinking organizations to create disruptive ventures that shape the future of finance. Our office is located in Bregenz, Austria and Frankfurt am Main, Germany."
   },
   "JoinUs": {
     "title": "Join us in shaping the future of finance",
@@ -47,19 +47,20 @@
     "firstSubtitle": "Venture ideation and validation",
     "secondSubtitle": "Venture building and development",
     "thirdSubtitle": "Venture growth and scaling",
-    "firstDetail": "Fast designing, building and scaling of disruptive and innovative business models in the financial sector",
+    "firstDetail": "Fast designing, building and scaling of disruptive and innovative business models",
     "secondDetail": "Advising financial institutions on digital transformation strategies",
     "thirdDetail": "Company building and applying lean start-up methodology",
     "fourthDetail": "ESG consulting",
-    "fifthDetail": "IT consulting & advisory (we are experts on core banking systems and have established strong relationship to all core banking provider in DACH region)",
-    "sixthDetail": "Business development & advisory for market entry into DACH region",
-    "seventhDetail": "Advisory on regulatory topics for financial institutions",
-    "eightDetail": "Fund-raising for start-ups"
+    "fifthDetail": "IT consulting including building IT infrastructure",
+    "sixthDetail": "Consulting for core banking systems and banking platforms (we have established strong relationships to all core banking providers in DACH region)",
+    "seventhDetail": "Business development & advisory for market entry in DACH region",
+    "eightDetail": "Support regulatory topics for financial institutions",
+    "ninthDetail": "Fund-raising for start-ups"
   },
   "AboutUs": {
     "mainTitle": "About us",
     "firstText": "At walnut ventures, we believe in reshaping the financial landscape by embracing cutting-edge technologies, driving digital transformation, and fostering entrepreneurial spirit. With our deep industry expertise and forward-thinking approach, we are at the forefront of revolutionizing finance for the digital age.",
-    "secondText": "Julian is an accomplished finance and technology executive with a proven track record of driving innovation and growth in the financial sector. With a strong background in finance, coupled with a deep understanding of emerging technologies, he possesses a unique blend of strategic vision and hands-on leadership.",
+    "secondText": "Julian is an accomplished finance and technology executive with a proven track record of driving innovation and growth in the financial sector.",
     "thirdText": "His passion for entrepreneurship and his keen eye for market opportunities have allowed him to forge strategic partnerships, creating synergies between traditional financial institutions and agile fintech start-ups.",
     "fourthText": "Julian has professional experience in working for large international banking groups and deep regulatory and monetary policy know-how. He has consulted for many years international banks on various innovation projects (ESG platforms, neo bank projects, core-banking system integration and many more).",
     "name": "Julian Verocai",
@@ -71,7 +72,7 @@
     "mainTitle": "Career",
     "firstText": "Hi there! We are glad you found us! We are looking for brilliant minds, who want to support founders & corporate innovation heads from idea to scale.",
     "secondText": "Are you passionate about building new ventures, new business models, products and leaving your mark on the industry? At walnut venture you will find a like minded team of highly motivated entrepreneurs.",
-    "thirdText": "We are always interested in hearing from new talents. Please send us your CV with a short intro e-mail to "
+    "thirdText": "Please send us your CV with a short intro e-mail to "
   },
   "ContactUs": {
     "mainTitle": "Interested in working together?",
@@ -87,12 +88,12 @@
   },
   "Methodology": {
     "mainTitle": "Methodology",
-    "firstSubtitle": "MVP approach - we design, test and build ventures",
+    "firstSubtitle": "We design, test and build ventures",
     "secondSubtitle": "Research, Ideation & Design",
     "thirdSubtitle": "Initial Testing & Feasibility Study",
     "fourthSubtitle": "Minimum Viable Product Preparation",
     "fifthSubtile": "Roll-Out & Scaling",
-    "firstText": "We offer our clients a fully company building portfolio. Our process combines design thinking, lean startup and agile/ scrum.",
+    "firstText": "Our process combines design thinking, lean startup and agile/ scrum.",
     "researchFirst": "Focus on customer centricity & technology exploration",
     "researchSecond": "Generate hypothesis",
     "studyFirst": "Create a prototype",

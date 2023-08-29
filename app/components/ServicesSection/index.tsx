@@ -55,14 +55,15 @@ const ServicesSection = () => {
                 <ListItem className={styles.servicesSubtitle}>{t("thirdDetail")}</ListItem>
                 <ListItem className={styles.servicesSubtitle}>{t("fourthDetail")}</ListItem>
                 <ListItem className={styles.servicesSubtitle}>{t("fifthDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("sixthDetail")}</ListItem>
               </div>
               <div className={styles.mediaContent}>
                 <div className={styles.detailImageWrapper}>
                   <Image className={styles.image} src={ourServicesDetailSrc} alt="OurServices" fill />
                 </div>
-                <ListItem className={styles.servicesSubtitle}>{t("sixthDetail")}</ListItem>
                 <ListItem className={styles.servicesSubtitle}>{t("seventhDetail")}</ListItem>
                 <ListItem className={styles.servicesSubtitle}>{t("eightDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("ninthDetail")}</ListItem>
               </div>
             </div>
             :
@@ -78,6 +79,7 @@ const ServicesSection = () => {
                 <ListItem className={styles.servicesSubtitle}>{t("sixthDetail")}</ListItem>
                 <ListItem className={styles.servicesSubtitle}>{t("seventhDetail")}</ListItem>
                 <ListItem className={styles.servicesSubtitle}>{t("eightDetail")}</ListItem>
+                <ListItem className={styles.servicesSubtitle}>{t("ninthDetail")}</ListItem>
               </div>
             </div>
         }
