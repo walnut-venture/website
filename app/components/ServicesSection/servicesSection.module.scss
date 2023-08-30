@@ -58,7 +58,7 @@
 .imageWrapper {
   width: 41%;
   position: relative;
-  padding-top: calc(546 / 598 * 50%);
+  padding-top: calc(546 / 598 * 40%);
 
   @include mixin.media-w(breakpoints.$mobile) {
     width: 100%;
@@ -79,6 +79,7 @@
 .image {
   object-fit: cover;
   border-radius: 30px;
+  top: 0;
 
   @include mixin.media-w(breakpoints.$laptop) {
     border-radius: 16px;
@@ -164,17 +165,17 @@
 .listItem {
   font-weight: 500;
   white-space: nowrap;
-  @include mixin.fluidFont(6, 32, 1920);
+  @include mixin.fluidFont(10, 36, 1920);
 
   @include mixin.media-w(breakpoints.$laptop) {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   @include mixin.media-minW(breakpoints.$desktop) {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   @include mixin.media-w(breakpoints.$mobile) {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
