@@ -37,7 +37,7 @@ export const ContactUsSection = () => {
       const responseJson = await res.json();
       console.log(responseJson);
 
-      return toast(<P>Emails was send!</P>, {style: {backgroundColor: "#E7E7E7", padding: "12px, 20px", color: '#000000', borderRadius: "40px", textAlign: "center"}});
+      return toast.success(<P>Emails was send!</P>, {style: {backgroundColor: "#E7E7E7", padding: "12px 20px", color: '#000000', borderRadius: "40px", textAlign: "center"}});
     } else {
       console.log("Error sending email");
     }

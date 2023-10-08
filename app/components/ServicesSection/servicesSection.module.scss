@@ -20,6 +20,12 @@
 
 .title {
   text-align: center;
+  
+  margin-bottom: 80px;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    margin-bottom: 28px;
+  }
 }
 
 .servicesContainer {
@@ -55,8 +61,26 @@
   width: 41%;
 }
 
-.imageWrapper {
+.servicesImages {
   width: 41%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    gap: 16px;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    width: 100%;
+    gap: 28px;
+  }
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 33%;
   position: relative;
   padding-top: calc(546 / 598 * 40%);
 

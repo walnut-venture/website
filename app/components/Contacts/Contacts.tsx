@@ -9,7 +9,7 @@ export const Contacts = () => {
   return (
     <address className={styles.component}>
       <P className={styles.title}>{t("title")}</P>
-      <P className={styles.subtitle}>Blodigweg 1, 6900 Bregenz, Austria</P>
+      <a href="https://maps.app.goo.gl/W9nwkCHHPaqMNart6" target="_blank" className={styles.subtitle}>Heiligkreuzgasse 16, 60313 Frankfurt am Main, Germany</a>
       <a className={styles.subtitle} href="mailto:office@walnut-vs.com">office@walnut-vs.com</a>
     </address>
   );

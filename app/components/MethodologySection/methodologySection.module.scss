@@ -69,6 +69,10 @@
   padding: 0 5px;
   height: 500px;
 
+  @include mixin.media-w(breakpoints.$desktop-m) {
+    height: 450px;
+  }
+
   @include mixin.media-w(breakpoints.$desktop-s) {
     height: 400px;
   }
@@ -170,98 +174,95 @@
 }
 
 .firstContent {
-  padding: 30px;
+  padding: 24% 25px 25px 25px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 20px;
+  gap: 15px;
 
   @include mixin.media-w(breakpoints.$desktop-s) {
-    gap: 15px;
+    gap: 10px;
   }
 
   @include mixin.media-w(breakpoints.$laptop) {
-    gap: 10px;
-    padding: 20px;
+    gap: 8px;
+    padding: 24% 20px 20px 20px;
   }
 
   @include mixin.media-w(breakpoints.$mobile) {
-    gap: 7px;
+    gap: 5px;
   }
 }
 
 .secondContent {
   width: 50%;
-  padding: 30px;
+  padding: 15% 25px 25px 25px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 20px;
+  gap: 15px;
 
   @include mixin.media-w(breakpoints.$desktop-s) {
-    gap: 15px;
+    gap: 10px;
   }
 
   @include mixin.media-w(breakpoints.$laptop) {
-    gap: 10px;
-    padding: 20px;
+    gap: 8px;
+    padding: 15% 20px 20px 20px;
   }
 
   @include mixin.media-w(breakpoints.$mobile) {
-    gap: 7px;
+    gap: 5px;
   }
 }
 
 .thirdContent {
   width: 33%;
-  padding: 30px;
+  padding: 13% 25px 25px 25px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 20px;
+  gap: 15px;
 
   @include mixin.media-w(breakpoints.$desktop-s) {
-    gap: 15px;
+    gap: 10px;
   }
   
   @include mixin.media-w(breakpoints.$laptop) {
-    gap: 10px;
-    padding: 20px;
+    gap: 8px;
+    padding: 13% 20px 20px 20px;
   }
 
   @include mixin.media-w(breakpoints.$laptop-l) {
+    padding: 25% 20px 20px 20px;
     width: 100%;
   }
 
   @include mixin.media-w(breakpoints.$mobile) {
-    gap: 7px;
+    gap: 5px;
   }
 }
 
 .fourthContent {
   width: 27%;
-  padding: 30px;
+  padding: 11.5% 25px 25px 25px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 20px;
+  gap: 15px;
 
   @include mixin.media-w(breakpoints.$desktop-s) {
-    gap: 15px;
+    gap: 10px;
   }
 
   @include mixin.media-w(breakpoints.$laptop) {
-    gap: 10px;
-    padding: 20px;
+    gap: 8px;
+    padding: 11.5% 20px 20px 20px;
   }
 
   @include mixin.media-w(breakpoints.$laptop-l) {
-    padding: 40px;
+    padding: 15% 20px 20px 20px;
     width: 50%;
   }
 
   @include mixin.media-w(breakpoints.$mobile) {
-    gap: 7px;
+    gap: 5px;
   }
 }
 

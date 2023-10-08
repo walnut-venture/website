@@ -7,8 +7,10 @@ import { useWindowSize } from "hooks";
 import { motion } from "framer-motion";
 
 import styles from "./servicesSection.module.scss";
-import ourServicesSrc from "./img/ourSevicesImage.jpg";
-import ourServicesDetailSrc from "./img/ourSevicesDetailImage.jpg";
+import ourServicesBgSrc from "./img/ourServicesBg.jpg";
+import ourServicesFinTech from "./img/ourServicesFinTech.jpg";
+import ourServicesSrc from "./img/ourServicesImage.jpg";
+import ourServicesDetailSrc from "./img/ourServicesDetailImage.jpg";
 
 const ServicesSection = () => {
   const { isMobile } = useWindowSize();
@@ -18,13 +20,25 @@ const ServicesSection = () => {
     <MainContainer>
       <section id="services" className={styles.component}>
         <H2 className={styles.title}>{t("mainTitle")}</H2>
-        <div className={styles.listContainer}>
-          <P className={styles.listItem}>{t("firstTitle")}</P>
-        </div>
         <div className={styles.servicesContainer}>
-          <div className={styles.imageWrapper}>
-            <Image className={styles.image} src={ourServicesSrc} alt="OurServices" fill />
-          </div>
+          {
+            isMobile ?
+              <div className={styles.servicesImages}>
+                <div className={styles.imageWrapper}>
+                  <Image className={styles.image} src={ourServicesBgSrc} alt="OurServices" fill />
+                </div>
+                <div className={styles.imageWrapper}>
+                  <Image className={styles.image} src={ourServicesFinTech} alt="OurServices" fill />
+                </div>
+                <div className={styles.imageWrapper}>
+                  <Image className={styles.image} src={ourServicesSrc} alt="OurServices" fill />
+                </div>
+              </div>
+              :
+              <div className={styles.imageWrapper}>
+                <Image className={styles.image} src={ourServicesSrc} alt="OurServices" fill />
+              </div>
+          }
           <div className={styles.cardsContainer}>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 2 }} viewport={{ once: true }} className={styles.servicesCard}>
               <P className={styles.number}>01.</P>
@@ -36,13 +50,13 @@ const ServicesSection = () => {
               <H3>{t("secondSubtitle")}</H3>
               <P className={styles.subtitle}>{t("secondText")}</P>
             </motion.div>
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 2 }} viewport={{ once: true }} className={styles.servicesCard}>
+              <P className={styles.number}>03.</P>
+              <H3>{t("thirdSubtitle")}</H3>
+              <P className={styles.subtitle}>{t("thirdText")}</P>
+            </motion.div>
           </div>
         </div>
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 2 }} viewport={{ once: true }} className={styles.servicesCard}>
-          <P className={styles.number}>03.</P>
-          <H3>{t("thirdSubtitle")}</H3>
-          <P className={styles.subtitle}>{t("thirdText")}</P>
-        </motion.div>
         <div className={styles.listContainer}>
           <P className={styles.listItem}>{t("secondTitle")}</P>
         </div>
