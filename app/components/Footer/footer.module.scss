@@ -29,8 +29,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 45%;
 
   @include mixin.media-w(breakpoints.$mobile) {
+    width: 100%;
     gap: 40px;
     align-items: center;
   }
