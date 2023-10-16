@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Button, P } from "components";
+import { Button, ListItem } from "components";
 import { useTranslations } from "next-intl";
 
 import styles from "./showMore.module.scss";
 
 export const ShowMore = () => {
-  const t = useTranslations("AboutUs");
+  const t = useTranslations("Services");
   const [ activeTitle, setActiveTitle ] = useState(false);
   const handleClick = () => {
     setActiveTitle(!activeTitle);
@@ -15,7 +15,14 @@ export const ShowMore = () => {
     <div className={styles.component}>
       {
         activeTitle &&
-        <P>{t("fourthText")}</P>
+        <>
+          <ListItem className={styles.servicesSubtitle}>{t("fourthDetail")}</ListItem>
+          <ListItem className={styles.servicesSubtitle}>{t("fifthDetail")}</ListItem>
+          <ListItem className={styles.servicesSubtitle}>{t("sixthDetail")}</ListItem>
+          <ListItem className={styles.servicesSubtitle}>{t("seventhDetail")}</ListItem>
+          <ListItem className={styles.servicesSubtitle}>{t("eightDetail")}</ListItem>
+          <ListItem className={styles.servicesSubtitle}>{t("ninthDetail")}</ListItem>
+        </>
       }
       <Button
         onClick={handleClick}

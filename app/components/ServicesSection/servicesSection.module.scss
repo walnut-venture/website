@@ -41,7 +41,7 @@
 
 .servicesDetailContainer {
   display: flex;
-  gap: 13.8%;
+  gap: 8%;
 
   @include mixin.media-w(breakpoints.$mobile) {
     flex-direction: column;

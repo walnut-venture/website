@@ -77,11 +77,20 @@
 .sizeH {
   background-color: transparent;
   padding: 0;
+  margin-left: 20px;
   color: var(--textGray);
-  font-size: 18px;
+  @include mixin.fluidFont(8, 28, 1920);
   border-radius: 0;
   border-bottom: 2px solid var(--textGray);
   font-weight: 300;
+
+  @include mixin.media-w(breakpoints.$laptop-l) {
+    font-size: 18px;
+  }
+
+  @include mixin.media-minW(breakpoints.$desktop) {
+    font-size: 28px;
+  }
 }
 
 .sizeH:hover {

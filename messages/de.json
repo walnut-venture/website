@@ -55,7 +55,9 @@
     "sixthDetail": "Beratung für Kernbankensysteme und Bankplattformen (wir haben enge Beziehungen zu allen Kernbankanbietern in der DACH-Region)",
     "seventhDetail": "Business Development & Beratung für den Markteintritt in die DACH-Region",
     "eightDetail": "Beratung zu regulatorischen Themen für Finanzinstitute",
-    "ninthDetail": "Mittelbeschaffung für Start-ups"
+    "ninthDetail": "Mittelbeschaffung für Start-ups",
+    "showMore": "Mehr anzeigen",
+    "showLess": "Weniger anzeigen"
   },
   "AboutUs": {
     "mainTitle": "Über uns",
@@ -64,9 +66,7 @@
     "thirdText": "Seine Leidenschaft für Unternehmertum und sein scharfes Auge für Marktchancen haben es ihm ermöglicht, strategische Partnerschaften zu schmieden und Synergien zwischen traditionellen Finanzinstituten und agilen Fintech-Start-ups zu schaffen.",
     "fourthText": "Julian hat Berufserfahrung in großen internationalen Bankkonzernen und verfügt über fundierte Kenntnisse in den Bereichen Regulierung und Geldpolitik. Er hat viele Jahre lang internationale Banken bei verschiedenen Innovationsprojekten beraten (ESG-Plattformen, Neo-Bank-Projekte, Integration von Kernbankensystemen und vieles mehr).",
     "name": "Julian Verocai",
-    "speciality": "Gründer und CEO von walnut venture studios",
-    "showMore": "Mehr anzeigen",
-    "showLess": "Weniger anzeigen"
+    "speciality": "Gründer und CEO von walnut venture studios"
   },
   "Career": {
     "mainTitle": "Karriere",
@@ -83,7 +83,7 @@
     "getInTouch": "Kontakt aufnehmen"
   },
   "Footer": {
-    "title": "Kontakt",
+    "title": "Unsere buros",
     "text": "Urheberrecht © 2023 walnut venture studios GmbH"
   },
   "Methodology": {

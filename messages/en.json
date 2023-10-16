@@ -55,7 +55,9 @@
     "sixthDetail": "Consulting for core banking systems and banking platforms (we have established strong relationships to all core banking providers in DACH region)",
     "seventhDetail": "Business development & advisory for market entry in DACH region",
     "eightDetail": "Support regulatory topics for financial institutions",
-    "ninthDetail": "Fund-raising for start-ups"
+    "ninthDetail": "Fund-raising for start-ups",
+    "showMore": "Show more",
+    "showLess": "Show less"
   },
   "AboutUs": {
     "mainTitle": "About us",
@@ -64,9 +66,7 @@
     "thirdText": "His passion for entrepreneurship and his keen eye for market opportunities have allowed him to forge strategic partnerships, creating synergies between traditional financial institutions and agile fintech start-ups.",
     "fourthText": "Julian has professional experience in working for large international banking groups and deep regulatory and monetary policy know-how. He has consulted for many years international banks on various innovation projects (ESG platforms, neo bank projects, core-banking system integration and many more).",
     "name": "Julian Verocai",
-    "speciality": "Frounder and CEO of walnut venture studios",
-    "showMore": "Show more",
-    "showLess": "Show less"
+    "speciality": "Frounder and CEO of walnut venture studios"
   },
   "Career": {
     "mainTitle": "Career",
@@ -83,7 +83,7 @@
     "getInTouch": "Get in touch"
   },
   "Footer": {
-    "title": "Contact",
+    "title": "Our offices",
     "text": "Copyright © 2023 walnut venture studios GmbH"
   },
   "Methodology": {

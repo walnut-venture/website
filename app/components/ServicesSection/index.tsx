@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { H2, MainContainer, P, H3, ListItem } from "components";
+import { H2, MainContainer, P, H3, ListItem, ShowMore } from "components";
 import { useTranslations } from "next-intl";
 import { useWindowSize } from "hooks";
 import { motion } from "framer-motion";
@@ -67,17 +67,12 @@ const ServicesSection = () => {
                 <ListItem>{t("firstDetail")}</ListItem>
                 <ListItem className={styles.servicesSubtitle}>{t("secondDetail")}</ListItem>
                 <ListItem className={styles.servicesSubtitle}>{t("thirdDetail")}</ListItem>
-                <ListItem className={styles.servicesSubtitle}>{t("fourthDetail")}</ListItem>
-                <ListItem className={styles.servicesSubtitle}>{t("fifthDetail")}</ListItem>
-                <ListItem className={styles.servicesSubtitle}>{t("sixthDetail")}</ListItem>
+                <ShowMore />
               </div>
               <div className={styles.mediaContent}>
                 <div className={styles.detailImageWrapper}>
                   <Image className={styles.image} src={ourServicesDetailSrc} alt="OurServices" fill />
                 </div>
-                <ListItem className={styles.servicesSubtitle}>{t("seventhDetail")}</ListItem>
-                <ListItem className={styles.servicesSubtitle}>{t("eightDetail")}</ListItem>
-                <ListItem className={styles.servicesSubtitle}>{t("ninthDetail")}</ListItem>
               </div>
             </div>
             :

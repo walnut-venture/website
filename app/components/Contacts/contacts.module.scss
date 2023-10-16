@@ -6,13 +6,13 @@
   flex-direction: column;
   gap: 24px;
   font-style: normal;
-  width: 45%;
+  width: 50%;
 
   @include mixin.media-w(breakpoints.$laptop) {
     gap: 12px;
   }
 
-  @include mixin.media-w(breakpoints.$mobile) {
+  @include mixin.media-w(breakpoints.$laptop-m) {
     width: 100%;
     text-align: center;
     align-items: center;
@@ -28,6 +28,40 @@
   @include mixin.media-w(breakpoints.$laptop) {
     font-size: 18px;
     margin-bottom: 8px;
+  }
+}
+
+.cityTitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--bgWhite);
+
+  @include mixin.media-w(breakpoints.$laptop) {
+    font-size: 16px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  gap: 30px;
+
+  @include mixin.media-w(breakpoints.$laptop-m) {
+    width: 60%;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    flex-direction: column;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 8px;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    width: 100%;
   }
 }
 

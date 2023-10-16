@@ -18,7 +18,7 @@
     padding: 0 20px;
   }
 
-  @include mixin.media-w(breakpoints.$mobile) {
+  @include mixin.media-w(breakpoints.$laptop-m) {
     flex-direction: column-reverse;
     align-items: center;
     gap: 40px;
@@ -31,7 +31,7 @@
   justify-content: space-between;
   width: 45%;
 
-  @include mixin.media-w(breakpoints.$mobile) {
+  @include mixin.media-w(breakpoints.$laptop-m) {
     width: 100%;
     gap: 40px;
     align-items: center;
@@ -51,5 +51,6 @@
 
   @include mixin.media-w(breakpoints.$laptop) {
     font-size: 16px;
+    text-align: center;
   }
 }
