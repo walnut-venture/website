@@ -1,14 +1,27 @@
 import { P } from "components";
-import { useTranslations } from "next-intl";
+import { useContentfulData } from "hooks";
+import { GET_FOOTER } from "data";
 
 import styles from "./contacts.module.scss";
 
+type Item = {
+  title: string;
+}
+
+type TProps = {
+  items: Item[];
+}
+
 export const Contacts = () => {
-  const t = useTranslations("Footer");
+  const data = useContentfulData<TProps>("footerCollection", GET_FOOTER);
+  const isValidData = data?.items && data.items.length > 0;
 
   return (
     <address className={styles.component}>
-      <P className={styles.title}>{t("title")}</P>
+      {
+        isValidData &&
+        <P className={styles.title}>{data.items[0].title}</P>
+      }
       <div className={styles.wrapper}>
         <div className={styles.contact}>
           <P className={styles.title}>Austria</P>

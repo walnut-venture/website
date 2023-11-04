@@ -1,13 +1,23 @@
 import classNames from "classnames";
 import { sanFrancisco } from "font/sanFrancisco";
-import { useTranslations } from "next-intl";
 import CookieConsent from "react-cookie-consent";
 import { P } from "components";
+import { useContentfulData } from "hooks";
+import { GET_FOOTER } from "data";
 
 import styles from "./cookieBanner.module.scss";
 
+type Item = {
+  cookieBanner: string;
+}
+
+type TProps = {
+  items: Item[];
+}
+
 export const CookieBanner = () => {
-  const t = useTranslations("CookieBanner");
+  const data = useContentfulData<TProps>("footerCollection", GET_FOOTER);
+  const isValidData = data?.items && data.items.length > 0;
 
   return (
     <CookieConsent
@@ -20,7 +30,10 @@ export const CookieBanner = () => {
       buttonClasses={classNames(styles.button, sanFrancisco.className)}
       contentStyle={{width: 1200}}
     >
-      <P className={styles.title}>{t("title")}</P>
+      {
+        isValidData &&
+        <P className={styles.title}>{data.items[0].cookieBanner}</P>
+      }
     </CookieConsent>
   );
 };

@@ -4,21 +4,30 @@ import Image from "next/image";
 import Link from "next/link";
 import { useContext, useRef } from "react";
 import { Button, Container, Logo, Navigation, LanguageToggle } from "components";
-import { useTranslations } from "next-intl";
-import { useWindowSize, useClickOutside } from "hooks";
+import { useWindowSize, useClickOutside, useContentfulData } from "hooks";
 import { BurgerContext } from "context";
+import { GET_NAVIGATION } from "data";
 
 import styles from "./header.module.scss";
 import burgerIconSrc from "./img/burgerMenu.svg";
 import crossIconSrc from "./img/crossButton.svg";
 
+type Item = {
+  title: string;
+}
+
+type TProps = {
+  items: Item[];
+}
+
 const Header = () => {
   const activeLocalization = process.env.NEXT_PUBLIC_LOCALISATION === "true";
   const { isLaptopM } = useWindowSize();
-  const t = useTranslations("Navigation");
   const { activeBurger, setActiveBurger } = useContext(BurgerContext);
   const burgerRef = useRef<HTMLDivElement>(null);
   useClickOutside(burgerRef, () => setActiveBurger(false));
+  const data = useContentfulData<TProps>("navigationCollection", GET_NAVIGATION);
+  const isValidData = data?.items && data.items.length > 0;
 
   const handleBurgerClick = () => {
     setActiveBurger(!activeBurger);
@@ -36,13 +45,16 @@ const Header = () => {
               </div>
               <div className={styles.burgerWrapper}>
                 {activeLocalization && <LanguageToggle />}
-                <Link href="#contact-us">
-                  <Button
-                    size="s"
-                  >
-                    {t("getInTouch")}
-                  </Button>
-                </Link>
+                {
+                  isValidData &&
+                    <Link href="#contact-us">
+                      <Button
+                        size="s"
+                      >
+                        {data.items[0].title}
+                      </Button>
+                    </Link>
+                }
               </div>
             </>
             :

@@ -1,14 +1,28 @@
 import Image from "next/image";
-import { useWindowSize } from "hooks";
+import { useWindowSize, useContentfulData } from "hooks";
+import { GET_CAREER } from "data";
 
 import styles from "./imagesWrapper.module.scss";
-import firstImageSrc from "./img/careerFirstImage.jpg";
-import secondImageSrc from "./img/careerSecondImage.jpg";
-import thirdImageSrc from "./img/careerThirdImage.jpg";
-import fourthImageSrc from "./img/careerFourthImage.jpg";
+
+type Item = {
+  firstImage: {url: string};
+  secondImage: {url: string};
+  thirdImage: {url: string};
+  fourthImage: {url: string};
+}
+
+type TProps = {
+  items: Item[];
+}
 
 export const ImagesWrapper = () => {
   const { isLaptopS } = useWindowSize();
+  const data = useContentfulData<TProps>("careerCollection", GET_CAREER);
+  const isValidData = data?.items && data.items.length > 0;
+  const firstImageSrc = isValidData ? data.items[0].firstImage.url : undefined;
+  const secondImageSrc = isValidData ? data.items[0].secondImage.url : undefined;
+  const thirdImageSrc = isValidData ? data.items[0].thirdImage.url : undefined;
+  const fourthImageSrc = isValidData ? data.items[0].fourthImage.url : undefined;
 
   return (
     <div className={styles.component}>
@@ -16,22 +30,37 @@ export const ImagesWrapper = () => {
         isLaptopS ?
           <div className={styles.flexContainer}>
             <div className={styles.imageWrapper}>
-              <Image className={styles.image} src={secondImageSrc} alt="Image" fill />
+              {
+                secondImageSrc &&
+                <Image className={styles.image} src={secondImageSrc} alt="Image" fill />
+              }
             </div>
           </div>
           :
           <div className={styles.imagesContainer}>
             <div className={styles.imageWrapper}>
-              <Image className={styles.image} src={firstImageSrc} alt="Image" fill />
+              {
+                firstImageSrc &&
+                <Image className={styles.image} src={firstImageSrc} alt="Image" fill />
+              }
             </div>
             <div className={styles.imageWrapper}>
-              <Image className={styles.image} src={secondImageSrc} alt="Image" fill />
+              {
+                secondImageSrc &&
+                <Image className={styles.image} src={secondImageSrc} alt="Image" fill />
+              }
             </div>
             <div className={styles.imageWrapper}>
-              <Image className={styles.image} src={thirdImageSrc} alt="Image" fill />
+              {
+                thirdImageSrc &&
+                <Image className={styles.image} src={thirdImageSrc} alt="Image" fill />
+              }
             </div>
             <div className={styles.imageWrapper}>
-              <Image className={styles.image} src={fourthImageSrc} alt="Image" fill />
+              {
+                fourthImageSrc &&
+                <Image className={styles.image} src={fourthImageSrc} alt="Image" fill />
+              }
             </div>
           </div>
       }

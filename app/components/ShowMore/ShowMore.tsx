@@ -1,35 +1,45 @@
-import { useState } from "react";
-import { Button, ListItem } from "components";
-import { useTranslations } from "next-intl";
+import { useState, ReactNode } from "react";
+import { Button } from "components";
+import { useContentfulData } from "hooks";
+import { GET_OUR_SERVICES_IN_DETAIL } from "data";
 
-import styles from "./showMore.module.scss";
+type Item = {
+  title: string;
+  subtitle: string;
+  text:string;
+  image: {
+    url: string
+  };
+}
 
-export const ShowMore = () => {
-  const t = useTranslations("Services");
+type TProps = {
+  items: Item[];
+}
+
+export const ShowMore = ({ children }: { children: ReactNode }) => {
+  const data = useContentfulData<TProps>("ourServicesInDetailCollection", GET_OUR_SERVICES_IN_DETAIL);
+  const isValidData = data?.items && data.items.length > 0;
   const [ activeTitle, setActiveTitle ] = useState(false);
   const handleClick = () => {
     setActiveTitle(!activeTitle);
   };
 
   return (
-    <div className={styles.component}>
+    <div>
       {
-        activeTitle &&
+        isValidData &&
         <>
-          <ListItem className={styles.servicesSubtitle}>{t("fourthDetail")}</ListItem>
-          <ListItem className={styles.servicesSubtitle}>{t("fifthDetail")}</ListItem>
-          <ListItem className={styles.servicesSubtitle}>{t("sixthDetail")}</ListItem>
-          <ListItem className={styles.servicesSubtitle}>{t("seventhDetail")}</ListItem>
-          <ListItem className={styles.servicesSubtitle}>{t("eightDetail")}</ListItem>
-          <ListItem className={styles.servicesSubtitle}>{t("ninthDetail")}</ListItem>
+          {
+            activeTitle && children
+          }
+          <Button
+            onClick={handleClick}
+            size="h"
+          >
+            {activeTitle ? data.items[0].title : data.items[1].title}
+          </Button>
         </>
       }
-      <Button
-        onClick={handleClick}
-        size="h"
-      >
-        {activeTitle ? t("showLess") : t("showMore")}
-      </Button>
     </div>
   );
 };
