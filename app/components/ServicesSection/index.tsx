@@ -4,7 +4,7 @@ import Image from "next/image";
 import { H2, MainContainer, P, H3, ListItem, ShowMore } from "components";
 import { useWindowSize, useContentfulData } from "hooks";
 import { motion } from "framer-motion";
-import { GET_SERVICES, GET_OUR_SERVICES_IN_DETAIL } from "data";
+import { GetQueries } from "data";
 
 import styles from "./servicesSection.module.scss";
 
@@ -23,8 +23,9 @@ type TProps = {
 
 const ServicesSection = () => {
   const { isMobile } = useWindowSize();
-  const data = useContentfulData<TProps>("servicesCollection", GET_SERVICES);
-  const details = useContentfulData<TProps>("ourServicesInDetailCollection", GET_OUR_SERVICES_IN_DETAIL);
+  const { services, ourServicesInDetail } = GetQueries();
+  const data = useContentfulData<TProps>("servicesCollection", services);
+  const details = useContentfulData<TProps>("ourServicesInDetailCollection", ourServicesInDetail);
   const isValidData = data?.items && data.items.length > 0;
   const isValidDetails = details?.items && details.items.length > 0;
   const ourServicesBgSrc = isValidData ? data.items[2].image.url : undefined;

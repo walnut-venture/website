@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useWindowSize, useContentfulData } from "hooks";
-import { GET_CAREER } from "data";
+import { GetQueries } from "data";
 
 import styles from "./imagesWrapper.module.scss";
 
@@ -17,7 +17,8 @@ type TProps = {
 
 export const ImagesWrapper = () => {
   const { isLaptopS } = useWindowSize();
-  const data = useContentfulData<TProps>("careerCollection", GET_CAREER);
+  const { career } = GetQueries();
+  const data = useContentfulData<TProps>("careerCollection", career);
   const isValidData = data?.items && data.items.length > 0;
   const firstImageSrc = isValidData ? data.items[0].firstImage.url : undefined;
   const secondImageSrc = isValidData ? data.items[0].secondImage.url : undefined;

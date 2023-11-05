@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { MainContainer, H2, P } from "components";
 import { useContentfulData, useWindowSize } from "hooks";
-import { GET_DRIVING_INNOVATION } from "data";
+import { GetQueries } from "data";
 
 import styles from "./drivingInnovationSection.module.scss";
 
@@ -22,7 +22,8 @@ type TProps = {
 
 const DrivingInnovationSection = () => {
   const { isMobile } = useWindowSize();
-  const data = useContentfulData<TProps>("drivingInnovationCollection", GET_DRIVING_INNOVATION);
+  const { drivingInnovation } = GetQueries();
+  const data = useContentfulData<TProps>("drivingInnovationCollection", drivingInnovation);
   const isValidData = data?.items && data.items.length > 0;
   const imageSrc = isValidData ? data.items[0].image.url : undefined;
 

@@ -6,7 +6,7 @@ import { useContext, useRef } from "react";
 import { Button, Container, Logo, Navigation, LanguageToggle } from "components";
 import { useWindowSize, useClickOutside, useContentfulData } from "hooks";
 import { BurgerContext } from "context";
-import { GET_NAVIGATION } from "data";
+import { GetQueries } from "data";
 
 import styles from "./header.module.scss";
 import burgerIconSrc from "./img/burgerMenu.svg";
@@ -22,11 +22,12 @@ type TProps = {
 
 const Header = () => {
   const activeLocalization = process.env.NEXT_PUBLIC_LOCALISATION === "true";
+  const { navigation } = GetQueries();
   const { isLaptopM } = useWindowSize();
   const { activeBurger, setActiveBurger } = useContext(BurgerContext);
   const burgerRef = useRef<HTMLDivElement>(null);
   useClickOutside(burgerRef, () => setActiveBurger(false));
-  const data = useContentfulData<TProps>("navigationCollection", GET_NAVIGATION);
+  const data = useContentfulData<TProps>("navigationCollection", navigation);
   const isValidData = data?.items && data.items.length > 0;
 
   const handleBurgerClick = () => {
@@ -35,54 +36,54 @@ const Header = () => {
 
   return (
     <Container>
-      <header className={styles.component}>
-        {
-          !isLaptopM ?
-            <>
-              <div className={styles.navContainer}>
+      {
+        isValidData &&
+        <header className={styles.component}>
+          {
+            !isLaptopM ?
+              <>
+                <div className={styles.navContainer}>
+                  <Logo />
+                  <Navigation />
+                </div>
+                <div className={styles.burgerWrapper}>
+                  {activeLocalization && <LanguageToggle />}
+                  <Link href="#contact-us">
+                    <Button
+                      size="s"
+                    >
+                      {data.items[0].title}
+                    </Button>
+                  </Link>
+                </div>
+              </>
+              :
+              <>
                 <Logo />
-                <Navigation />
-              </div>
-              <div className={styles.burgerWrapper}>
-                {activeLocalization && <LanguageToggle />}
-                {
-                  isValidData &&
-                    <Link href="#contact-us">
-                      <Button
-                        size="s"
-                      >
-                        {data.items[0].title}
-                      </Button>
-                    </Link>
-                }
-              </div>
-            </>
-            :
-            <>
-              <Logo />
-              <div ref={burgerRef}>
-                {activeBurger ?
-                  <Button
-                    size="none"
-                    onClick={handleBurgerClick}
-                  >
-                    <Image src={crossIconSrc} alt="BurgerMenu" />
-                  </Button>
-                  :
-                  <div className={styles.burgerWrapper}>
-                    {activeLocalization && <LanguageToggle />}
+                <div ref={burgerRef}>
+                  {activeBurger ?
                     <Button
                       size="none"
                       onClick={handleBurgerClick}
                     >
-                      <Image src={burgerIconSrc} alt="BurgerMenu" />
+                      <Image src={crossIconSrc} alt="BurgerMenu" />
                     </Button>
-                  </div>
-                }
-              </div>
-            </>
-        }
-      </header>
+                    :
+                    <div className={styles.burgerWrapper}>
+                      {activeLocalization && <LanguageToggle />}
+                      <Button
+                        size="none"
+                        onClick={handleBurgerClick}
+                      >
+                        <Image src={burgerIconSrc} alt="BurgerMenu" />
+                      </Button>
+                    </div>
+                  }
+                </div>
+              </>
+          }
+        </header>
+      }
     </Container>
   );
 };

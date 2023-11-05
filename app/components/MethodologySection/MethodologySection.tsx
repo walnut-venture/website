@@ -1,6 +1,6 @@
 import { H2, H3, P, Container } from "components";
 import { useWindowSize, useContentfulData } from "hooks";
-import { GET_METHODOLOGY, GET_METHODOLOGY_CARDS } from "data";
+import { GetQueries } from "data";
 
 import styles from "./methodologySection.module.scss";
 
@@ -21,8 +21,9 @@ type TProps = {
 
 export const MethodologySection = () => {
   const { isLaptopL } = useWindowSize();
-  const data = useContentfulData<TProps>("methodologyCollection", GET_METHODOLOGY);
-  const cards = useContentfulData<TProps>("methodologyCardCollection", GET_METHODOLOGY_CARDS);
+  const { methodology, methodologyCard } = GetQueries();
+  const data = useContentfulData<TProps>("methodologyCollection", methodology);
+  const cards = useContentfulData<TProps>("methodologyCardCollection", methodologyCard);
   const isValidData = data?.items && data.items.length > 0;
   const isValidCards = cards?.items && cards.items.length > 0;
 

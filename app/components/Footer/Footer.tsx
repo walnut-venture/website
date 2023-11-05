@@ -1,6 +1,6 @@
 import { Contacts, Container, Logo, P } from "components";
 import { useContentfulData } from "hooks";
-import { GET_FOOTER } from "data";
+import { GetQueries } from "data";
 
 import styles from "./footer.module.scss";
 
@@ -13,7 +13,8 @@ type TProps = {
 }
 
 export const Footer = () => {
-  const data = useContentfulData<TProps>("footerCollection", GET_FOOTER);
+  const { footer } = GetQueries();
+  const data = useContentfulData<TProps>("footerCollection", footer);
   const isValidData = data?.items && data.items.length > 0;
 
   return (

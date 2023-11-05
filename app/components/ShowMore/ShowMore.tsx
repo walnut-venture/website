@@ -1,7 +1,7 @@
 import { useState, ReactNode } from "react";
 import { Button } from "components";
 import { useContentfulData } from "hooks";
-import { GET_OUR_SERVICES_IN_DETAIL } from "data";
+import { GetQueries } from "data";
 
 type Item = {
   title: string;
@@ -17,7 +17,8 @@ type TProps = {
 }
 
 export const ShowMore = ({ children }: { children: ReactNode }) => {
-  const data = useContentfulData<TProps>("ourServicesInDetailCollection", GET_OUR_SERVICES_IN_DETAIL);
+  const { ourServicesInDetail } = GetQueries();
+  const data = useContentfulData<TProps>("ourServicesInDetailCollection", ourServicesInDetail);
   const isValidData = data?.items && data.items.length > 0;
   const [ activeTitle, setActiveTitle ] = useState(false);
   const handleClick = () => {

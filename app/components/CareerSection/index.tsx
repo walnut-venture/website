@@ -1,6 +1,6 @@
 import { H2, P, ImagesWrapper, MainContainer } from "components";
 import { useContentfulData } from "hooks";
-import { GET_CAREER } from "data";
+import { GetQueries } from "data";
 
 import styles from "./career.module.scss";
 
@@ -16,7 +16,8 @@ type TProps = {
 }
 
 const CareerSection = () => {
-  const data = useContentfulData<TProps>("careerCollection", GET_CAREER);
+  const { career } = GetQueries();
+  const data = useContentfulData<TProps>("careerCollection", career);
   const isValidData = data?.items && data.items.length > 0;
 
   return (

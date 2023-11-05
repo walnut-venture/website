@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MainContainer, H2, P, ArrowButton } from "components";
 import { useContentfulData, useWindowSize } from "hooks";
-import { GET_JOIN_US } from "data";
+import { GetQueries } from "data";
 
 import styles from "./joinUsSection.module.scss";
 
@@ -24,7 +24,8 @@ type TProps = {
 
 const JoinUsSection = () => {
   const { isMobile } = useWindowSize();
-  const data = useContentfulData<TProps>("joinUsCollection", GET_JOIN_US);
+  const { joinUs } = GetQueries();
+  const data = useContentfulData<TProps>("joinUsCollection", joinUs);
   const isValidData = data?.items && data.items.length > 0;
   const imageSrc = isValidData ? data.items[0].image.url : undefined;
 

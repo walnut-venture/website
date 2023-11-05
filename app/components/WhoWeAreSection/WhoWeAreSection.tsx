@@ -1,7 +1,7 @@
 import { MainContainer, H2, P, H3 } from "components";
 import { motion } from "framer-motion";
 import { useContentfulData } from "hooks";
-import { GET_WHO_WE_ARE } from "data";
+import { GetQueries } from "data";
 
 import styles from "./whoWeAreSection.module.scss";
 
@@ -16,7 +16,8 @@ type TProps = {
 }
 
 export const WhoWeAreSection = () => {
-  const data = useContentfulData<TProps>("whoWeAreCollection", GET_WHO_WE_ARE);
+  const { whoWeAre } = GetQueries();
+  const data = useContentfulData<TProps>("whoWeAreCollection", whoWeAre);
   const isValidData = data?.items && data.items.length > 0;
 
   return (

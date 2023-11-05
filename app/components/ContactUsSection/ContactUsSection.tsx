@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
 import { Container, H2, P, Button, Input, Textarea } from "components";
 import { useContentfulData } from "hooks";
-import { GET_CONTACT_US } from "data";
+import { GetQueries } from "data";
 
 import styles from "./contactUsSection.module.scss";
 
@@ -27,7 +27,8 @@ type TProps = {
 }
 
 export const ContactUsSection = () => {
-  const data = useContentfulData<TProps>("contactUsCollection", GET_CONTACT_US);
+  const { contactUs } = GetQueries();
+  const data = useContentfulData<TProps>("contactUsCollection", contactUs);
   const isValidData = data?.items && data.items.length > 0;
   const { control, handleSubmit: validateBeforeSubmit } = useForm<IForm>({
     defaultValues: {

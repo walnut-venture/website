@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { MainContainer, H2, P, H3, ShowMore } from "components";
 import { useWindowSize, useContentfulData } from "hooks";
-import { GET_ABOUT_US } from "data";
+import { GetQueries } from "data";
 
 import styles from "./teamSection.module.scss";
 import linkedinSrc from "./img/linkedin.svg";
@@ -27,7 +27,8 @@ type TProps = {
 
 const TeamSection = () => {
   const { isMobile } = useWindowSize();
-  const data = useContentfulData<TProps>("aboutUsCollection", GET_ABOUT_US);
+  const { aboutUs } = GetQueries();
+  const data = useContentfulData<TProps>("aboutUsCollection", aboutUs);
   const isValidData = data?.items && data.items.length > 0;
   const teamSEOSrc = isValidData ? data.items[0].image.url : undefined;
 

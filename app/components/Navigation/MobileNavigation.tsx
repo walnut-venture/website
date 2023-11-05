@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "components";
 import { useContentfulData } from "hooks";
-import { GET_NAVIGATION } from "data";
+import { GetQueries } from "data";
 
 import styles from "./navigation.module.scss";
 
@@ -14,7 +14,8 @@ type TProps = {
 }
 
 export const MobileNavigation = () => {
-  const data = useContentfulData<TProps>("navigationCollection", GET_NAVIGATION);
+  const { navigation } = GetQueries();
+  const data = useContentfulData<TProps>("navigationCollection", navigation);
   const isValidData = data?.items && data.items.length > 0;
 
   return (

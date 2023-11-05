@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { ArrowButton, Container, H1, MobileNavigation, P } from "components";
 import { BurgerContext } from "context";
 import { useContentfulData } from "hooks";
-import { GET_WALNUT_CONTENT } from "data";
+import { GetQueries } from "data";
 
 import styles from "./walnutSection.module.scss";
 
@@ -18,7 +18,8 @@ type TProps = {
 }
 
 export const WalnutContent = () => {
-  const data = useContentfulData<TProps>("walnutContentCollection", GET_WALNUT_CONTENT);
+  const { walnutContent } = GetQueries();
+  const data = useContentfulData<TProps>("walnutContentCollection", walnutContent);
   const isValidData = data?.items && data.items.length > 0;
   const { activeBurger, setActiveBurger } = useContext(BurgerContext);
 
