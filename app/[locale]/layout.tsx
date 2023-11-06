@@ -2,7 +2,6 @@ import classNames from "classnames";
 import { ReactNode } from "react";
 import { sanFrancisco } from "../font/sanFrancisco";
 import { NextIntlClientProvider } from "next-intl";
-import { notFound } from "next/navigation";
 import "../styles/globals.css";
 
 import styles from "../layout.module.scss";
@@ -17,7 +16,7 @@ type Props = {
 };
 
 export function generateStaticParams() {
-  return [{locale: "en"}, {locale: "de"}];
+  return [{locale: "en-US"}, {locale: "de-DE"}];
 };
 
 export const metadata = {
@@ -32,15 +31,8 @@ export default async function RootLayout({
 }: Props) {
   const activeLocalization = process.env.NEXT_PUBLIC_LOCALISATION === "true";
 
-  let messages;
-  try {
-    messages = (await import(`../../messages/${activeLocalization ? locale : "en"}.json`)).default;
-  } catch (error) {
-    notFound();
-  };
-
   return (
-    <html lang={activeLocalization ? locale: "en"}>
+    <html lang={activeLocalization ? locale: "en-US"}>
       <head>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -48,7 +40,7 @@ export default async function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={classNames(styles.component, sanFrancisco.className)}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider locale={locale}>
           {children}
         </NextIntlClientProvider>
       </body>

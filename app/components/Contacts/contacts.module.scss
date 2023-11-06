@@ -51,6 +51,7 @@
 
   @include mixin.media-w(breakpoints.$mobile) {
     flex-direction: column;
+    align-items: center;
   }
 }
 

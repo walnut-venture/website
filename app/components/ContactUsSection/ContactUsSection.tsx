@@ -1,7 +1,8 @@
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
 import { Container, H2, P, Button, Input, Textarea } from "components";
-import { useTranslations } from "next-intl";
+import { useContentfulData } from "hooks";
+import { GetQueries } from "data";
 
 import styles from "./contactUsSection.module.scss";
 
@@ -12,8 +13,23 @@ interface IForm {
   message: string;
 };
 
+type Item = {
+  title: string;
+  subtitle: string;
+  button: string;
+  name: string;
+  phoneNumber: string;
+  message: string;
+}
+
+type TProps = {
+  items: Item[];
+}
+
 export const ContactUsSection = () => {
-  const t = useTranslations("ContactUs");
+  const { contactUs } = GetQueries();
+  const data = useContentfulData<TProps>("contactUsCollection", contactUs);
+  const isValidData = data?.items && data.items.length > 0;
   const { control, handleSubmit: validateBeforeSubmit } = useForm<IForm>({
     defaultValues: {
       name: "",
@@ -45,77 +61,80 @@ export const ContactUsSection = () => {
 
   return (
     <Container>
-      <section id="contact-us" className={styles.component}>
-        <div className={styles.contentWrapper}>
-          <H2 className={styles.title}>{t("mainTitle")}</H2>
-          <P className={styles.subtitle}>{t("firstText")}</P>
-          <form action="POST" onSubmit={validateBeforeSubmit(handleSubmit)} className={styles.form}>
-            <div className={styles.container}>
-              <div className={styles.inputWrapper}>
-                <Input
-                  name="name"
-                  placeholder={t("firstInput")}
-                  control={control}
-                  rules={{
-                    required: "Name field is required",
-                    minLength: {
-                      value: 4,
-                      message: "Name must contain at least 4 characters"
-                    }
-                  }}
-                />
-                <Input
-                  name="email"
-                  placeholder="E-mail"
-                  control={control}
-                  rules={{
-                    required: "Email field is required",
-                    pattern: {
-                      value: /^\S+@\S+$/i,
-                      message: "Please enter a valid email address"
-                    }
-                  }}
-                />
-                <Input
-                  name="phone"
-                  placeholder={t("secondInput")}
-                  control={control}
-                  rules={{
-                    pattern: {
-                      value: /^\+?[0-9]+$/,
-                      message: "Please enter a valid phone number"
-                    }
-                  }}
-                />
+      {
+        isValidData &&
+        <section id="contact-us" className={styles.component}>
+          <div className={styles.contentWrapper}>
+            <H2 className={styles.title}>{data.items[0].title}</H2>
+            <P className={styles.subtitle}>{data.items[0].subtitle}</P>
+            <form action="POST" onSubmit={validateBeforeSubmit(handleSubmit)} className={styles.form}>
+              <div className={styles.container}>
+                <div className={styles.inputWrapper}>
+                  <Input
+                    name="name"
+                    placeholder={data.items[0].name}
+                    control={control}
+                    rules={{
+                      required: "Name field is required",
+                      minLength: {
+                        value: 4,
+                        message: "Name must contain at least 4 characters"
+                      }
+                    }}
+                  />
+                  <Input
+                    name="email"
+                    placeholder="E-mail"
+                    control={control}
+                    rules={{
+                      required: "Email field is required",
+                      pattern: {
+                        value: /^\S+@\S+$/i,
+                        message: "Please enter a valid email address"
+                      }
+                    }}
+                  />
+                  <Input
+                    name="phone"
+                    placeholder={data.items[0].phoneNumber}
+                    control={control}
+                    rules={{
+                      pattern: {
+                        value: /^\+?[0-9]+$/,
+                        message: "Please enter a valid phone number"
+                      }
+                    }}
+                  />
+                </div>
+                <div className={styles.textareaWrapper}>
+                  <Textarea
+                    name="message"
+                    placeholder={data.items[0].message}
+                    control={control}
+                    rules={{
+                      minLength: {
+                        value: 0,
+                        message: "The message must contain at least 10 characters"
+                      },
+                      maxLength: {
+                        value: 200,
+                        message: "The message must contain no more than 200 characters"
+                      }
+                    }}
+                  />
+                </div>
               </div>
-              <div className={styles.textareaWrapper}>
-                <Textarea
-                  name="message"
-                  placeholder={t("thirdInput")}
-                  control={control}
-                  rules={{
-                    minLength: {
-                      value: 0,
-                      message: "The message must contain at least 10 characters"
-                    },
-                    maxLength: {
-                      value: 200,
-                      message: "The message must contain no more than 200 characters"
-                    }
-                  }}
-                />
-              </div>
-            </div>
-            <Button
-              size="m"
-              type="submit"
-            >
-              {t("getInTouch")}
-            </Button>
-            <Toaster />
-          </form>
-        </div>
-      </section>
+              <Button
+                size="m"
+                type="submit"
+              >
+                {data.items[0].button}
+              </Button>
+              <Toaster />
+            </form>
+          </div>
+        </section>
+      }
     </Container>
   );
 };

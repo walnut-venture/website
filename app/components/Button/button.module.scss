@@ -77,7 +77,6 @@
 .sizeH {
   background-color: transparent;
   padding: 0;
-  margin-left: 20px;
   color: var(--textGray);
   @include mixin.fluidFont(8, 28, 1920);
   border-radius: 0;

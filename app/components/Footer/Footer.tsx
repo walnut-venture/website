@@ -1,20 +1,34 @@
 import { Contacts, Container, Logo, P } from "components";
-import { useTranslations } from "next-intl";
+import { useContentfulData } from "hooks";
+import { GetQueries } from "data";
 
 import styles from "./footer.module.scss";
 
+type Item = {
+  copyright: string;
+}
+
+type TProps = {
+  items: Item[];
+}
+
 export const Footer = () => {
-  const t = useTranslations("Footer");
+  const { footer } = GetQueries();
+  const data = useContentfulData<TProps>("footerCollection", footer);
+  const isValidData = data?.items && data.items.length > 0;
 
   return (
     <Container>
-      <footer className={styles.component}>
-        <div className={styles.contentWrapper}>
-          <Logo className={styles.footerLogo} />
-          <P className={styles.subtitle}>{t("text")}</P>
-        </div>
-        <Contacts />
-      </footer>
+      {
+        isValidData &&
+        <footer className={styles.component}>
+          <div className={styles.contentWrapper}>
+            <Logo className={styles.footerLogo} />
+            <P className={styles.subtitle}>{data.items[0].copyright}</P>
+          </div>
+          <Contacts />
+        </footer>
+      }
     </Container>
   );
 };

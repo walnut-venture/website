@@ -14,12 +14,12 @@ export const LanguageToggle = () => {
 
   return (
     <div className={styles.component}>
-      <Link href="/" locale="en">
-        <P className={toggleItemClassName('en')}>EN</P>
+      <Link href="/" locale="en-US">
+        <P className={toggleItemClassName('en-US')}>EN</P>
       </Link>
       <P>/</P>
-      <Link href="/" locale="de">
-        <P className={toggleItemClassName('de')}>DE</P>
+      <Link href="/" locale="de-DE">
+        <P className={toggleItemClassName('de-DE')}>DE</P>
       </Link>
     </div>
   );
