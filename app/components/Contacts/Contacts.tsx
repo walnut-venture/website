@@ -1,6 +1,4 @@
 import { P } from "components";
-import { useContentfulData } from "hooks";
-import { GetQueries } from "data";
 
 import styles from "./contacts.module.scss";
 
@@ -13,10 +11,6 @@ type TProps = {
 }
 
 export const Contacts = () => {
-  const { footer } = GetQueries();
-  const data = useContentfulData<TProps>("footerCollection", footer);
-  const isValidData = data?.items && data.items.length > 0;
-
   return (
     <address className={styles.component}>
       <div className={styles.wrapper}>
