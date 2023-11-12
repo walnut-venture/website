@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { sanFrancisco } from "font/sanFrancisco";
+import { nunitoSans } from "font/nunitoSans";
 
 import {
   ReactNode,
@@ -34,7 +34,7 @@ export const Button = forwardRef<HTMLButtonElement, Props>(({
   const buttonClassName = classNames(
     styles.component,
     buttonSize,
-    sanFrancisco.className,
+    nunitoSans.className,
     propsClassName
   );
 

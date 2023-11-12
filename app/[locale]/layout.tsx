@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { ReactNode } from "react";
-import { sanFrancisco } from "../font/sanFrancisco";
+import { nunitoSans } from "../font/nunitoSans";
 import { NextIntlClientProvider } from "next-intl";
 import "../styles/globals.css";
 
@@ -39,7 +39,7 @@ export default async function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={classNames(styles.component, sanFrancisco.className)}>
+      <body className={classNames(styles.component, nunitoSans.className)}>
         <NextIntlClientProvider locale={locale}>
           {children}
         </NextIntlClientProvider>

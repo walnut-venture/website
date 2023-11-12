@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { sanFrancisco } from "font/sanFrancisco";
+import { nunitoSans } from "font/nunitoSans";
 import { FunctionComponent } from "react";
 import { RegisterOptions, useController } from "react-hook-form";
 
@@ -28,7 +28,7 @@ export const Input: FunctionComponent<TProps> = ({
   const { field, fieldState } = useController({ name, control, rules });
 
   const inputStyles = fieldState.error ? styles.inputError : styles.container;
-  const inputClassName = classNames(styles.component, propsClassName, sanFrancisco.className);
+  const inputClassName = classNames(styles.component, propsClassName, nunitoSans.className);
 
   return (
     <div className={containerClassName}>

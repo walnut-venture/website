@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { sanFrancisco } from "font/sanFrancisco";
+import { nunitoSans } from "font/nunitoSans";
 import { FunctionComponent } from "react";
 import { RegisterOptions, useController } from "react-hook-form";
 
@@ -28,7 +28,7 @@ export const Textarea: FunctionComponent<TProps> = ({
   const { field, fieldState } = useController({ name, control, rules });
 
   const textareaStyles = fieldState.error ? styles.textareaError : styles.container;
-  const textareaClassName = classNames(styles.component, propsClassName, sanFrancisco.className);
+  const textareaClassName = classNames(styles.component, propsClassName, nunitoSans.className);
   const wrapperClassName = classNames(styles.container, containerClassName);
 
   return (

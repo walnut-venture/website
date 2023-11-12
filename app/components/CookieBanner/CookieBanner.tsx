@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { sanFrancisco } from "font/sanFrancisco";
+import { nunitoSans } from "font/nunitoSans";
 import CookieConsent from "react-cookie-consent";
 import { P } from "components";
 import { useContentfulData } from "hooks";
@@ -28,7 +28,7 @@ export const CookieBanner = () => {
       cookieName="cookieConsent"
       expires={150}
       containerClasses={styles.container}
-      buttonClasses={classNames(styles.button, sanFrancisco.className)}
+      buttonClasses={classNames(styles.button, nunitoSans.className)}
       contentStyle={{width: 1200}}
     >
       {
