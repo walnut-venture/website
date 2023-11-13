@@ -15,7 +15,7 @@ const getQuery = (queryName: string, locale: string) => {
         ${queryName === 'navigation' ? 'title' : ''}
         ${queryName === 'ourServicesInDetail' ? 'title, image { url }' : ''}
         ${queryName === 'services' ? 'title, subtitle, text, image { url }' : ''}
-        ${queryName === 'walnutContent' ? 'title, subtitle, button, video { url }' : ''}
+        ${queryName === 'walnutContent' ? 'title, outlineTitle, subtitle, button, video { url }' : ''}
         ${queryName === 'whoWeAre' ? 'title, subtitle, text' : ''}
       }
     }

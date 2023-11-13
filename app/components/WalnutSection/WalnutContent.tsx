@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useContext } from "react";
-import { ArrowButton, Container, H1, MobileNavigation, P } from "components";
+import { ArrowButton, H1, MainContainer, MobileNavigation, P } from "components";
 import { BurgerContext } from "context";
 import { useContentfulData } from "hooks";
 import { GetQueries } from "data";
@@ -11,6 +11,7 @@ type Item = {
   title: string;
   subtitle:string;
   button: string;
+  outlineTitle: string;
 }
 
 type TProps = {
@@ -24,13 +25,14 @@ export const WalnutContent = () => {
   const { activeBurger, setActiveBurger } = useContext(BurgerContext);
 
   return (
-    <Container>
+    <MainContainer>
       {
         isValidData &&
           <div className={styles.contentContainer}>
             {
               !activeBurger &&
               <>
+                <H1 className={styles.outlineTitle}>{data.items[0].outlineTitle}</H1>
                 <H1 className={styles.title}>{data.items[0].title}</H1>
                 <P className={styles.subtitle}>{data.items[0].subtitle}</P>
                 <Link href="#contact-us" className={styles.button}>
@@ -45,6 +47,6 @@ export const WalnutContent = () => {
             </div>
           </div>
       }
-    </Container>
+    </MainContainer>
   );
 };
