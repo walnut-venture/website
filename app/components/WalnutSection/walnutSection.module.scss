@@ -41,7 +41,7 @@
 
 .outlineTitle {
   color: transparent;
-  @include mixin.fluidFont(18, 70, 1920);
+  @include mixin.fluidFont(18, 80, 1920);
   font-weight: 600;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--titleGray);

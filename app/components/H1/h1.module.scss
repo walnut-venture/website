@@ -3,7 +3,7 @@
 
 .component {
   color: var(--titleGray);
-  @include mixin.fluidFont(18, 70, 1920);
+  @include mixin.fluidFont(18, 80, 1920);
   font-weight: 600;
 
   @include mixin.media-w(breakpoints.$laptop) {
