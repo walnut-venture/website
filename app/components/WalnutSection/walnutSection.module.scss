@@ -40,17 +40,21 @@
 }
 
 .outlineTitle {
-  color: var(--bgBlack) !important;
-  text-shadow: 
-    -2px -2px 0 var(--bgWhite),
-    2px -2px 0 var(--bgWhite),
-    -2px 2px 0 var(--bgWhite),
-    2px 2px 0 var(--bgWhite);
+  color: transparent;
+  @include mixin.fluidFont(18, 70, 1920);
+  font-weight: 600;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--titleGray);
 
   margin-top: 97px;
 
   @include mixin.media-w(breakpoints.$laptop) {
     margin-top: 39px;
+    font-size: 36px;
+  }
+
+  @include mixin.media-minW(breakpoints.$desktop) {
+    font-size: 70px;
   }
 }
 

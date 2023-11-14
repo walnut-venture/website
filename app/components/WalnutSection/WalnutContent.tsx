@@ -32,7 +32,7 @@ export const WalnutContent = () => {
             {
               !activeBurger &&
               <>
-                <H1 className={styles.outlineTitle}>{data.items[0].outlineTitle}</H1>
+                <h1 className={styles.outlineTitle}>{data.items[0].outlineTitle}</h1>
                 <H1 className={styles.title}>{data.items[0].title}</H1>
                 <P className={styles.subtitle}>{data.items[0].subtitle}</P>
                 <Link href="#contact-us" className={styles.button}>
