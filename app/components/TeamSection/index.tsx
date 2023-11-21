@@ -44,8 +44,7 @@ const TeamSection = () => {
           <H2 className={styles.title}>{data.items[0].title}</H2>
           <P className={styles.subtitle}>{data.items[0].firstSubtitle}</P>
           {
-            isMobile ?
-              sortedEmployees &&
+            sortedEmployees &&
               sortedEmployees.map((item) => (
                 <div className={styles.employeeCard} key={item.name}>
                   <div className={styles.teamCard}>
@@ -66,66 +65,17 @@ const TeamSection = () => {
                     </div>
                   </div>
                   <div className={styles.textContainer}>
+                    {item.firstSubtitle && <P>{item.firstSubtitle}</P>}
+                    {item.secondSubtitle && <P>{item.secondSubtitle}</P>}
                     {
-                      item.firstSubtitle ?
-                        <P>{item.firstSubtitle}</P>
+                      isMobile ?
+                        <>
+                          {item.thirdSubtitle &&<P>{item.thirdSubtitle}</P>}
+                        </>
                         :
-                        null
-                    }
-                    {
-                      item.secondSubtitle ?
-                        <P>{item.secondSubtitle}</P>
-                        :
-                        null
-                    }
-                    {
-                      item.thirdSubtitle ?
-                        <P>{item.thirdSubtitle}</P>
-                        :
-                        null
-                    }
-                  </div>
-                </div>
-              ))
-              :
-              sortedEmployees &&
-              sortedEmployees.map((item) => (
-                <div className={styles.employeeCard} key={item.name}>
-                  <div className={styles.teamCard}>
-                    <div className={styles.imageWrapper}>
-                      <Image className={styles.image} src={item.image.url} alt={item.name} fill />
-                    </div>
-                    <div className={styles.teamTitle}>
-                      <div className={styles.socialWrapper}>
-                        <H3>{item.name}</H3>
-                        {
-                          item.linkedinLink &&
-                          <a className={styles.socialLink} href={item.linkedinLink} target="_blank">
-                            <Image className={styles.social} src={linkedinSrc} alt="Linkedin" />
-                          </a>
-                        }
-                      </div>
-                      <P>{item.specialty}</P>
-                    </div>
-                  </div>
-                  <div className={styles.textContainer}>
-                    {
-                      item.firstSubtitle ?
-                        <P>{item.firstSubtitle}</P>
-                        :
-                        null
-                    }
-                    {
-                      item.secondSubtitle ?
-                        <P>{item.secondSubtitle}</P>
-                        :
-                        null
-                    }
-                    {
-                      item.thirdSubtitle ?
-                        <ShowMore><P className={styles.text}>{item.thirdSubtitle}</P></ShowMore>
-                        :
-                        null
+                        <>
+                          {item.thirdSubtitle &&<ShowMore><P className={styles.text}>{item.thirdSubtitle}</P></ShowMore>}
+                        </>
                     }
                   </div>
                 </div>
