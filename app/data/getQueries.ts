@@ -8,6 +8,7 @@ const getQuery = (queryName: string, locale: string) => {
         ${queryName === 'career' ? 'title, firstSubtitle, secondSubtitle, thirdSubtitle, firstImage { url }, secondImage { url }, thirdImage { url }, fourthImage { url }' : ''}
         ${queryName === 'contactUs' ? 'title, subtitle, button, name, phoneNumber, message' : ''}
         ${queryName === 'drivingInnovation' ? 'title, firstSubtitle, secondSubtitle, image { url }' : ''}
+        ${queryName === 'employee' ? 'name, linkedinLink, specialty, firstSubtitle, secondSubtitle, thirdSubtitle, image { url }' : ''}
         ${queryName === 'footer' ? 'title, copyright, cookieBanner' : ''}
         ${queryName === 'joinUs' ? 'title, firstSubtitle, secondSubtitle, button, image { url }' : ''}
         ${queryName === 'methodology' ? 'title, firstBlockSubtitle, secondBlockSubtitle' : ''}
@@ -34,6 +35,7 @@ export const GetQueries = () => {
     'career',
     'contactUs',
     'drivingInnovation',
+    'employee',
     'footer',
     'joinUs',
     'methodology',
