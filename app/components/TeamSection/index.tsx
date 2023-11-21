@@ -17,6 +17,7 @@ type Item = {
   name: string;
   specialty: string;
   linkedinLink: string;
+  order: number;
   image: {
     url: string
   };
@@ -33,6 +34,7 @@ const TeamSection = () => {
   const employees = useContentfulData<TProps>("employeeCollection", employee);
   const isValidData = data?.items && data.items.length > 0;
   const isValidEmployees = employees?.items && employees.items.length > 0;
+  const sortedEmployees = isValidEmployees && employees.items.sort((a, b) => b.order - a.order);
 
   return (
     <MainContainer>
@@ -43,10 +45,10 @@ const TeamSection = () => {
           <P className={styles.subtitle}>{data.items[0].firstSubtitle}</P>
           {
             isMobile ?
-              isValidEmployees &&
-              employees.items.map((item) => (
-                <>
-                  <div key={item.name} className={styles.teamCard}>
+              sortedEmployees &&
+              sortedEmployees.map((item) => (
+                <div className={styles.employeeCard} key={item.name}>
+                  <div className={styles.teamCard}>
                     <div className={styles.imageWrapper}>
                       <Image className={styles.image} src={item.image.url} alt={item.name} fill />
                     </div>
@@ -83,13 +85,13 @@ const TeamSection = () => {
                         null
                     }
                   </div>
-                </>
+                </div>
               ))
               :
-              isValidEmployees &&
-              employees.items.map((item) => (
-                <>
-                  <div key={item.name} className={styles.teamCard}>
+              sortedEmployees &&
+              sortedEmployees.map((item) => (
+                <div className={styles.employeeCard} key={item.name}>
+                  <div className={styles.teamCard}>
                     <div className={styles.imageWrapper}>
                       <Image className={styles.image} src={item.image.url} alt={item.name} fill />
                     </div>
@@ -126,7 +128,7 @@ const TeamSection = () => {
                         null
                     }
                   </div>
-                </>
+                </div>
               ))
           }
         </section>
