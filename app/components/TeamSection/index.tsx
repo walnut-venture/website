@@ -16,6 +16,8 @@ type Item = {
   fourthSubtitle: string;
   name: string;
   specialty: string;
+  linkedinLink: string;
+  order: number;
   image: {
     url: string
   };
@@ -27,45 +29,57 @@ type TProps = {
 
 const TeamSection = () => {
   const { isMobile } = useWindowSize();
-  const { aboutUs } = GetQueries();
+  const { aboutUs, employee } = GetQueries();
   const data = useContentfulData<TProps>("aboutUsCollection", aboutUs);
+  const employees = useContentfulData<TProps>("employeeCollection", employee);
   const isValidData = data?.items && data.items.length > 0;
-  const teamSEOSrc = isValidData ? data.items[0].image.url : undefined;
+  const isValidEmployees = employees?.items && employees.items.length > 0;
+  const sortedEmployees = isValidEmployees && employees.items.sort((a, b) => b.order - a.order);
 
   return (
     <MainContainer>
       {
-        isValidData && teamSEOSrc &&
+        isValidData &&
         <section id="team" className={styles.component}>
           <H2 className={styles.title}>{data.items[0].title}</H2>
           <P className={styles.subtitle}>{data.items[0].firstSubtitle}</P>
-          <div className={styles.teamCard}>
-            <div className={styles.imageWrapper}>
-              <Image className={styles.image} src={teamSEOSrc} alt="TeamSEO" fill />
-            </div>
-            <div className={styles.teamTitle}>
-              <div className={styles.socialWrapper}>
-                <H3>{data.items[0].name}</H3>
-                <a className={styles.socialLink} href="https://www.linkedin.com/in/julian-verocai-30b1a582/" target="_blank">
-                  <Image className={styles.social} src={linkedinSrc} alt="Linkedin" />
-                </a>
-              </div>
-              <P>{data.items[0].specialty}</P>
-            </div>
-          </div>
           {
-            isMobile ?
-              <div className={styles.textContainer}>
-                <P>{data.items[0].secondSubtitle}</P>
-                <P>{data.items[0].thirdSubtitle}</P>
-                <P>{data.items[0].fourthSubtitle}</P>
-              </div>
-              :
-              <div className={styles.textContainer}>
-                <P>{data.items[0].secondSubtitle}</P>
-                <P>{data.items[0].thirdSubtitle}</P>
-                <ShowMore><P className={styles.text}>{data.items[0].fourthSubtitle}</P></ShowMore>
-              </div>
+            sortedEmployees &&
+              sortedEmployees.map((item) => (
+                <div className={styles.employeeCard} key={item.name}>
+                  <div className={styles.teamCard}>
+                    <div className={styles.imageWrapper}>
+                      <Image className={styles.image} src={item.image.url} alt={item.name} fill />
+                    </div>
+                    <div className={styles.teamTitle}>
+                      <div className={styles.socialWrapper}>
+                        <H3>{item.name}</H3>
+                        {
+                          item.linkedinLink &&
+                          <a className={styles.socialLink} href={item.linkedinLink} target="_blank">
+                            <Image className={styles.social} src={linkedinSrc} alt="Linkedin" />
+                          </a>
+                        }
+                      </div>
+                      <P>{item.specialty}</P>
+                    </div>
+                  </div>
+                  <div className={styles.textContainer}>
+                    {item.firstSubtitle && <P>{item.firstSubtitle}</P>}
+                    {item.secondSubtitle && <P>{item.secondSubtitle}</P>}
+                    {
+                      isMobile ?
+                        <>
+                          {item.thirdSubtitle &&<P>{item.thirdSubtitle}</P>}
+                        </>
+                        :
+                        <>
+                          {item.thirdSubtitle &&<ShowMore><P className={styles.text}>{item.thirdSubtitle}</P></ShowMore>}
+                        </>
+                    }
+                  </div>
+                </div>
+              ))
           }
         </section>
       }

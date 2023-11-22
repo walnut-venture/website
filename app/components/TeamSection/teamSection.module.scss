@@ -38,6 +38,20 @@
   }
 }
 
+.employeeCard {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  @include mixin.media-w(breakpoints.$laptop) {;
+    gap: 28px;
+  }
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    gap: 12px;
+  }
+}
+
 .teamCard {
   display: flex;
   justify-content: space-between;
