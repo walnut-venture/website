@@ -103,6 +103,7 @@
     left: 20px;
     width: 47%;
     height: 93%;
+    justify-content: center;
   }
 
   @include mixin.media-w(breakpoints.$mobile) {
@@ -302,7 +303,7 @@
   text-align: center;
 
   @include mixin.media-w(breakpoints.$laptop) {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   @include mixin.media-minW(breakpoints.$desktop) {

@@ -4,12 +4,8 @@ import { useContentfulData } from "hooks";
 import { GetQueries } from "data";
 
 type Item = {
-  title: string;
-  subtitle: string;
-  text:string;
-  image: {
-    url: string
-  };
+  showMore: string;
+  showLess: string;
 }
 
 type TProps = {
@@ -17,8 +13,8 @@ type TProps = {
 }
 
 export const ShowMore = ({ children }: { children: ReactNode }) => {
-  const { ourServicesInDetail } = GetQueries();
-  const data = useContentfulData<TProps>("ourServicesInDetailCollection", ourServicesInDetail);
+  const { showMoreButton } = GetQueries();
+  const data = useContentfulData<TProps>("showMoreButtonCollection", showMoreButton);
   const isValidData = data?.items && data.items.length > 0;
   const [ activeTitle, setActiveTitle ] = useState(false);
   const handleClick = () => {
@@ -37,7 +33,7 @@ export const ShowMore = ({ children }: { children: ReactNode }) => {
             onClick={handleClick}
             size="h"
           >
-            {activeTitle ? data.items[0].title : data.items[1].title}
+            {activeTitle ? data.items[0].showLess : data.items[0].showMore}
           </Button>
         </>
       }

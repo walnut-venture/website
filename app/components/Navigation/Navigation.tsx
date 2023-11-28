@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { useContentfulData } from "hooks";
 import { GetQueries } from "data";
+import { sortContentByOrder } from "@/utils/sortContentByOrder";
 
 import styles from "./navigation.module.scss";
 
 type Item = {
   title: string;
+  order: number;
 }
 
 type TProps = {
@@ -16,36 +18,37 @@ export const Navigation = () => {
   const { navigation } = GetQueries();
   const data = useContentfulData<TProps>("navigationCollection", navigation);
   const isValidData = data?.items && data.items.length > 0;
+  const sortedData = isValidData && data.items.sort(sortContentByOrder);
 
   return (
     <nav className={styles.component}>
       {
-        isValidData &&
+        sortedData &&
           <>
             <ul className={styles.nav}>
               <li>
                 <Link href="#who-we-are" className={styles.link}>
-                  {data.items[5].title}
+                  {sortedData[0].title}
                 </Link>
               </li>
               <li>
                 <Link href="#services" className={styles.link}>
-                  {data.items[4].title}
+                  {sortedData[1].title}
                 </Link>
               </li>
               <li>
                 <Link href="#team" className={styles.link}>
-                  {data.items[3].title}
+                  {sortedData[2].title}
                 </Link>
               </li>
               <li>
                 <Link href="#methodology" className={styles.link}>
-                  {data.items[2].title}
+                  {sortedData[3].title}
                 </Link>
               </li>
               <li>
                 <Link href="#career" className={styles.link}>
-                  {data.items[1].title}
+                  {sortedData[4].title}
                 </Link>
               </li>
             </ul>

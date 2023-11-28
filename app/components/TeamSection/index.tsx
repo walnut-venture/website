@@ -4,6 +4,7 @@ import Image from "next/image";
 import { MainContainer, H2, P, H3, ShowMore } from "components";
 import { useWindowSize, useContentfulData } from "hooks";
 import { GetQueries } from "data";
+import { sortContentByOrder } from "@/utils/sortContentByOrder";
 
 import styles from "./teamSection.module.scss";
 import linkedinSrc from "./img/linkedin.svg";
@@ -34,7 +35,7 @@ const TeamSection = () => {
   const employees = useContentfulData<TProps>("employeeCollection", employee);
   const isValidData = data?.items && data.items.length > 0;
   const isValidEmployees = employees?.items && employees.items.length > 0;
-  const sortedEmployees = isValidEmployees && employees.items.sort((a, b) => b.order - a.order);
+  const sortedEmployees = isValidEmployees && employees.items.sort(sortContentByOrder);
 
   return (
     <MainContainer>
@@ -68,7 +69,7 @@ const TeamSection = () => {
                     {item.firstSubtitle && <P>{item.firstSubtitle}</P>}
                     {item.secondSubtitle && <P>{item.secondSubtitle}</P>}
                     {
-                      isMobile ?
+                      !isMobile ?
                         <>
                           {item.thirdSubtitle &&<P>{item.thirdSubtitle}</P>}
                         </>

@@ -32,7 +32,7 @@ const JoinUsSection = () => {
   return (
     <MainContainer>
       {
-        isMobile ?
+        !isMobile ?
           <>
             {
               isValidData && imageSrc &&

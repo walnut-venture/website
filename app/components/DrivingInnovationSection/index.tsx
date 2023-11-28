@@ -30,7 +30,7 @@ const DrivingInnovationSection = () => {
   return (
     <MainContainer>
       {
-        isMobile ?
+        !isMobile ?
           <>
             {
               isValidData && imageSrc &&

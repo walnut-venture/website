@@ -148,6 +148,7 @@
   @include mixin.fluidFont(4, 22, 1920);
   display: flex;
   align-items: center;
+  white-space: nowrap;
 
   @include mixin.media-w(breakpoints.$laptop) {
     font-size: 12px;

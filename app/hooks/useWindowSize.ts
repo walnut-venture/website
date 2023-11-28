@@ -42,6 +42,6 @@ export function useWindowSize(): UseWindowSize {
     isLaptopL: windowSize.width <= 900,
     isLaptopM: windowSize.width <= 800,
     isLaptopS: windowSize.width <= 700,
-    isMobile: windowSize.width >= 600
+    isMobile: windowSize.width <= 600
   };
 };

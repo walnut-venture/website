@@ -1,6 +1,7 @@
 import { H2, H3, P, Container } from "components";
 import { useWindowSize, useContentfulData } from "hooks";
 import { GetQueries } from "data";
+import { sortContentByOrder } from "@/utils/sortContentByOrder";
 
 import styles from "./methodologySection.module.scss";
 
@@ -13,6 +14,7 @@ type Item = {
   thirdSubtitle: string;
   fourthSubtitle: string;
   phaseSubtitle: string;
+  order: number;
 }
 
 type TProps = {
@@ -26,11 +28,12 @@ export const MethodologySection = () => {
   const cards = useContentfulData<TProps>("methodologyCardCollection", methodologyCard);
   const isValidData = data?.items && data.items.length > 0;
   const isValidCards = cards?.items && cards.items.length > 0;
+  const sortedCards = isValidCards && cards.items.sort(sortContentByOrder);
 
   return (
     <Container>
       {
-        isValidData && isValidCards &&
+        isValidData && sortedCards &&
         <section id="methodology" className={styles.component}>
           <div className={styles.titleWrapper}>
             <H2>{data.items[0].title}</H2>
@@ -43,54 +46,54 @@ export const MethodologySection = () => {
                 <div className={styles.cardsContainer}>
                   <div className={styles.firstCard}>
                     <div className={styles.firstContent}>
-                      <H3 className={styles.cardTitle}>{cards.items[3].title}</H3>
-                      <P className={styles.cardText}>{cards.items[3].firstSubtitle}</P>
-                      <P className={styles.cardText}>{cards.items[3].secondSubtitle}</P>
+                      <H3 className={styles.cardTitle}>{sortedCards[0].title}</H3>
+                      <P className={styles.cardText}>{sortedCards[0].firstSubtitle}</P>
+                      <P className={styles.cardText}>{sortedCards[0].secondSubtitle}</P>
                     </div>
                   </div>
                   <div className={styles.secondCard}>
                     <div className={styles.secondContent}>
-                      <H3 className={styles.cardTitle}>{cards.items[2].title}</H3>
-                      <P className={styles.cardText}>{cards.items[2].firstSubtitle}</P>
-                      <P className={styles.cardText}>{cards.items[2].secondSubtitle}</P>
-                      <P className={styles.cardText}>{cards.items[2].thirdSubtitle}</P>
+                      <H3 className={styles.cardTitle}>{sortedCards[1].title}</H3>
+                      <P className={styles.cardText}>{sortedCards[1].firstSubtitle}</P>
+                      <P className={styles.cardText}>{sortedCards[1].secondSubtitle}</P>
+                      <P className={styles.cardText}>{sortedCards[1].thirdSubtitle}</P>
                     </div>
                   </div>
                 </div>
                 <div className={styles.phaseContainer}>
                   <div className={styles.firstPhase}>
-                    <H3 className={styles.phaseTitle}>{cards.items[3].phaseSubtitle}</H3>
+                    <H3 className={styles.phaseTitle}>{sortedCards[0].phaseSubtitle}</H3>
                   </div>
                   <div className={styles.secondPhase}>
-                    <H3 className={styles.phaseTitle}>{cards.items[2].phaseSubtitle}</H3>
+                    <H3 className={styles.phaseTitle}>{sortedCards[1].phaseSubtitle}</H3>
                   </div>
                 </div>
                 <div className={styles.cardsContainer}>
                   <div className={styles.thirdCard}>
                     <div className={styles.thirdContent}>
-                      <H3 className={styles.cardTitle}>{cards.items[1].title}</H3>
-                      <P className={styles.cardText}>{cards.items[1].firstSubtitle}</P>
-                      <P className={styles.cardText}>{cards.items[1].secondSubtitle}</P>
-                      <P className={styles.cardText}>{cards.items[1].thirdSubtitle}</P>
-                      <P className={styles.cardText}>{cards.items[1].fourthSubtitle}</P>
+                      <H3 className={styles.cardTitle}>{sortedCards[2].title}</H3>
+                      <P className={styles.cardText}>{sortedCards[2].firstSubtitle}</P>
+                      <P className={styles.cardText}>{sortedCards[2].secondSubtitle}</P>
+                      <P className={styles.cardText}>{sortedCards[2].thirdSubtitle}</P>
+                      <P className={styles.cardText}>{sortedCards[2].fourthSubtitle}</P>
                     </div>
                   </div>
                   <div className={styles.fourthCard}>
                     <div className={styles.fourthContent}>
-                      <H3 className={styles.cardTitle}>{cards.items[0].title}</H3>
-                      <P className={styles.cardText}>{cards.items[0].firstSubtitle}</P>
-                      <P className={styles.cardText}>{cards.items[0].secondSubtitle}</P>
-                      <P className={styles.cardText}>{cards.items[0].thirdSubtitle}</P>
-                      <P className={styles.cardText}>{cards.items[0].fourthSubtitle}</P>
+                      <H3 className={styles.cardTitle}>{sortedCards[3].title}</H3>
+                      <P className={styles.cardText}>{sortedCards[3].firstSubtitle}</P>
+                      <P className={styles.cardText}>{sortedCards[3].secondSubtitle}</P>
+                      <P className={styles.cardText}>{sortedCards[3].thirdSubtitle}</P>
+                      <P className={styles.cardText}>{sortedCards[3].fourthSubtitle}</P>
                     </div>
                   </div>
                 </div>
                 <div className={styles.phaseContainer}>
                   <div className={styles.thirdPhase}>
-                    <H3 className={styles.phaseTitle}>{cards.items[1].phaseSubtitle}</H3>
+                    <H3 className={styles.phaseTitle}>{sortedCards[2].phaseSubtitle}</H3>
                   </div>
                   <div className={styles.fourthPhase}>
-                    <H3 className={styles.phaseTitle}>{cards.items[0].phaseSubtitle}</H3>
+                    <H3 className={styles.phaseTitle}>{sortedCards[3].phaseSubtitle}</H3>
                   </div>
                 </div>
               </>
@@ -99,50 +102,50 @@ export const MethodologySection = () => {
                 <div className={styles.cardsContainer}>
                   <div className={styles.firstCard}>
                     <div className={styles.firstContent}>
-                      <H3 className={styles.cardTitle}>{cards.items[3].title}</H3>
-                      <P className={styles.cardText}>{cards.items[3].firstSubtitle}</P>
-                      <P className={styles.cardText}>{cards.items[3].secondSubtitle}</P>
+                      <H3 className={styles.cardTitle}>{sortedCards[0].title}</H3>
+                      <P className={styles.cardText}>{sortedCards[0].firstSubtitle}</P>
+                      <P className={styles.cardText}>{sortedCards[0].secondSubtitle}</P>
                     </div>
                   </div>
                   <div className={styles.secondCard}>
                     <div className={styles.secondContent}>
-                      <H3 className={styles.cardTitle}>{cards.items[2].title}</H3>
-                      <P className={styles.cardText}>{cards.items[2].firstSubtitle}</P>
-                      <P className={styles.cardText}>{cards.items[2].secondSubtitle}</P>
-                      <P className={styles.cardText}>{cards.items[2].thirdSubtitle}</P>
+                      <H3 className={styles.cardTitle}>{sortedCards[1].title}</H3>
+                      <P className={styles.cardText}>{sortedCards[1].firstSubtitle}</P>
+                      <P className={styles.cardText}>{sortedCards[1].secondSubtitle}</P>
+                      <P className={styles.cardText}>{sortedCards[1].thirdSubtitle}</P>
                     </div>
                   </div>
                   <div className={styles.thirdCard}>
                     <div className={styles.thirdContent}>
-                      <H3 className={styles.cardTitle}>{cards.items[1].title}</H3>
-                      <P className={styles.cardText}>{cards.items[1].firstSubtitle}</P>
-                      <P className={styles.cardText}>{cards.items[1].secondSubtitle}</P>
-                      <P className={styles.cardText}>{cards.items[1].thirdSubtitle}</P>
-                      <P className={styles.cardText}>{cards.items[1].fourthSubtitle}</P>
+                      <H3 className={styles.cardTitle}>{sortedCards[2].title}</H3>
+                      <P className={styles.cardText}>{sortedCards[2].firstSubtitle}</P>
+                      <P className={styles.cardText}>{sortedCards[2].secondSubtitle}</P>
+                      <P className={styles.cardText}>{sortedCards[2].thirdSubtitle}</P>
+                      <P className={styles.cardText}>{sortedCards[2].fourthSubtitle}</P>
                     </div>
                   </div>
                   <div className={styles.fourthCard}>
                     <div className={styles.fourthContent}>
-                      <H3 className={styles.cardTitle}>{cards.items[0].title}</H3>
-                      <P className={styles.cardText}>{cards.items[0].firstSubtitle}</P>
-                      <P className={styles.cardText}>{cards.items[0].secondSubtitle}</P>
-                      <P className={styles.cardText}>{cards.items[0].thirdSubtitle}</P>
-                      <P className={styles.cardText}>{cards.items[0].fourthSubtitle}</P>
+                      <H3 className={styles.cardTitle}>{sortedCards[3].title}</H3>
+                      <P className={styles.cardText}>{sortedCards[3].firstSubtitle}</P>
+                      <P className={styles.cardText}>{sortedCards[3].secondSubtitle}</P>
+                      <P className={styles.cardText}>{sortedCards[3].thirdSubtitle}</P>
+                      <P className={styles.cardText}>{sortedCards[3].fourthSubtitle}</P>
                     </div>
                   </div>
                 </div>
                 <div className={styles.phaseContainer}>
                   <div className={styles.firstPhase}>
-                    <H3 className={styles.phaseTitle}>{cards.items[3].phaseSubtitle}</H3>
+                    <H3 className={styles.phaseTitle}>{sortedCards[0].phaseSubtitle}</H3>
                   </div>
                   <div className={styles.secondPhase}>
-                    <H3 className={styles.phaseTitle}>{cards.items[2].phaseSubtitle}</H3>
+                    <H3 className={styles.phaseTitle}>{sortedCards[1].phaseSubtitle}</H3>
                   </div>
                   <div className={styles.thirdPhase}>
-                    <H3 className={styles.phaseTitle}>{cards.items[1].phaseSubtitle}</H3>
+                    <H3 className={styles.phaseTitle}>{sortedCards[2].phaseSubtitle}</H3>
                   </div>
                   <div className={styles.fourthPhase}>
-                    <H3 className={styles.phaseTitle}>{cards.items[0].phaseSubtitle}</H3>
+                    <H3 className={styles.phaseTitle}>{sortedCards[3].phaseSubtitle}</H3>
                   </div>
                 </div>
               </>

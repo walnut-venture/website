@@ -4,7 +4,7 @@ const getQuery = (queryName: string, locale: string) => {
   return `query {
     ${queryName}Collection (locale: "${locale}") {
       items {
-        ${queryName === 'aboutUs' ? 'title, firstSubtitle, secondSubtitle, thirdSubtitle, fourthSubtitle, image { url }, name, specialty' : ''}
+        ${queryName === 'aboutUs' ? 'title, firstSubtitle ' : ''}
         ${queryName === 'career' ? 'title, firstSubtitle, secondSubtitle, thirdSubtitle, firstImage { url }, secondImage { url }, thirdImage { url }, fourthImage { url }' : ''}
         ${queryName === 'contactUs' ? 'title, subtitle, button, name, phoneNumber, message' : ''}
         ${queryName === 'drivingInnovation' ? 'title, firstSubtitle, secondSubtitle, image { url }' : ''}
@@ -12,12 +12,13 @@ const getQuery = (queryName: string, locale: string) => {
         ${queryName === 'footer' ? 'title, copyright, cookieBanner' : ''}
         ${queryName === 'joinUs' ? 'title, firstSubtitle, secondSubtitle, button, image { url }' : ''}
         ${queryName === 'methodology' ? 'title, firstBlockSubtitle, secondBlockSubtitle' : ''}
-        ${queryName === 'methodologyCard' ? 'title, firstSubtitle, secondSubtitle, thirdSubtitle, fourthSubtitle, phaseSubtitle' : ''}
-        ${queryName === 'navigation' ? 'title' : ''}
-        ${queryName === 'ourServicesInDetail' ? 'title, image { url }' : ''}
-        ${queryName === 'services' ? 'title, subtitle, text, image { url }' : ''}
+        ${queryName === 'methodologyCard' ? 'title, firstSubtitle, secondSubtitle, thirdSubtitle, fourthSubtitle, phaseSubtitle, order' : ''}
+        ${queryName === 'navigation' ? 'title, order' : ''}
+        ${queryName === 'ourServicesInDetail' ? 'title, image { url }, order' : ''}
+        ${queryName === 'services' ? 'title, subtitle, text, image { url }, order' : ''}
+        ${queryName === 'showMoreButton' ? 'showMore, showLess' : ''}
         ${queryName === 'walnutContent' ? 'title, outlineTitle, subtitle, button, video { url }' : ''}
-        ${queryName === 'whoWeAre' ? 'title, subtitle, text' : ''}
+        ${queryName === 'whoWeAre' ? 'title, subtitle, text, order' : ''}
       }
     }
   }`;
@@ -43,6 +44,7 @@ export const GetQueries = () => {
     'navigation',
     'ourServicesInDetail',
     'services',
+    'showMoreButton',
     'walnutContent',
     'whoWeAre'
   ];

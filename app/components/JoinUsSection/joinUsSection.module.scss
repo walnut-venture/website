@@ -46,6 +46,7 @@
 .contentWrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   @include mixin.media-w(breakpoints.$mobile) {
     flex-direction: column;
