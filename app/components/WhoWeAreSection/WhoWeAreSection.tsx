@@ -1,4 +1,4 @@
-import { MainContainer, H2, P, H3 } from "components";
+import { Container, H2, P, H3 } from "components";
 import { motion } from "framer-motion";
 import { useContentfulData } from "hooks";
 import { GetQueries } from "data";
@@ -18,7 +18,7 @@ export const WhoWeAreSection = () => {
   const sortedData = isValidData && data.items.sort(sortContentByOrder);
 
   return (
-    <MainContainer>
+    <Container>
       {
         sortedData &&
           <section id="who-we-are" className={styles.component}>
@@ -59,6 +59,6 @@ export const WhoWeAreSection = () => {
             </motion.div>
           </section>
       }
-    </MainContainer>
+    </Container>
   );
 };

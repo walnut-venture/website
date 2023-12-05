@@ -1,13 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { MainContainer, H2, P, H3, ShowMore } from "components";
+import { H2, P, H3, ShowMore, Container } from "components";
 import { useWindowSize, useContentfulData } from "hooks";
 import { GetQueries } from "data";
 import { sortContentByOrder } from "@/utils/sortContentByOrder";
 
 import styles from "./teamSection.module.scss";
 import linkedinSrc from "./img/linkedin.svg";
+import classNames from "classnames";
 
 type Item = {
   title: string;
@@ -38,7 +39,7 @@ const TeamSection = () => {
   const sortedEmployees = isValidEmployees && employees.items.sort(sortContentByOrder);
 
   return (
-    <MainContainer>
+    <Container>
       {
         isValidData &&
         <section id="team" className={styles.component}>
@@ -46,9 +47,9 @@ const TeamSection = () => {
           <P className={styles.subtitle}>{data.items[0].firstSubtitle}</P>
           {
             sortedEmployees &&
-              sortedEmployees.map((item) => (
+              sortedEmployees.map((item, index) => (
                 <div className={styles.employeeCard} key={item.name}>
-                  <div className={styles.teamCard}>
+                  <div className={classNames(styles.teamCard, index % 2 !== 0 && styles.oddCard)}>
                     <div className={styles.imageWrapper}>
                       <Image className={styles.image} src={item.image.url} alt={item.name} fill />
                     </div>
@@ -84,7 +85,7 @@ const TeamSection = () => {
           }
         </section>
       }
-    </MainContainer>
+    </Container>
   );
 };
 

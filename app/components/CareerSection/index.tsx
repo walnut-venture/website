@@ -1,4 +1,4 @@
-import { H2, P, ImagesWrapper, MainContainer } from "components";
+import { H2, P, ImagesWrapper, Container } from "components";
 import { useContentfulData } from "hooks";
 import { GetQueries } from "data";
 
@@ -21,7 +21,7 @@ const CareerSection = () => {
   const isValidData = data?.items && data.items.length > 0;
 
   return (
-    <MainContainer>
+    <Container>
       {
         isValidData &&
         <section id="career" className={styles.component}>
@@ -36,7 +36,7 @@ const CareerSection = () => {
           </div>
         </section>
       }
-    </MainContainer>
+    </Container>
   );
 };
 

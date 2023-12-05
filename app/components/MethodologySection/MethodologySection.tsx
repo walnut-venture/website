@@ -38,7 +38,7 @@ export const MethodologySection = () => {
           <div className={styles.titleWrapper}>
             <H2>{data.items[0].title}</H2>
             <H3 className={styles.subtitle}>{data.items[0].firstBlockSubtitle}</H3>
-            <P>{data.items[0].secondBlockSubtitle}</P>
+            <P className={styles.text}>{data.items[0].secondBlockSubtitle}</P>
           </div>
           {
             isLaptopL ?

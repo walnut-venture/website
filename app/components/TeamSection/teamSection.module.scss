@@ -3,21 +3,26 @@
 
 .component {
   margin-top: 144px;
-  padding: 0 90px;
   display: flex;
   flex-direction: column;
   gap: 80px;
+  align-items: center;
 
   @include mixin.media-w(breakpoints.$laptop) {
-    padding: 0 52px;
     margin-top: 52px;
     gap: 28px;
   }
 
+  @include mixin.media-w(breakpoints.$laptop-m) {
+    padding: 20px 50px;
+  }
+
+  @include mixin.media-w(breakpoints.$laptop-s) {
+    padding: 20px 30px;
+  }
+
   @include mixin.media-w(breakpoints.$mobile) {
-    padding: 0 35px;
     margin-top: 60px;
-    gap: 12px;
   }
 }
 
@@ -31,10 +36,16 @@
 
 .subtitle {
   text-align: center;
+  width: 90%;
 
   @include mixin.media-w(breakpoints.$mobile) {
     text-align: start;
     margin-bottom: 12px;
+  }
+  
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    width: 100%;
   }
 }
 
@@ -55,6 +66,14 @@
 .teamCard {
   display: flex;
   justify-content: space-between;
+
+  @include mixin.media-w(breakpoints.$mobile) {
+    flex-direction: column;
+  }
+}
+
+.oddCard {
+  flex-direction: row-reverse;
 
   @include mixin.media-w(breakpoints.$mobile) {
     flex-direction: column;

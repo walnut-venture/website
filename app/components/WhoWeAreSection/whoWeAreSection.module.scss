@@ -3,15 +3,21 @@
 
 .component {
   margin-top: 144px;
-  padding: 0 90px;
   display: flex;
   flex-direction: column;
   gap: 60px;
 
   @include mixin.media-w(breakpoints.$laptop) {
-    padding: 0 35px;
     margin-top: 60px;
     gap: 20px;
+  }
+
+  @include mixin.media-w(breakpoints.$laptop-m) {
+    padding: 28px 50px;
+  }
+
+  @include mixin.media-w(breakpoints.$laptop-s) {
+    padding: 0 30px;
   }
 }
 

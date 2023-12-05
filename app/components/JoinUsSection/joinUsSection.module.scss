@@ -6,6 +6,7 @@
   padding: 90px;
   margin-top: 80px;
   border-radius: 40px;
+  hyphens: auto;
 
   @include mixin.media-w(breakpoints.$laptop) {
     padding: 52px;
@@ -13,9 +14,13 @@
   }
 
   @include mixin.media-w(breakpoints.$laptop-m) {
-    padding: 28px 48px;
+    padding: 28px 50px;
     margin-top: 0;
     border-radius: 0;
+  }
+
+  @include mixin.media-w(breakpoints.$laptop-s) {
+    padding: 28px 30px;
   }
 }
 
@@ -24,6 +29,7 @@
   justify-content: flex-end;
 
   @include mixin.media-w(breakpoints.$mobile) {
+    width: 100%;
     justify-content: flex-start;
   }
 }
