@@ -4,23 +4,24 @@
 
 .component {
   margin-top: 144px;
-  padding: 0 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @include mixin.media-w(breakpoints.$laptop) {
-    padding: 0 52px;
     margin-top: 52px;
   }
 
   @include mixin.media-w(breakpoints.$laptop-m) {
-    padding: 0 50px;
+    padding: 20px 50px;
+  }
+
+  @include mixin.media-w(breakpoints.$laptop-s) {
+    padding: 20px 30px;
   }
 
   @include mixin.media-w(breakpoints.$mobile) {
     margin-top: 60px;
-    padding: 0 35px;
   }
 }
 
@@ -31,7 +32,7 @@
 .subtitle {
   margin: 80px auto 68px auto;
   text-align: center;
-  width: 100%;
+  width: 90%;
 
   @include mixin.media-w(breakpoints.$laptop) {
     margin: 28px auto 20px auto;
@@ -49,7 +50,7 @@
 }
 
 .textContainer {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   gap: 24px;

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useContext } from "react";
-import { ArrowButton, H1, MainContainer, MobileNavigation, P } from "components";
+import { ArrowButton, Container, H1, MobileNavigation, P } from "components";
 import { BurgerContext } from "context";
 import { useContentfulData } from "hooks";
 import { GetQueries } from "data";
@@ -25,7 +25,7 @@ export const WalnutContent = () => {
   const { activeBurger, setActiveBurger } = useContext(BurgerContext);
 
   return (
-    <MainContainer>
+    <Container>
       {
         isValidData &&
           <div className={styles.contentContainer}>
@@ -47,6 +47,6 @@ export const WalnutContent = () => {
             </div>
           </div>
       }
-    </MainContainer>
+    </Container>
   );
 };

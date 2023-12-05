@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { MainContainer, H2, P } from "components";
+import { H2, P, Container } from "components";
 import { useContentfulData, useWindowSize } from "hooks";
 import { GetQueries } from "data";
 
@@ -28,7 +28,7 @@ const DrivingInnovationSection = () => {
   const imageSrc = isValidData ? data.items[0].image.url : undefined;
 
   return (
-    <MainContainer>
+    <Container>
       {
         !isMobile ?
           <>
@@ -67,7 +67,7 @@ const DrivingInnovationSection = () => {
             }
           </>
       }
-    </MainContainer>
+    </Container>
   );
 };
 

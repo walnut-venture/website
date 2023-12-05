@@ -23,11 +23,12 @@
   height: calc(100vh - 102px);
 
   @include mixin.media-w(breakpoints.$laptop-m) {
-    padding: 28px 48px;
+    padding: 28px 50px;
   }
 
   @include mixin.media-w(breakpoints.$laptop-s) {
     justify-content: center;
+    padding: 0 30px;
   }
 }
 

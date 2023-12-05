@@ -12,7 +12,7 @@
   }
 
   @include mixin.media-w(breakpoints.$laptop-s) {
-    padding: 20px;
+    padding: 20px 30px;
   }
 }
 

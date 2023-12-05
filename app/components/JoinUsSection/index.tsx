@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { MainContainer, H2, P, ArrowButton } from "components";
+import { H2, P, ArrowButton, Container } from "components";
 import { useContentfulData, useWindowSize } from "hooks";
 import { GetQueries } from "data";
 
@@ -30,7 +30,7 @@ const JoinUsSection = () => {
   const imageSrc = isValidData ? data.items[0].image.url : undefined;
 
   return (
-    <MainContainer>
+    <Container>
       {
         !isMobile ?
           <>
@@ -83,7 +83,7 @@ const JoinUsSection = () => {
             }
           </>
       }
-    </MainContainer>
+    </Container>
   );
 };
 

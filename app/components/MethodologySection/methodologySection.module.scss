@@ -3,13 +3,11 @@
 
 .component {
   margin-top: 144px;
-  padding: 0 90px;
   display: flex;
   flex-direction: column;
   gap: 60px;
 
   @include mixin.media-w(breakpoints.$laptop) {
-    padding: 0 52px;
     margin-top: 52px;
     gap: 30px;
   }
@@ -17,14 +15,14 @@
   @include mixin.media-w(breakpoints.$laptop-l) {
     gap: 15px;
   }
-
-  @include mixin.media-w(breakpoints.$laptop-s) {
-    padding: 0 50px;
-    margin-top: 60px;
+  
+  @include mixin.media-w(breakpoints.$laptop-m) {
+    padding: 20px 50px;
   }
 
-  @include mixin.media-w(breakpoints.$mobile) {
-    padding: 0 26px;
+  @include mixin.media-w(breakpoints.$laptop-s) {
+    padding: 0 30px;
+    margin-top: 60px;
   }
 }
 
@@ -63,6 +61,10 @@
   }
 }
 
+.text {
+  width: 100%;
+}
+
 .cardsContainer {
   position: relative;
   width: 100%;
@@ -82,7 +84,7 @@
   }
 
   @include mixin.media-w(breakpoints.$laptop-l) {
-    height: 300px;
+    height: 330px;
     padding: 0;
   }
 }
@@ -189,6 +191,10 @@
     padding: 24% 20px 20px 20px;
   }
 
+  @include mixin.media-w(breakpoints.$laptop-l) {
+    padding: 18% 20px 20px 20px;
+  }
+
   @include mixin.media-w(breakpoints.$mobile) {
     gap: 5px;
   }
@@ -210,6 +216,10 @@
     padding: 15% 20px 20px 20px;
   }
 
+  @include mixin.media-w(breakpoints.$laptop-l) {
+    padding: 12% 20px 20px 20px;
+  }
+
   @include mixin.media-w(breakpoints.$mobile) {
     gap: 5px;
   }
@@ -217,7 +227,7 @@
 
 .thirdContent {
   width: 33%;
-  padding: 13% 25px 25px 25px;
+  padding: 12% 25px 25px 25px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -232,7 +242,7 @@
   }
 
   @include mixin.media-w(breakpoints.$laptop-l) {
-    padding: 25% 20px 20px 20px;
+    padding: 19% 20px 20px 20px;
     width: 100%;
   }
 
@@ -243,7 +253,7 @@
 
 .fourthContent {
   width: 27%;
-  padding: 11.5% 25px 25px 25px;
+  padding: 10.5% 25px 25px 25px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -258,7 +268,7 @@
   }
 
   @include mixin.media-w(breakpoints.$laptop-l) {
-    padding: 15% 20px 20px 20px;
+    padding: 12% 20px 20px 20px;
     width: 50%;
   }
 
@@ -268,7 +278,7 @@
 }
 
 .cardTitle {
-  margin-bottom: 30px;
+  height: 95px;
   text-align: center;
   color: var(--bgWhite);
   @include mixin.fluidFont(8, 28, 1920);
@@ -276,23 +286,18 @@
 
   @include mixin.media-w(breakpoints.$laptop) {
     font-size: 16px;
-    margin-bottom: 10px;
   }
 
   @include mixin.media-w(breakpoints.$laptop-l) {
-    margin-bottom: 5px;
+    height: 60px;
   }
 
   @include mixin.media-minW(breakpoints.$desktop) {
     font-size: 28px;
   }
 
-  @include mixin.media-w(breakpoints.$desktop-s) {
-    margin-bottom: 15px;
-  }
-
   @include mixin.media-w(breakpoints.$mobile) {
-    margin-bottom: 10px;
+    height: 80px;
   }
 }
 

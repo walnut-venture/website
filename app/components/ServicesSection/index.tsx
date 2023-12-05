@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { H2, MainContainer, P, H3, ListItem, ShowMore } from "components";
+import { H2, P, H3, ListItem, ShowMore, Container } from "components";
 import { useWindowSize, useContentfulData } from "hooks";
 import { motion } from "framer-motion";
 import { GetQueries } from "data";
@@ -35,7 +35,7 @@ const ServicesSection = () => {
   const sortedDetails = isValidDetails && details.items.sort(sortContentByOrder);
 
   return (
-    <MainContainer>
+    <Container>
       <section id="services" className={styles.component}>
         {
           sortedData &&
@@ -89,16 +89,20 @@ const ServicesSection = () => {
               {
                 sortedDetails &&
                   <div className={styles.servicesDetailWrapper}>
-                    <ListItem>{sortedDetails[1].title}</ListItem>
-                    <ListItem className={styles.servicesSubtitle}>{sortedDetails[2].title}</ListItem>
-                    <ListItem className={styles.servicesSubtitle}>{sortedDetails[3].title}</ListItem>
+                    {
+                      sortedDetails.slice(1, 4).map((detail, index) => (
+                        <ListItem key={index} className={index === 0 ? '' : styles.servicesSubtitle}>
+                          {detail.title}
+                        </ListItem>
+                      ))
+                    }
                     <ShowMore>
-                      <ListItem>{sortedDetails[4].title}</ListItem>
-                      <ListItem className={styles.servicesSubtitle}>{sortedDetails[5].title}</ListItem>
-                      <ListItem className={styles.servicesSubtitle}>{sortedDetails[6].title}</ListItem>
-                      <ListItem className={styles.servicesSubtitle}>{sortedDetails[7].title}</ListItem>
-                      <ListItem className={styles.servicesSubtitle}>{sortedDetails[8].title}</ListItem>
-                      <ListItem className={styles.servicesSubtitle}>{sortedDetails[9].title}</ListItem>
+                      {
+                        sortedDetails.slice(4).map((detail, index) => (
+                          <ListItem key={index} className={styles.servicesSubtitle}>
+                            {detail.title}
+                          </ListItem>
+                        ))}
                     </ShowMore>
                   </div>
               }
@@ -129,7 +133,7 @@ const ServicesSection = () => {
             </div>
         }
       </section>
-    </MainContainer>
+    </Container>
   );
 };
 
