@@ -178,7 +178,6 @@
 
 .servicesDetailWrapper {
   width: 50%;
-  hyphens: auto;
 
   @include mixin.media-w(breakpoints.$mobile) {
     width: 100%;

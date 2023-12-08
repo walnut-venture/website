@@ -6,7 +6,6 @@
   padding: 90px;
   margin-top: 144px;
   border-radius: 40px;
-  hyphens: auto;
 
   @include mixin.media-w(breakpoints.$laptop) {
     padding: 52px;
