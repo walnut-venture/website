@@ -39,7 +39,7 @@ const TeamSection = () => {
   const sortedEmployees = isValidEmployees && employees.items.sort(sortContentByOrder);
 
   return (
-    <Container>
+    <Container maxWidth={1340}>
       {
         isValidData &&
         <section id="team" className={styles.component}>

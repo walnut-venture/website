@@ -21,7 +21,7 @@ const CareerSection = () => {
   const isValidData = data?.items && data.items.length > 0;
 
   return (
-    <Container>
+    <Container maxWidth={1340}>
       {
         isValidData &&
         <section id="career" className={styles.component}>
