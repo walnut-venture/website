@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import { ReactNode } from "react";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { nunitoSans } from "../font/nunitoSans";
 import { NextIntlClientProvider } from "next-intl";
 import "../styles/globals.css";
@@ -43,6 +44,7 @@ export default async function RootLayout({
         <NextIntlClientProvider locale={locale}>
           {children}
         </NextIntlClientProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
