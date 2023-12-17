@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   title: 'Walnut venture studios',
   description: 'Empowering innovation and new business models in the financial sector. We design, build and scale the success stories of tomorrow.',
   keywords: 'fintech, company building, venture building, innovation, finance',
-  themeColor: '#025c51',
+  themeColor: '#025c51'
 };
 
 export default async function RootLayout({
